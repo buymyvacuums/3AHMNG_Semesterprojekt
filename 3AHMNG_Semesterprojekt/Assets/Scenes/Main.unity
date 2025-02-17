@@ -508,7 +508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1340165979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 1977730471}
   - component: {fileID: 1977730473}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player_CUBE_VERSION
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 2602904064140046123, guid: b597b262d6b09ff4ea363233ca5e45ce,
         type: 3}
       propertyPath: m_Name
-      value: Player2
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6271281419646979647, guid: b597b262d6b09ff4ea363233ca5e45ce,
         type: 3}
