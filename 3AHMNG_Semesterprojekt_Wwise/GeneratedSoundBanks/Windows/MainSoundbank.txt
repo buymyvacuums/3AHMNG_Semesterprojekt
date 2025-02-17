@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2051061508	Stop_Test			\Default Work Unit\TEST\Stop_Test	
+	3187507146	Play_Test			\Default Work Unit\TEST\Play_Test	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	506642230	Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192	C:\Game Projects\2024_25_SemesterProjk\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192		1303992
+

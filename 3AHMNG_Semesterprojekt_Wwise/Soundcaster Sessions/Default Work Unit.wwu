@@ -6,11 +6,11 @@
 				<SoundcasterSession Name="Test_Soundcaster" ID="{B52577C6-DA0B-4B4A-9EF7-280440F732C3}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Test" ID="{EB53D27A-AB1B-49AD-9786-837988855208}" WorkUnitID="{688E3598-204D-47B9-A428-C37505F3A82F}"/>
+							<ObjectRef Name="Play_Test" ID="{EB53D27A-AB1B-49AD-9786-837988855208}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Stop_Test" ID="{FACA3CFD-F2FE-4A89-BC1E-E11703B2C1BD}" WorkUnitID="{688E3598-204D-47B9-A428-C37505F3A82F}"/>
+							<ObjectRef Name="Stop_Test" ID="{FACA3CFD-F2FE-4A89-BC1E-E11703B2C1BD}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>

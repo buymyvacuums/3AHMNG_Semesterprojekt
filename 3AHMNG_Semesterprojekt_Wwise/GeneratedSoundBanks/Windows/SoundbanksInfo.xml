@@ -9,6 +9,24 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{196BA485-0EF1-09E8-D8F8-88690A7C777A}">
+			<ShortName>MainSoundbank</ShortName>
+			<Path>MainSoundbank.bnk</Path>
+			<Media>
+				<File Id="506642230" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192.wav</ShortName>
+					<CachePath>SFX/Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3187507146" Name="Play_Test" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="506642230"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2051061508" Name="Stop_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0E4D9290-44AE-80CA-4F22-62BE198F5E4A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -139,5 +157,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A081AB06-BB61-5681-8D6C-080B32D8E135}</FileHash>
+	<FileHash>{0338B36E-B6B1-9378-0748-2E136A5714F4}</FileHash>
 </SoundBanksInfo>

@@ -365,8 +365,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dd0c7b8377c1b74185fe70c0e3120a6f
     GuidInternal: 
-    m_lastTime: -8584624076076961851
-    List: []
+    m_lastTime: -8584618083774758817
+    List:
+    - name: MainSoundbank
+      guid: 58a72b3d45dd9c4aafb2fbdf59d4653b
+      id: 534561221
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: dd0c7b8377c1b74185fe70c0e3120a6f
+      - ElementName: MainSoundbank
+        ObjectType: 7
+        guid: 58a72b3d45dd9c4aafb2fbdf59d4653b
+      Path: SoundBanks\Default Work Unit\MainSoundbank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -379,20 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584624076077372575
-    List: []
-  - PhysicalPath: Events\TheTEST.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: TheTEST
-      ObjectType: 12
-      guid: 98358e684d20b947a428c37505f3a82f
-    ParentPath: Events\TheTEST
-    guid: 98358e684d20b947a428c37505f3a82f
-    GuidInternal: 
-    m_lastTime: -8584618094648393182
+    m_lastTime: -8584618087583218673
     List:
     - name: Play_Test
       guid: 7ad253eb1babad499786837988855208
@@ -401,13 +402,16 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: TheTEST
+      - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 98358e684d20b947a428c37505f3a82f
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: TEST
+        ObjectType: 4
+        guid: a80b3d83bfaa6d449144d751f08c7819
       - ElementName: Play_Test
         ObjectType: 3
         guid: 7ad253eb1babad499786837988855208
-      Path: Events\TheTEST\Play_Test
+      Path: Events\Default Work Unit\TEST\Play_Test
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -418,13 +422,33 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: TheTEST
+      - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 98358e684d20b947a428c37505f3a82f
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: TEST
+        ObjectType: 4
+        guid: a80b3d83bfaa6d449144d751f08c7819
       - ElementName: Stop_Test
         ObjectType: 3
         guid: fd3ccafafef2894abc1ee11703b2c1bd
-      Path: Events\TheTEST\Stop_Test
+      Path: Events\Default Work Unit\TEST\Stop_Test
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: TEST
+      guid: a80b3d83bfaa6d449144d751f08c7819
+      id: 3157003241
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: TEST
+        ObjectType: 4
+        guid: a80b3d83bfaa6d449144d751f08c7819
+      Path: Events\Default Work Unit\TEST
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -485,7 +509,7 @@ MonoBehaviour:
     m_lastTime: -8584624076077137784
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000d0000000e0000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
