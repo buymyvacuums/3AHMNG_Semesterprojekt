@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="TEST" ID="{29562798-4DF7-4BF8-B053-93A35B2F7320}" ShortID="582749144">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192" ID="{5E29EAC8-8715-4BB0-AAD1-B04937427629}" ShortID="699265783">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192" ID="{85496EA2-7985-4D75-A5FD-22F04E58349D}">
+									<Language>SFX</Language>
+									<AudioFile>Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="506642230"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192" ID="{85496EA2-7985-4D75-A5FD-22F04E58349D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
