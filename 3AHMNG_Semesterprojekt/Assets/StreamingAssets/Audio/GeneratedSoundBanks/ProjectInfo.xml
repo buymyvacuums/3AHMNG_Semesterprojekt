@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="3AHMNG_Semesterprojekt_Wwise" GUID="{12CB3B11-D043-4BCC-9F2C-5A319D082140}" Generator="2022.1.15.8501"/>
+	<CacheRoot>../../../../../3AHMNG_Semesterprojekt_Wwise/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{588D48CF-B290-48BC-8861-8A4D585C2217}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../../3AHMNG_Semesterprojekt_Wwise/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{D3531DFB-D210-4BEB-B8C5-37211B06E2FD}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{2C895423-6E2F-FB95-A7EF-81B5BA122890}</FileHash>
+</ProjectInfo>
