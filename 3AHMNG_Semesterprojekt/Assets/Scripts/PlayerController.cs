@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float movSpeed = 1f;
-    // Start is called before the first frame update
+    public float speed = 150f;
+    public Rigidbody rb;
+
+    // Use this for initialization
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        transform.Translate(dir * movSpeed * Time.deltaTime);
+
     }
+
+
+    void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        rb.velocity = movement * speed * Time.fixedDeltaTime;
+    }
+
+
 }
