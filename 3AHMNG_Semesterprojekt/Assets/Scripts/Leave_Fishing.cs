@@ -15,7 +15,7 @@ public class Leave_Fishing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("Main");
         }
