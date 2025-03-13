@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,13 +13,31 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask fishArea;
     [SerializeField] private GameObject _interactTXT;
+    [SerializeField] private GameObject _exitTXT;
     [SerializeField] private GameObject _fishingOBJ;
+    [SerializeField] private GameObject _cameraPos;
+    [SerializeField] private Camera _camera;
+    private CameraSmoothness _cameraScp;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         _interactTXT.SetActive(false);
+        _exitTXT.SetActive(false);
+        //_camera = GetComponent<Camera>();
+        _cameraScp = _camera.GetComponent<CameraSmoothness>();
+    }
+
+    IEnumerator StartFishing()
+    {
+        transform.position = new Vector3(17, -1.2f, -0.5f);
+        _interactTXT.SetActive(false);
+        _exitTXT.SetActive(true);
+        _cameraScp.enabled = false;
+        _camera.transform.position = _cameraPos.transform.position;
+        _camera.transform.rotation = Quaternion.Euler(90, 0, 0);
+        yield return null;
     }
 
     // Update is called once per frame
@@ -32,9 +51,10 @@ public class PlayerController : MonoBehaviour
         if(Physics.Raycast(rayOrigin, rayDirection, out rayHit, maxRayDistance, fishArea))
         {
             _interactTXT.SetActive(true);
-            if(Input.GetKey(KeyCode.E) ) 
+            if(Input.GetKeyDown(KeyCode.E) ) 
             {
-                SceneManager.LoadScene("Fishing");
+                StartCoroutine(StartFishing());
+                
             }
         }
         else
@@ -43,6 +63,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //_exitTXT.SetActive(false);
+    //_cameraScp.enabled = true;
+    //_camera.transform.position = new Vector3(0, 13.7f, -32.8f);
+    //_camera.transform.rotation = Quaternion.Euler(23, 0, 0);
 
     void FixedUpdate()
     {
