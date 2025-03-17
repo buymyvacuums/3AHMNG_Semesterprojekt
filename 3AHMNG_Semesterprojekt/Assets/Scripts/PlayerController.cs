@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E) ) 
             {
                 StartCoroutine(StartFishing());
-                
+                //SceneManager.LoadScene("Fishing");
             }
         }
         else
