@@ -22,6 +22,8 @@ public class KnowsObject : MonoBehaviour
             if(canBePressed)
             {
                 gameObject.SetActive(false);
+
+                GameManager.instance.NoteHit();
             }
         }
     }
@@ -40,6 +42,8 @@ public class KnowsObject : MonoBehaviour
         if (other.gameObject.tag == "Activator")
         {
             canBePressed = false;
+
+            GameManager.instance.NoteMissed();
         }
     }
 }
