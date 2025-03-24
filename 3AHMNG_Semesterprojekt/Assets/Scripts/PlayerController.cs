@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
             _interactTXT.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) ) 
             {
-                StartCoroutine(StartFishing());
-                //SceneManager.LoadScene("Fishing");
+                //StartCoroutine(StartFishing());
+                SceneManager.LoadScene("Fishing_Rythm");
             }
         }
         else
