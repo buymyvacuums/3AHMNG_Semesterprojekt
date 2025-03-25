@@ -12,13 +12,14 @@ public class GameManager : MonoBehaviour
     public int currentScore;
     public int scorePerNote = 100;
 
-    public GameObject _wellDoneTXT;
+    public GameObject _wellDoneTXT, _failedTXT;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;   
         _wellDoneTXT.gameObject.SetActive(false);
+        _failedTXT.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +29,11 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(EndFishing());
         }
+
+        //else
+        //{
+        //    StartCoroutine(FishFailed());
+        //}
     }
 
     public void NoteHit()
@@ -45,6 +51,13 @@ public class GameManager : MonoBehaviour
     {
         _wellDoneTXT.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Main");
+    }
+
+    IEnumerator FishFailed()
+    {
+        _failedTXT.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Main");
     }
 }
