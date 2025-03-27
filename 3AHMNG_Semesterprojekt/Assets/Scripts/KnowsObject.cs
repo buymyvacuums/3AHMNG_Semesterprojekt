@@ -21,7 +21,7 @@ public class KnowsObject : MonoBehaviour
         {
             if(canBePressed)
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
 
                 GameManager.instance.NoteHit();
             }

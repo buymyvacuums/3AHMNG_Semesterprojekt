@@ -45,31 +45,37 @@ public class ComboScroller : MonoBehaviour
         //    SceneManager.LoadScene("Main");
         //}
 
-        if(GameManager.instance.missedNote + GameManager.instance.hitNote == 10)
+        if(GameManager.instance.hitNote == 5)
         {
-            if(GameManager.instance.missedNote > 0)
-            {
-                StartCoroutine(FishFailed());
-            }
-            else
-            {
-                StartCoroutine(EndFishing());
-            }
+            
+            StartCoroutine(EndFishing());
         }
+        else if(GameManager.instance.missedNote == 5)
+        {
+            
+            StartCoroutine(FishFailed());
+        }
+        
     }
 
     IEnumerator EndFishing()
     {
         _wonTXT.gameObject.SetActive(true);
-        //Play Victory Sound?
+        //Play Victory Sound
         yield return new WaitForSeconds(1);
+        GameManager.instance.currentScore += 5;
+        GameManager.instance.hitNote = 0;
+        GameManager.instance.missedNote = 0;
         SceneManager.LoadScene("Main");
     }
 
     IEnumerator FishFailed()
     {
         _failTXT.gameObject.SetActive(true);
+        //Play Fail Sound
         yield return new WaitForSeconds(1);
+        GameManager.instance.hitNote = 0;
+        GameManager.instance.missedNote = 0;
         SceneManager.LoadScene("Main");
     }
 }

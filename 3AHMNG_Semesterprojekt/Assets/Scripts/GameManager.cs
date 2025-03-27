@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //public ComboScroller theScroller;
+    
 
     public static GameManager instance;
 
@@ -17,20 +17,28 @@ public class GameManager : MonoBehaviour
     public float _rndStartTime;
 
 
-    public GameObject _fishTXT, _wellDoneTXT;
+    public GameObject _wellDoneTXT;
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;   
-        //_fishTXT.gameObject.SetActive(false);
-        //_failedTXT.gameObject.SetActive(false);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            //Debug.LogWarning("Multiple instances of " + instance.GetType().Name + " #1", gameObject);
+            //Debug.LogWarning("Destroyed " + this.gameObject.name + " because there must only be one " + instance.GetType().Name);
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        DontDestroyOnLoad(gameObject);
+        
 
         
     }
@@ -39,7 +47,7 @@ public class GameManager : MonoBehaviour
     {
         hitNote += 1;
         Debug.Log("Hit on Time");
-        currentScore += scorePerNote;
+        
     }
 
     public void NoteMissed()
@@ -50,13 +58,14 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Wait()
     {
+        PlayerController.instance._interactTXT.SetActive(false);
         missedNote = 0;
         hitNote = 0;
         _rndStartTime = Random.Range(1f, 6f);
         //Start Waiting Sound
         yield return new WaitForSeconds(_rndStartTime);
         
-        _fishTXT.gameObject.SetActive(true);
+        PlayerController.instance._fishBitTXT.gameObject.SetActive(true);
         // Start bite sound + Stop Waiting Sound
         yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene("Fishing_Rythm");
