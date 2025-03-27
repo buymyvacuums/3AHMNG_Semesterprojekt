@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask fishArea;
     [SerializeField] private GameObject _interactTXT;
-    [SerializeField] private GameObject _exitTXT;
+    [SerializeField] private GameObject _fishBitTXT;
     [SerializeField] private GameObject _fishingOBJ;
     [SerializeField] private GameObject _cameraPos;
     [SerializeField] private Camera _camera;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         _interactTXT.SetActive(false);
-        _exitTXT.SetActive(false);
+        //_exitTXT.SetActive(false);
         //_camera = GetComponent<Camera>();
         _cameraScp = _camera.GetComponent<CameraSmoothness>();
     }
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(17, -1.2f, -0.5f);
         _interactTXT.SetActive(false);
-        _exitTXT.SetActive(true);
+        //_exitTXT.SetActive(true);
         _cameraScp.enabled = false;
         _camera.transform.position = _cameraPos.transform.position;
         _camera.transform.rotation = Quaternion.Euler(90, 0, 0);
@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
             _interactTXT.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) ) 
             {
-                //StartCoroutine(StartFishing());
-                SceneManager.LoadScene("Fishing_Rythm");
+                StartCoroutine(GameManager.instance.Wait());
+                
             }
         }
         else

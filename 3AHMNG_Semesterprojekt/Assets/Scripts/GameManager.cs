@@ -5,59 +5,61 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public ComboScroller theScroller;
+    //public ComboScroller theScroller;
 
     public static GameManager instance;
 
     public int currentScore;
     public int scorePerNote = 100;
+    public int hitNote;
+    public int missedNote;
 
-    public GameObject _wellDoneTXT, _failedTXT;
+    public float _rndStartTime;
+
+
+    public GameObject _fishTXT, _wellDoneTXT;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;   
-        _wellDoneTXT.gameObject.SetActive(false);
-        _failedTXT.gameObject.SetActive(false);
+        //_fishTXT.gameObject.SetActive(false);
+        //_failedTXT.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentScore == 500)
-        {
-            StartCoroutine(EndFishing());
-        }
+        DontDestroyOnLoad(gameObject);
 
-        //else
-        //{
-        //    StartCoroutine(FishFailed());
-        //}
+        
     }
 
     public void NoteHit()
     {
+        hitNote += 1;
         Debug.Log("Hit on Time");
         currentScore += scorePerNote;
     }
 
     public void NoteMissed()
     {
+        missedNote += 1;
         Debug.Log("Missed Note");
     }
 
-    IEnumerator EndFishing()
+    public IEnumerator Wait()
     {
-        _wellDoneTXT.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Main");
+        missedNote = 0;
+        hitNote = 0;
+        _rndStartTime = Random.Range(1f, 6f);
+        //Start Waiting Sound
+        yield return new WaitForSeconds(_rndStartTime);
+        
+        _fishTXT.gameObject.SetActive(true);
+        // Start bite sound + Stop Waiting Sound
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("Fishing_Rythm");
     }
 
-    IEnumerator FishFailed()
-    {
-        _failedTXT.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Main");
     }
-}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComboScroller : MonoBehaviour
 {
@@ -8,49 +9,67 @@ public class ComboScroller : MonoBehaviour
 
     public bool hasStarted;
 
-    [SerializeField] private GameObject _goTXT, _combo, _pressTXT;
+    [SerializeField] private GameObject _failTXT, _wonTXT;
 
-    public float _rndStartTime;
 
     // Start is called before the first frame update
     void Start()
     {
         beatTempo = beatTempo / 60f;
         
-        _goTXT.SetActive(false);
-        _combo.gameObject.SetActive(false);
+        _failTXT.SetActive(false);
+        _wonTXT.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(!hasStarted)
+        //if(!hasStarted)
+        //{
+        //    if (Input.anyKeyDown)
+        //    {
+        //        //_pressTXT.SetActive(false);
+        //        //_goTXT.gameObject.SetActive(true);
+        //        //StartCoroutine(GameManager.instance.Wait());
+        //        //gameObject.SetActive(true);
+        //        //hasStarted = true;
+        //    }
+        //}
+        
+        
+        transform.position -= new Vector3 (0f, beatTempo * Time.deltaTime, 0f);
+        
+        //if(GameManager.instance.currentScore == 500)
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
+
+        if(GameManager.instance.missedNote + GameManager.instance.hitNote == 10)
         {
-            if (Input.anyKeyDown)
+            if(GameManager.instance.missedNote > 0)
             {
-                _pressTXT.SetActive(false);
-                //_goTXT.gameObject.SetActive(true);
-                StartCoroutine(Wait());
-                //gameObject.SetActive(true);
-                //hasStarted = true;
+                StartCoroutine(FishFailed());
             }
-        }
-        else
-        {
-            transform.position -= new Vector3 (0f, beatTempo * Time.deltaTime, 0f);
+            else
+            {
+                StartCoroutine(EndFishing());
+            }
         }
     }
 
-   IEnumerator Wait()
+    IEnumerator EndFishing()
     {
-        _rndStartTime = Random.Range(1f, 6f);
-        _combo.gameObject.SetActive(false);
-        yield return new WaitForSeconds(_rndStartTime);
-        _goTXT.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        _goTXT.gameObject.SetActive(false);
-        _combo.gameObject.SetActive(true);
-        hasStarted = true;
+        _wonTXT.gameObject.SetActive(true);
+        //Play Victory Sound?
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Main");
+    }
+
+    IEnumerator FishFailed()
+    {
+        _failTXT.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Main");
     }
 }
