@@ -862,7 +862,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _interactTXT: {fileID: 441620872}
-  _fishBitTXT: {fileID: 0}
+  _fishBitTXT: {fileID: 630710429}
   _fishingOBJ: {fileID: 233781513}
   _cameraPos: {fileID: 344367409}
   _camera: {fileID: 1045284103}
@@ -1213,13 +1213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e00123a495c2f4bb4a985b6e204b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 467577630}
   currentScore: 0
   scorePerNote: 100
   hitNote: 0
   missedNote: 0
   _rndStartTime: 0
   _fishTXT: {fileID: 630710429}
-  _wellDoneTXT: {fileID: 0}
 --- !u!1 &630710429
 GameObject:
   m_ObjectHideFlags: 0
