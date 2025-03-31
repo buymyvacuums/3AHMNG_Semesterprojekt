@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int currentScore;
+    
     public int scorePerNote = 100;
     public int hitNote;
     public int missedNote;
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-
+        
         
     }
 
