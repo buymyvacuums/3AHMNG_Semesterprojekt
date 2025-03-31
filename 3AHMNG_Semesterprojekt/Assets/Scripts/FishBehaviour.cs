@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Galaxy
+{
+    Tutoria,
+    Prehistoria,
+    Biologica,
+    Galaxia
+}
 class Fish
 {
     public int _rarity;
     public string _name;
-    public int _fishPoints;
+    public int _fishCode;
     public GameObject _combo;
     public Sprite _fishSprite;
 }
@@ -99,22 +106,24 @@ class Hemospheel : Fish
 {
 
 }
-class Sprayfish : Fish
-{
-
-}
 public class FishBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject _starComb;
 
+    public static FishBehaviour _instance;
+
     // Start is called before the first frame update
     void Start()
     {
+        _instance = this;
+
         Fish _stardine = new Fish();
+        _stardine._fishCode = 1;
         _stardine._rarity = 1;
         _stardine._name = "Stardine";
-        _stardine._fishPoints = Random.Range(1,5);
         _stardine._combo = _starComb;
+
+        Fish _sprayfish = new Fish();
     }
 
     // Update is called once per frame
