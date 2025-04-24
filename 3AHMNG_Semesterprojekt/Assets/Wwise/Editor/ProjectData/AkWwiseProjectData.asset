@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584561838587885949
+    m_lastTime: -8584561094999824818
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -649,6 +649,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.6711655
       minDuration: 1.4274094
+    - name: walkloop
+      guid: b5efc752504f564393ee88f99bdbef42
+      id: 2636529496
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: walkloop
+        ObjectType: 3
+        guid: b5efc752504f564393ee88f99bdbef42
+      Path: Events\Default Work Unit\placeholders\walkloop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -661,8 +681,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c1900241dad3f349b9bd515f65558efb
     GuidInternal: 
-    m_lastTime: -8584593835198256049
-    List: []
+    m_lastTime: -8584561084933435986
+    List:
+    - name: walk
+      guid: 3767e52c1555e9478eb04eb5467b33cb
+      id: 2108779966
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c1900241dad3f349b9bd515f65558efb
+      - ElementName: walk
+        ObjectType: 13
+        guid: 3767e52c1555e9478eb04eb5467b33cb
+      Path: Game Parameters\Default Work Unit\walk
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -706,7 +740,7 @@ MonoBehaviour:
     m_lastTime: -8584593835197762200
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c0000000d0000000e0000001a000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000000b0000000c0000000d0000000e00000016000000170000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

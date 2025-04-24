@@ -9,21 +9,25 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{C759B23D-26F6-9E4B-645B-2CEC5A523F4D}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{1BC0FF2A-9DCE-9ABC-91F6-A35E43C92596}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
 				<File Id="22914865" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>success.wav</ShortName>
-					<CachePath>SFX/success_F6998FC0.wem</CachePath>
+					<CachePath>SFX/success_8A3AF540.wem</CachePath>
 				</File>
 				<File Id="50014804" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fail.wav</ShortName>
-					<CachePath>SFX/fail_1F7D65D1.wem</CachePath>
+					<CachePath>SFX/fail_0174E4BC.wem</CachePath>
 				</File>
 				<File Id="91520667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hit4.wav</ShortName>
 					<CachePath>SFX/hit4_4EE3279A.wem</CachePath>
+				</File>
+				<File Id="231802220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walking-001.wav</ShortName>
+					<CachePath>SFX/walking-001_DDC112E7.wem</CachePath>
 				</File>
 				<File Id="300009681" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reel.wav</ShortName>
@@ -56,6 +60,10 @@
 				<File Id="862933871" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>throw.wav</ShortName>
 					<CachePath>SFX/throw_A79B58A7.wem</CachePath>
+				</File>
+				<File Id="956377342" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walking-002.wav</ShortName>
+					<CachePath>SFX/walking-002_DDC112E7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -111,9 +119,18 @@
 						<MediaRef Id="862933871"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2636529496" Name="walkloop" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="231802220"/>
+						<MediaRef Id="956377342"/>
+					</MediaRefs>
+				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2108779966" Name="walk"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0E4D9290-44AE-80CA-4F22-62BE198F5E4A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6A904E35-95D8-7D67-BCF2-F084459BDD07}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -127,6 +144,9 @@
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="2108779966" Name="walk"/>
+			</GameParameters>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -243,5 +263,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F8529667-33B2-C84F-A1D2-26592596F41B}</FileHash>
+	<FileHash>{C58943DB-A337-3011-8E03-4C5153AF9A5E}</FileHash>
 </SoundBanksInfo>

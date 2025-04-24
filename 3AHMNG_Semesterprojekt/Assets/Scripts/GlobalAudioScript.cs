@@ -10,6 +10,8 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akReel;
     [SerializeField] public AK.Wwise.Event _akFail;
     [SerializeField] public AK.Wwise.Event _akSuccess;
+    [SerializeField] public AK.Wwise.Event _akWalkLoop;
+    [SerializeField] private AK.Wwise.RTPC _akPWalk;
 
     private void Awake()
     {
@@ -17,7 +19,14 @@ public class GlobalAudioScript : MonoBehaviour
         {  instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else { Destroy(gameObject); } 
+        else { Destroy(gameObject); }
+
+        
+    }
+
+    private void Start()
+    {
+       PlaySound(_akWalkLoop);
     }
 
     // Update is called once per frame
@@ -26,6 +35,10 @@ public class GlobalAudioScript : MonoBehaviour
         
     }
 
-    public void PlaySound(AK.Wwise.Event sound) { sound?.Post(gameObject); }
+    public void PlaySound(AK.Wwise.Event sound) { sound?.Post(this.gameObject); }
+    public void WalkSounds(float value)
+    {
+        _akPWalk.SetValue(gameObject, value);
+    }
 
 }

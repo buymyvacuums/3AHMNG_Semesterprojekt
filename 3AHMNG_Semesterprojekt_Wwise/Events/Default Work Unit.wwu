@@ -172,6 +172,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="walkloop" ID="{52C7EFB5-4F50-4356-93EE-88F99BDBEF42}">
+							<ChildrenList>
+								<Action Name="" ID="{57861A3C-A9BC-44C2-AB88-1F53DC44F809}" ShortID="70659134">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="walk loop" ID="{13EE98B5-B581-4374-AC10-C41125AD5242}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

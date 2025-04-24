@@ -24,7 +24,13 @@ namespace AK
         static const AkUniqueID STOP_TEST = 2051061508U;
         static const AkUniqueID SUCCESS = 3625060726U;
         static const AkUniqueID THROW = 745179803U;
+        static const AkUniqueID WALKLOOP = 2636529496U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID WALK = 2108779966U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

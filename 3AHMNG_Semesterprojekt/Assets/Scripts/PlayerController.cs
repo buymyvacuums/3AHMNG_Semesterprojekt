@@ -69,6 +69,11 @@ public class PlayerController : MonoBehaviour
         //Movement
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rb.velocity = movement * speed * Time.fixedDeltaTime;
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            GlobalAudioScript.instance.WalkSounds(1);
+        }
+        else { GlobalAudioScript.instance.WalkSounds(0); }
     }
 
 

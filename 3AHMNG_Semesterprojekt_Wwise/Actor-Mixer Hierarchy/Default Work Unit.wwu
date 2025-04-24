@@ -149,7 +149,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="fail" ID="{F42B9F7D-52E2-4AE7-8F93-0D07737B3C69}">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0260744985673352"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.436231884057969"/>
 									</PropertyList>
@@ -176,7 +176,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="success" ID="{62F5C25A-35E2-4456-B671-33A0B74C4B9E}">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0300859598853868"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.442318840579709"/>
 									</PropertyList>
@@ -491,6 +491,45 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{8558D8A3-51A5-454E-8D3E-DCFF2E74FE1F}" ShortID="20556184">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="walk" ID="{2CE56737-5515-47E9-8EB0-4EB5467B33CB}" WorkUnitID="{410290C1-D3DA-49F3-B9BD-515F65558EFB}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{4E186792-EB41-4369-AECF-85AD5D158542}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<Playlist>
 								<ItemRef Name="walking-001" ID="{CF830D8C-1BCE-488F-AF0D-30980BB1C19E}"/>
 								<ItemRef Name="walking-002" ID="{AE618BBC-CBF2-4F18-AAA8-6B99F5E316FE}"/>
