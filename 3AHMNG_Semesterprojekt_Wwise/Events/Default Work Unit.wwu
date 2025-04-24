@@ -36,6 +36,144 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="placeholders" ID="{80C57B90-5F94-442E-BED6-7D40454357AB}" ShortID="968966781">
+					<ChildrenList>
+						<Event Name="throw" ID="{74377E13-AABC-4915-B02C-448F055972F0}">
+							<ChildrenList>
+								<Action Name="" ID="{18268FC0-65E1-4C07-BF89-4E329D7C6244}" ShortID="768804333">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="throw" ID="{D482D93B-B7C5-41E8-BFA2-E893E45851D2}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F09DDA07-6261-40D5-9084-9F8B9BC0565B}" ShortID="400462398">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="plunge" ID="{7BD067A4-8A11-4810-A20B-06F627A22B56}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bite" ID="{20BCC2FF-1FE2-45C8-9A59-8AD1B031C570}">
+							<ChildrenList>
+								<Action Name="" ID="{3EF49DBE-7552-4A2F-9795-E9334E32AB02}" ShortID="742696244">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bite" ID="{0CF3EC1A-1C21-453D-84C9-2DF44A411077}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="reel" ID="{19B90884-FC86-4635-B48B-13F2D00716DE}">
+							<ChildrenList>
+								<Action Name="" ID="{1BEB985D-D2FC-453A-A2B2-CA1D6E608533}" ShortID="314394903">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="success" ID="{2B8D53FE-0FEE-4518-B76E-B2FAE68E41F1}">
+							<ChildrenList>
+								<Action Name="" ID="{E22913F0-9994-4AD9-9B1E-A53231F5DA67}" ShortID="623427049">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CC96CBB3-67D2-4EBA-AB55-892F2EE89DBD}" ShortID="402968006">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="success" ID="{84F7C6D8-82ED-4634-B7E2-28AABEC69D4A}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fail" ID="{213C4141-EE2E-4708-B321-765C58979B47}">
+							<ChildrenList>
+								<Action Name="" ID="{29AF336C-0509-4D4D-BB23-585BBB3A34BD}" ShortID="658635865">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{18259CAD-E045-40B5-8BA1-92C9DBF75500}" ShortID="831725228">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fail" ID="{EB4F1DA6-27E9-42A7-9E9E-8CF2C5467415}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hit1" ID="{AF3E9C30-81F0-4BD1-930F-18438B030167}">
+							<ChildrenList>
+								<Action Name="" ID="{8D74E32A-E9B2-4F45-AA0F-BB30BD851F53}" ShortID="211881301">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hit1" ID="{2ACAC7C8-419B-4B8E-8F9F-250373D3E6B4}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hit2" ID="{F055BF40-D1C6-42BF-B80B-22D8930A9CF3}">
+							<ChildrenList>
+								<Action Name="" ID="{CC595799-CB8A-4279-8A75-A30F479B42BB}" ShortID="343868150">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hit2" ID="{C02F428E-D9CD-4BB9-944E-0B01DAD09417}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hit3" ID="{2FF1DB6B-B781-4082-84AC-1FE34E7925A3}">
+							<ChildrenList>
+								<Action Name="" ID="{E24424F8-9343-4511-A047-27919BD74EAC}" ShortID="535710209">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hit3" ID="{9F4EF9BB-6BBF-4BB3-B128-335964CFAB18}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hit4" ID="{73687CD9-5535-4327-9854-0B486AC37C9D}">
+							<ChildrenList>
+								<Action Name="" ID="{224C0455-9E4C-49FC-9673-8EAB840B9F86}" ShortID="425385609">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hit4" ID="{9F6DAA2A-0024-437F-85A4-FE7E3BF572B5}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -13,8 +13,17 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BITE = 1645043423U;
+        static const AkUniqueID FAIL = 2596272617U;
+        static const AkUniqueID HIT1 = 3232033841U;
+        static const AkUniqueID HIT2 = 3232033842U;
+        static const AkUniqueID HIT3 = 3232033843U;
+        static const AkUniqueID HIT4 = 3232033844U;
         static const AkUniqueID PLAY_TEST = 3187507146U;
+        static const AkUniqueID REEL = 2512485637U;
         static const AkUniqueID STOP_TEST = 2051061508U;
+        static const AkUniqueID SUCCESS = 3625060726U;
+        static const AkUniqueID THROW = 745179803U;
     } // namespace EVENTS
 
     namespace BANKS

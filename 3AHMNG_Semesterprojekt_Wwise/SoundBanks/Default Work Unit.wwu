@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="MainSoundbank" ID="{3D2BA758-DD45-4A9C-AFB2-FBDF59D4653B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="placeholders" ID="{80C57B90-5F94-442E-BED6-7D40454357AB}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TEST" ID="{833D0BA8-AABF-446D-9144-D751F08C7819}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             _interactTXT.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) ) 
             {
-                
+                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
                 StartCoroutine(GameManager.instance.Wait());
             }
         }

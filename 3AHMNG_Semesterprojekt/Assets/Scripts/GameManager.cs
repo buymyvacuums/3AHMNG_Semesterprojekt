@@ -69,7 +69,10 @@ public class GameManager : MonoBehaviour
         
         PlayerController.instance._fishBitTXT.gameObject.SetActive(true);
         // Start bite sound + Stop Waiting Sound
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akBite);
+        
         yield return new WaitForSeconds(0.3f);
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akReel);
         SceneManager.LoadScene("Fishing_Rythm");
     }
 

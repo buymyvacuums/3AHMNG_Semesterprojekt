@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5fa7370285552e4cbab601d8a9be981e
     GuidInternal: 
-    m_lastTime: -8584593835198126387
+    m_lastTime: -8584581854818053466
     List:
     - name: Ambience
       guid: 35d400884ec7a04fb3bad60aba346ef7
@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dd0c7b8377c1b74185fe70c0e3120a6f
     GuidInternal: 
-    m_lastTime: -8584593835197782132
+    m_lastTime: -8584561838587953528
     List:
     - name: MainSoundbank
       guid: 58a72b3d45dd9c4aafb2fbdf59d4653b
@@ -393,8 +393,145 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584593835198266019
+    m_lastTime: -8584561838587885949
     List:
+    - name: bite
+      guid: ffc2bc20e21fc8459a598ad1b031c570
+      id: 1645043423
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: bite
+        ObjectType: 3
+        guid: ffc2bc20e21fc8459a598ad1b031c570
+      Path: Events\Default Work Unit\placeholders\bite
+      maxAttenuation: 0
+      maxDuration: 0.60227287
+      minDuration: 0.43708605
+    - name: fail
+      guid: 41413c212eee0847b321765c58979b47
+      id: 2596272617
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: fail
+        ObjectType: 3
+        guid: 41413c212eee0847b321765c58979b47
+      Path: Events\Default Work Unit\placeholders\fail
+      maxAttenuation: 0
+      maxDuration: 0.43623188
+      minDuration: 0.43623188
+    - name: hit1
+      guid: 309c3eaff081d14b930f18438b030167
+      id: 3232033841
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: hit1
+        ObjectType: 3
+        guid: 309c3eaff081d14b930f18438b030167
+      Path: Events\Default Work Unit\placeholders\hit1
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: hit2
+      guid: 40bf55f0c6d1bf42b80b22d8930a9cf3
+      id: 3232033842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: hit2
+        ObjectType: 3
+        guid: 40bf55f0c6d1bf42b80b22d8930a9cf3
+      Path: Events\Default Work Unit\placeholders\hit2
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: hit3
+      guid: 6bdbf12f81b7824084ac1fe34e7925a3
+      id: 3232033843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: hit3
+        ObjectType: 3
+        guid: 6bdbf12f81b7824084ac1fe34e7925a3
+      Path: Events\Default Work Unit\placeholders\hit3
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: hit4
+      guid: d97c68733555274398540b486ac37c9d
+      id: 3232033844
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: hit4
+        ObjectType: 3
+        guid: d97c68733555274398540b486ac37c9d
+      Path: Events\Default Work Unit\placeholders\hit4
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: placeholders
+      guid: 907bc580945f2e44bed67d40454357ab
+      id: 2644623831
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      Path: Events\Default Work Unit\placeholders
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Test
       guid: 7ad253eb1babad499786837988855208
       id: 3187507146
@@ -412,6 +549,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7ad253eb1babad499786837988855208
       Path: Events\Default Work Unit\TEST\Play_Test
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: reel
+      guid: 8408b91986fc3546b48b13f2d00716de
+      id: 2512485637
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: reel
+        ObjectType: 3
+        guid: 8408b91986fc3546b48b13f2d00716de
+      Path: Events\Default Work Unit\placeholders\reel
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -435,6 +592,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: success
+      guid: fe538d2bee0f1845b76eb2fae68e41f1
+      id: 3625060726
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: success
+        ObjectType: 3
+        guid: fe538d2bee0f1845b76eb2fae68e41f1
+      Path: Events\Default Work Unit\placeholders\success
+      maxAttenuation: 0
+      maxDuration: 0.44231883
+      minDuration: 0.44231883
     - name: TEST
       guid: a80b3d83bfaa6d449144d751f08c7819
       id: 3157003241
@@ -452,6 +629,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: throw
+      guid: 137e3774bcaa1549b02c448f055972f0
+      id: 745179803
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: throw
+        ObjectType: 3
+        guid: 137e3774bcaa1549b02c448f055972f0
+      Path: Events\Default Work Unit\placeholders\throw
+      maxAttenuation: 0
+      maxDuration: 1.6711655
+      minDuration: 1.4274094
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -509,7 +706,7 @@ MonoBehaviour:
     m_lastTime: -8584593835197762200
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000d0000000e0000001a000000
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c0000000d0000000e0000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

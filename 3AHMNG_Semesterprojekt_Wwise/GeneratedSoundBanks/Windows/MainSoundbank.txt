@@ -1,7 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
+	745179803	throw			\Default Work Unit\placeholders\throw	
+	1645043423	bite			\Default Work Unit\placeholders\bite	
 	2051061508	Stop_Test			\Default Work Unit\TEST\Stop_Test	
+	2512485637	reel			\Default Work Unit\placeholders\reel	
+	2596272617	fail			\Default Work Unit\placeholders\fail	
 	3187507146	Play_Test			\Default Work Unit\TEST\Play_Test	
+	3232033841	hit1			\Default Work Unit\placeholders\hit1	
+	3232033842	hit2			\Default Work Unit\placeholders\hit2	
+	3232033843	hit3			\Default Work Unit\placeholders\hit3	
+	3232033844	hit4			\Default Work Unit\placeholders\hit4	
+	3625060726	success			\Default Work Unit\placeholders\success	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	506642230	Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192	C:\Game Projects\2024_25_SemesterProjk\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192		1303992
+	22914865	success	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\success_F6998FC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\success		85020
+	50014804	fail	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\fail_1F7D65D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\fail		83852
+	91520667	hit4	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit4_4EE3279A.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit4		25696
+	300009681	reel	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\reel_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\reel loop\reel		153400
+	363098602	plunge	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\plunge_EA0AC281.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\plunge		200196
+	364352627	hit1	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit1_358D8159.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit1		25696
+	493269055	bite	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\bite_2A6D0567.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\bite		101524
+	506642230	Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192		1303992
+	759204815	hit3	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit3_F4C1C370.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit3		25696
+	822219929	hit2	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit2_2CA62ACD.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit2		25696
+	862933871	throw	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\throw_A79B58A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\throw		23176
 

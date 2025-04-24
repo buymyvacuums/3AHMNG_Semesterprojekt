@@ -62,6 +62,7 @@ public class ComboScroller : MonoBehaviour
     {
         _wonTXT.gameObject.SetActive(true);
         //Play Victory Sound
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akSuccess);
         yield return new WaitForSeconds(1);
         GameManager.instance.currentScore += 5;
         GameManager.instance.hitNote = 0;
@@ -73,6 +74,7 @@ public class ComboScroller : MonoBehaviour
     {
         _failTXT.gameObject.SetActive(true);
         //Play Fail Sound
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akFail);
         yield return new WaitForSeconds(1);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
