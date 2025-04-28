@@ -17,7 +17,11 @@ public class KnowsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(keyToPress))
+        //moving
+        transform.position -= new Vector3(0f, ComboScroller._ComboInstance.beatTempo * Time.deltaTime, 0f);
+
+
+        if (Input.GetKeyDown(keyToPress))
         {
             if(canBePressed)
             {

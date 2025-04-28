@@ -1092,6 +1092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611782736}
   - component: {fileID: 611782737}
+  - component: {fileID: 611782738}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1132,6 +1133,21 @@ MonoBehaviour:
   missedNote: 0
   _rndStartTime: 0
   _wellDoneTXT: {fileID: 0}
+--- !u!114 &611782738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611782735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9871e22f62e4d4041b8df1cd051994a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 0
+  galaxy: 0
+  fishCode: 0
 --- !u!1 &630710429
 GameObject:
   m_ObjectHideFlags: 0

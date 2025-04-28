@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public float _rndStartTime;
 
+    public int fishCode;
 
     public GameObject _wellDoneTXT;
 
@@ -35,12 +36,13 @@ public class GameManager : MonoBehaviour
             //Debug.LogWarning("Destroyed " + this.gameObject.name + " because there must only be one " + instance.GetType().Name);
             Destroy(gameObject);
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        FishBehaviour._instance.galaxy = Galaxy.Tutoria;
         
         
     }
@@ -60,14 +62,38 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Wait()
     {
+        fishCode = 0;
+
+        if (FishBehaviour._instance.galaxy == Galaxy.Tutoria)
+        {
+            fishCode = Random.Range(1, 7);
+            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+        }
+        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
+        {
+            fishCode = Random.Range(7, 13);
+            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+        }
+        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
+        {
+            fishCode = Random.Range(13, 19);
+            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+        }
+        if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
+        {
+            fishCode = Random.Range(19, 25);
+            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+        }
+
         PlayerController.instance._interactTXT.SetActive(false);
         missedNote = 0;
         hitNote = 0;
         _rndStartTime = Random.Range(1f, 6f);
+        
         //Start Waiting Sound
         yield return new WaitForSeconds(_rndStartTime);
-        
         PlayerController.instance._fishBitTXT.gameObject.SetActive(true);
+
         // Start bite sound + Stop Waiting Sound
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akBite);
         
