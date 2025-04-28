@@ -66,22 +66,22 @@ public class GameManager : MonoBehaviour
 
         if (FishBehaviour._instance.galaxy == Galaxy.Tutoria)
         {
-            fishCode = Random.Range(1, 7);
+            fishCode = Random.Range(1, 4);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
         if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
         {
-            fishCode = Random.Range(7, 13);
+            fishCode = Random.Range(4, 10);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
         if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
         {
-            fishCode = Random.Range(13, 19);
+            fishCode = Random.Range(10, 17);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
         if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
         {
-            fishCode = Random.Range(19, 25);
+            fishCode = Random.Range(17, 25);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
 

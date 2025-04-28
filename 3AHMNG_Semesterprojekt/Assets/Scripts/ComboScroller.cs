@@ -24,6 +24,8 @@ public class ComboScroller : MonoBehaviour
 
     private void Awake()
     {
+        FishBehaviour._instance.FishDifficulty();
+
         _ComboInstance = this;
 
         if (FishBehaviour._instance.difficulty == Difficulty.Easy)
@@ -41,6 +43,11 @@ public class ComboScroller : MonoBehaviour
             ComboScroller._ComboInstance._comboLength = 12;
         }
 
+        if (FishBehaviour._instance.difficulty == Difficulty.Legendary)
+        {
+            ComboScroller._ComboInstance._comboLength = 15;
+        }
+
         if (FishBehaviour._instance.difficulty == Difficulty.God)
         {
             ComboScroller._ComboInstance._comboLength = 18;
@@ -50,12 +57,66 @@ public class ComboScroller : MonoBehaviour
     void Start()
     {
         beatTempo = beatTempo / 60f;
+
+
         
         _failTXT.SetActive(false);
         _wonTXT.gameObject.SetActive(false);
 
         //Combo Randomizer
         if (_comboLength == 5)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
+
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = i + 3;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+        }
+        if (_comboLength == 8)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
+
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = i + 3;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+        }
+        if (_comboLength == 12)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
+
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = i + 3;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+        }
+        if (_comboLength == 15)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
+
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = i + 3;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+        }
+        if (_comboLength == 18)
         {
             for (int i = 0; i < _comboLength; i++)
             {
@@ -75,7 +136,6 @@ public class ComboScroller : MonoBehaviour
     void Update()
     {
         
-
 
         if (GameManager.instance.hitNote == _comboLength)
         {

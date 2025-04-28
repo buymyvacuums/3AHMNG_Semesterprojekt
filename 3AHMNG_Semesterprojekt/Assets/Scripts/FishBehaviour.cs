@@ -16,6 +16,7 @@ public enum Difficulty
     Easy,
     Medium,
     Hard,
+    Legendary,
     God
 }
 
@@ -67,7 +68,7 @@ public class FishBehaviour : MonoBehaviour
         Fish _hemospheel = new Fish();
         _hemospheel._fishCode = 3;
         _hemospheel._rarity = 1;
-        _hemospheel._name = "Hemospeel";
+        _hemospheel._name = "Hemospheel";
         _hemospheel._difficulty = Difficulty.Easy;
         fishDictionary.Add(_hemospheel._fishCode, _hemospheel);
 
@@ -82,14 +83,14 @@ public class FishBehaviour : MonoBehaviour
         _sacabambaspis._fishCode = 5;
         _sacabambaspis._rarity = 1;
         _sacabambaspis._name = "Sacabambaspis";
-        _sacabambaspis._difficulty = Difficulty.Easy;
+        _sacabambaspis._difficulty = Difficulty.Medium;
         fishDictionary.Add(_sacabambaspis._fishCode, _sacabambaspis);
 
         Fish _horseshoeCrab = new Fish();
         _horseshoeCrab._fishCode = 6;
         _horseshoeCrab._rarity = 1;
         _horseshoeCrab._name = "Horseshoe Crab";
-        _horseshoeCrab._difficulty = Difficulty.Easy;
+        _horseshoeCrab._difficulty = Difficulty.Medium;
         fishDictionary.Add(_horseshoeCrab._fishCode, _horseshoeCrab);
     }
 
@@ -105,12 +106,7 @@ public class FishBehaviour : MonoBehaviour
 
     public string GetFishNameByCode(int code)
     {
-        //if (code == 0)
-        //{
-        //    Debug.LogError("Fish code is 0. It may not be initialized properly.");
-        //    return "Unknown Fish";
-        //}
-
+        
         if (fishDictionary.TryGetValue(code, out Fish fish))
         {
             return fish._name;
@@ -120,6 +116,19 @@ public class FishBehaviour : MonoBehaviour
             return "Unknown Fish";
         }
     }
+
+    public void FishDifficulty()
+    {
+        // Get all the keys (fish codes) from the dictionary
+        List<int> fishCodes = new List<int>(fishDictionary.Keys);
+
+        // Get the fish
+        Fish selectedFish = fishDictionary[GameManager.instance.fishCode];
+
+        // Set the difficulty to the fish's difficulty
+        difficulty = selectedFish._difficulty;
+    }
+
 
 
 }
