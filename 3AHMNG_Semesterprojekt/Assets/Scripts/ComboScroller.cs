@@ -28,29 +28,34 @@ public class ComboScroller : MonoBehaviour
 
         _ComboInstance = this;
 
-        if (FishBehaviour._instance.difficulty == Difficulty.Easy)
+        if (FishBehaviour._instance.difficulty == Difficulty.Common)
         {
             ComboScroller._ComboInstance._comboLength = 5;
         }
 
-        if (FishBehaviour._instance.difficulty == Difficulty.Medium)
+        if (FishBehaviour._instance.difficulty == Difficulty.Uncommon)
         {
             ComboScroller._ComboInstance._comboLength = 8;
         }
 
-        if (FishBehaviour._instance.difficulty == Difficulty.Hard)
+        if (FishBehaviour._instance.difficulty == Difficulty.Rare)
         {
             ComboScroller._ComboInstance._comboLength = 12;
         }
 
-        if (FishBehaviour._instance.difficulty == Difficulty.Legendary)
+        if (FishBehaviour._instance.difficulty == Difficulty.Epic)
         {
             ComboScroller._ComboInstance._comboLength = 15;
         }
 
-        if (FishBehaviour._instance.difficulty == Difficulty.God)
+        if (FishBehaviour._instance.difficulty == Difficulty.Legendary)
         {
             ComboScroller._ComboInstance._comboLength = 18;
+        }
+
+        if (FishBehaviour._instance.difficulty == Difficulty.God)
+        {
+            ComboScroller._ComboInstance._comboLength = 21;
         }
     }
     // Start is called before the first frame update
@@ -117,6 +122,19 @@ public class ComboScroller : MonoBehaviour
             }
         }
         if (_comboLength == 18)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
+
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = i + 3;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+        }
+        if (_comboLength == 21)
         {
             for (int i = 0; i < _comboLength; i++)
             {

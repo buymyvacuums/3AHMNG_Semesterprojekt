@@ -37,14 +37,35 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        FishBehaviour._instance.galaxy = Galaxy.Tutoria;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        FishBehaviour._instance.galaxy = Galaxy.Tutoria;
         
-        
+        //GALAXY TESTER
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            FishBehaviour._instance.galaxy = Galaxy.Tutoria;
+            Debug.Log("Galaxy: Tutoria");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FishBehaviour._instance.galaxy = Galaxy.Prehistoria;
+            Debug.Log("Galaxy: Prehistoria");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            FishBehaviour._instance.galaxy = Galaxy.Biologica;
+            Debug.Log("Galaxy: Biologica");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            FishBehaviour._instance.galaxy = Galaxy.Galaxia;
+            Debug.Log("Galaxy: Galaxia");
+        }
     }
 
     public void NoteHit()
