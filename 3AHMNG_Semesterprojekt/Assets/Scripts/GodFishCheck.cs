@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class GodFishCheck : MonoBehaviour
 {
-    public TextMeshProUGUI _scoreTXT;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _scoreTXT.text = "Fish: " + GameManager.instance.currentScore.ToString();
+        
     }
 }

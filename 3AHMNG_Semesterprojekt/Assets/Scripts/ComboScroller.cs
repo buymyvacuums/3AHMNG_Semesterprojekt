@@ -173,14 +173,18 @@ public class ComboScroller : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         string fishName = FishBehaviour._instance.GetFishNameByCode(GameManager.instance.fishCode);
-        Debug.Log("Caught fish: " + fishName);  // Add debug log here
+        Debug.Log("Caught fish: " + fishName);
+
+        // Mark the fish as caught!
+        FishBehaviour._instance.MarkFishAsCaught(GameManager.instance.fishCode);
+
         _wonTXT.text = "You caught " + fishName;
         _wonTXT.gameObject.SetActive(true);
-        //Play Victory Sound
+        // Play Victory Sound
 
         yield return new WaitForSeconds(1);
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akSuccess);
-        GameManager.instance.currentScore += 5;
+        GameManager.instance.currentScore += 1;
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
         SceneManager.LoadScene("Main");

@@ -32,6 +32,9 @@ public class Fish
     public Sprite _fishSprite;
     public Galaxy _galaxy;
     public Difficulty _difficulty;
+
+    public bool isGodFish;
+    public bool hasBeenCaught;
 }
 
 
@@ -45,6 +48,7 @@ public class FishBehaviour : MonoBehaviour
     public Galaxy galaxy;
 
 
+
     public Dictionary<int, Fish> fishDictionary = new Dictionary<int, Fish>();
 
 
@@ -52,6 +56,7 @@ public class FishBehaviour : MonoBehaviour
     void Awake()
     {
         _instance = this;
+
 
         //Tutoria
         Fish _stardine = new Fish();
@@ -116,6 +121,8 @@ public class FishBehaviour : MonoBehaviour
         _kingOssis._rarity = 6;
         _kingOssis._name = "King Ossis";
         _kingOssis._difficulty = Difficulty.God;
+        _kingOssis.isGodFish = true;
+        //_kingOssis.hasBeenCaught = false;
         fishDictionary.Add(_kingOssis._fishCode, _kingOssis);
 
         //Biologica
@@ -166,6 +173,8 @@ public class FishBehaviour : MonoBehaviour
         _queenVitae._rarity = 6;
         _queenVitae._name = "Queen Vitae";
         _queenVitae._difficulty = Difficulty.God;
+        _queenVitae.isGodFish = true;
+        _queenVitae.hasBeenCaught = false;
         fishDictionary.Add(_queenVitae._fishCode, _queenVitae);
 
         //Galaxia
@@ -223,6 +232,8 @@ public class FishBehaviour : MonoBehaviour
         _ultranova._rarity = 6;
         _ultranova._name = "Ultranova";
         _ultranova._difficulty = Difficulty.God;
+        _ultranova.isGodFish = true;
+        _ultranova.hasBeenCaught = false;
         fishDictionary.Add(_ultranova._fishCode, _ultranova);
     }
 
@@ -248,6 +259,25 @@ public class FishBehaviour : MonoBehaviour
             return "Unknown Fish";
         }
     }
+
+    public bool HasCaughtFish(int fishCode)
+    {
+        if (fishDictionary.TryGetValue(fishCode, out Fish fish))
+        {
+            return fish.hasBeenCaught;
+        }
+        return false;
+    }
+
+    public void MarkFishAsCaught(int fishCode)
+    {
+        if (fishDictionary.TryGetValue(fishCode, out Fish fish))
+        {
+            fish.hasBeenCaught = true;
+            Debug.Log($"{fish._name} has been marked as caught.");
+        }
+    }
+
 
     public void FishDifficulty()
     {

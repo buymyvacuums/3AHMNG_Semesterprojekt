@@ -1132,6 +1132,7 @@ MonoBehaviour:
   hitNote: 0
   missedNote: 0
   _rndStartTime: 0
+  fishCode: 0
   _wellDoneTXT: {fileID: 0}
 --- !u!114 &611782738
 MonoBehaviour:
@@ -1147,7 +1148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficulty: 0
   galaxy: 0
-  fishCode: 0
 --- !u!1 &630710429
 GameObject:
   m_ObjectHideFlags: 0

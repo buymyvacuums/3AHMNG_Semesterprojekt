@@ -90,20 +90,49 @@ public class GameManager : MonoBehaviour
             fishCode = Random.Range(1, 4);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
+        
         if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
         {
-            fishCode = Random.Range(4, 10);
-            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+            if(FishBehaviour._instance.HasCaughtFish(9))
+            {
+                Debug.Log("GOTT IST TOT");
+                fishCode = Random.Range(4, 9);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
+
+            else
+            {
+                fishCode = Random.Range(4, 10);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
         }
         if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
         {
-            fishCode = Random.Range(10, 17);
-            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+            if (FishBehaviour._instance.HasCaughtFish(16) == false)
+            {
+                fishCode = Random.Range(10, 17);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
+
+            else if (FishBehaviour._instance.HasCaughtFish(16))
+            {
+                fishCode = Random.Range(10, 16);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
         }
         if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
         {
-            fishCode = Random.Range(17, 25);
-            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+            if (FishBehaviour._instance.HasCaughtFish(24) == false)
+            {
+                fishCode = Random.Range(17, 25);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
+
+            else if (FishBehaviour._instance.HasCaughtFish(24))
+            {
+                fishCode = Random.Range(17, 24);
+                Debug.Log("Set fishCode to: " + fishCode);
+            }
         }
 
         PlayerController.instance._interactTXT.SetActive(false);
