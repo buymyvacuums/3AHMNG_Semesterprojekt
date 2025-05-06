@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
         //Movement
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rb.velocity = movement * speed * Time.fixedDeltaTime;
+        if (Input.GetAxisRaw("Horizontal") > 0) { transform.localScale = new Vector3(-3.5f, transform.localScale.y, transform.localScale.z); }
+        else if (Input.GetAxisRaw("Horizontal") < 0) { transform.localScale = new Vector3(3.5f, transform.localScale.y, transform.localScale.z); }
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             GlobalAudioScript.instance.WalkSounds(1);

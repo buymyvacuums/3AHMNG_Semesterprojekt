@@ -15,6 +15,7 @@ public class ComboScroller : MonoBehaviour
     [SerializeField] private GameObject _failTXT;
 
     public TextMeshProUGUI _wonTXT;
+    private FishSpriteVisualizer _fishSpriteVisualizer;
 
     public GameObject[] _arrows;
 
@@ -57,10 +58,12 @@ public class ComboScroller : MonoBehaviour
         {
             ComboScroller._ComboInstance._comboLength = 21;
         }
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        _fishSpriteVisualizer = FindObjectOfType<FishSpriteVisualizer>();
         beatTempo = beatTempo / 60f;
 
 
@@ -180,6 +183,7 @@ public class ComboScroller : MonoBehaviour
 
         _wonTXT.text = "You caught " + fishName;
         _wonTXT.gameObject.SetActive(true);
+        _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode);
         // Play Victory Sound
 
         yield return new WaitForSeconds(1);

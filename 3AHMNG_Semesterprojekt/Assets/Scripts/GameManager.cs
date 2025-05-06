@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,21 +50,25 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             FishBehaviour._instance.galaxy = Galaxy.Tutoria;
+            BackgroundManager.instance.ChangeBackground(0);
             Debug.Log("Galaxy: Tutoria");
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             FishBehaviour._instance.galaxy = Galaxy.Prehistoria;
+            BackgroundManager.instance.ChangeBackground(1);
             Debug.Log("Galaxy: Prehistoria");
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             FishBehaviour._instance.galaxy = Galaxy.Biologica;
+            BackgroundManager.instance.ChangeBackground(2);
             Debug.Log("Galaxy: Biologica");
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             FishBehaviour._instance.galaxy = Galaxy.Galaxia;
+            BackgroundManager.instance.ChangeBackground(3);
             Debug.Log("Galaxy: Galaxia");
         }
     }
