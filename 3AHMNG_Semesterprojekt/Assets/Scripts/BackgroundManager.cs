@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class BackgroundManager : MonoBehaviour
 {
     public static BackgroundManager instance;
-    private Image bgImage;
+    [SerializeField] private Image bgImage;
+    [SerializeField] private Image pondImage;
     [SerializeField] private Sprite[] bgSprite;
     // Start is called before the first frame update
     void Awake()
     {
-        bgImage = GetComponent<Image>();
+
     }
 
     void Start()
@@ -37,5 +38,6 @@ public class BackgroundManager : MonoBehaviour
     public void ChangeBackground(int i)
     {
         bgImage.sprite = bgSprite[i];
+        pondImage.sprite = bgSprite[i];
     }
 }
