@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID HIT4 = 3232033844U;
         static const AkUniqueID PLAY_TEST = 3187507146U;
         static const AkUniqueID REEL = 2512485637U;
+        static const AkUniqueID SPACEMUSIC = 931648338U;
         static const AkUniqueID STOP_TEST = 2051061508U;
         static const AkUniqueID SUCCESS = 3625060726U;
         static const AkUniqueID THROW = 745179803U;

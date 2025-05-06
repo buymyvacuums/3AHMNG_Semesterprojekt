@@ -12,6 +12,7 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akSuccess;
     [SerializeField] public AK.Wwise.Event _akWalkLoop;
     [SerializeField] private AK.Wwise.RTPC _akPWalk;
+    [SerializeField] private AK.Wwise.Event _spaceMusic;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class GlobalAudioScript : MonoBehaviour
     private void Start()
     {
        PlaySound(_akWalkLoop);
+        PlaySound(_spaceMusic);
     }
 
     // Update is called once per frame

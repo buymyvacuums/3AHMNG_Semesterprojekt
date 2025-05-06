@@ -78,7 +78,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="fishinglooop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -93,7 +93,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="fishinglooop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -115,7 +115,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="reel loop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="fishinglooop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -177,7 +177,18 @@
 								<Action Name="" ID="{57861A3C-A9BC-44C2-AB88-1F53DC44F809}" ShortID="70659134">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="walk loop" ID="{13EE98B5-B581-4374-AC10-C41125AD5242}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="walkloop" ID="{8A574E81-6C1B-41AB-BAE5-AE12EACD6C01}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="spacemusic" ID="{517F2BBE-C57D-47EE-BF4F-EE9D13D4E158}">
+							<ChildrenList>
+								<Action Name="" ID="{C00C11B6-A764-4543-813F-A6DE0E1122E8}" ShortID="924819808">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="spacemusic" ID="{FEEB68E6-9B72-4D68-9156-5DD495BB7375}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

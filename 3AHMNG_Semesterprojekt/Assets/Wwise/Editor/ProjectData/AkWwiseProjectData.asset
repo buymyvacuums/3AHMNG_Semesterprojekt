@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584557609102246211
+    m_lastTime: -8584550663708083934
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -569,6 +569,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8408b91986fc3546b48b13f2d00716de
       Path: Events\Default Work Unit\placeholders\reel
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: spacemusic
+      guid: be2b7f517dc5ee47bf4fee9d13d4e158
+      id: 931648338
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: spacemusic
+        ObjectType: 3
+        guid: be2b7f517dc5ee47bf4fee9d13d4e158
+      Path: Events\Default Work Unit\placeholders\spacemusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

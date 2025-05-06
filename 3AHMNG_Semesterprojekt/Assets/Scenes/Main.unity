@@ -1108,6 +1108,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 647a9264ef6be004f96dc0ea86e048fe,
       type: 2}
+  _spaceMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ac90ac5de3a349a4bb5bf0c9b220ea13,
+      type: 2}
 --- !u!4 &549439593
 Transform:
   m_ObjectHideFlags: 0
