@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _fishingOBJ;
     [SerializeField] private GameObject _cameraPos;
     [SerializeField] private Camera _camera;
+    public Animator animator;
+    public GameObject rodGO;
     private CameraSmoothness _cameraScp;
 
     // Use this for initialization
@@ -54,6 +56,8 @@ public class PlayerController : MonoBehaviour
             _interactTXT.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) ) 
             {
+                animator.SetBool("isFishing", true);
+                rodGO.SetActive(true);
                 GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
                 StartCoroutine(GameManager.instance.Wait());
             }

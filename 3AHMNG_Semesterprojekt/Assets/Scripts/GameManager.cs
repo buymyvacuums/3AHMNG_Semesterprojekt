@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    public int currentScore;
+    public int currentScore = 0;
     
     public int scorePerNote = 100;
     public int hitNote;
@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         FishBehaviour._instance.galaxy = Galaxy.Tutoria;
 
     }
+
 
     // Update is called once per frame
     void Update()

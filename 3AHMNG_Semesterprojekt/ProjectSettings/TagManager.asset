@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Activator
   - GlobalSoundScript
+  - Space
   layers:
   - Default
   - TransparentFX

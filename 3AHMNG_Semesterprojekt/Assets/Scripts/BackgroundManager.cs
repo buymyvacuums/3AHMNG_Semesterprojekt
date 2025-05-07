@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class BackgroundManager : MonoBehaviour
 {
     public static BackgroundManager instance;
-    [SerializeField] private Image bgImage;
-    [SerializeField] private Image pondImage;
-    [SerializeField] private Sprite[] bgSprite;
+    public Sprite[] bgSprite;
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,7 +35,11 @@ public class BackgroundManager : MonoBehaviour
 
     public void ChangeBackground(int i)
     {
-        bgImage.sprite = bgSprite[i];
-        pondImage.sprite = bgSprite[i];
+        GameObject[] bgImage = GameObject.FindGameObjectsWithTag("Space");
+        foreach (var GO in bgImage)
+        {
+            Image bgImageComp = GO.GetComponent<Image>();
+            bgImageComp.sprite = bgSprite[i];
+        }
     }
 }
