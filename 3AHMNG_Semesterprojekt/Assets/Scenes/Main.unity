@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 414586247}
   m_Layer: 0
   m_Name: SpaceAmbience
-  m_TagString: Untagged
+  m_TagString: SpaceAmbience
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 414586246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.700001, z: -32.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e826331c17f1b4a9c19c39ed576876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 500
   rb: {fileID: 467577631}
   fishArea:
     serializedVersion: 2
@@ -1386,6 +1386,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630710429}
   m_CullTransparentMesh: 1
+--- !u!1 &723529263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7081752632026808928, guid: 220cee8ca724ab54fa2cba82db007264,
+    type: 3}
+  m_PrefabInstance: {fileID: 2353130034973641725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &723529268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723529263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be510fb31ff686249bef452cbb277709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _akShredder:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &809410215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2495,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7081752632026808928, guid: 220cee8ca724ab54fa2cba82db007264,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 723529268}
   m_SourcePrefab: {fileID: 100100000, guid: 220cee8ca724ab54fa2cba82db007264, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

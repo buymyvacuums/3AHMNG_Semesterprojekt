@@ -28,7 +28,7 @@ public class GlobalAudioScript : MonoBehaviour
     private void Start()
     {
        PlaySound(_akWalkLoop);
-        PlaySound(_spaceMusic);
+        _spaceMusic?.Post(GameObject.FindGameObjectWithTag("SpaceAmbience"));
     }
 
     // Update is called once per frame
