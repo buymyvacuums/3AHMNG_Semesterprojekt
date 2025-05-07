@@ -396,12 +396,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -648967431, guid: 929bf89839f16d941b4276741c40d940, type: 3}
+  m_Sprite: {fileID: -1658326911, guid: c64ee1c425a07324a9e8b5cba7819320, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.59, y: 7.54}
+  m_Size: {x: 1.004, y: 1.512}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e826331c17f1b4a9c19c39ed576876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 550
+  speed: 300
   rb: {fileID: 467577631}
   fishArea:
     serializedVersion: 2

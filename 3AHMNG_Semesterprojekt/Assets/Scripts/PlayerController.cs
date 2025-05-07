@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 150f;
+    public float speed;
     public Rigidbody rb;
 
     public static PlayerController instance;
@@ -79,8 +79,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             GlobalAudioScript.instance.WalkSounds(1);
+            animator.SetBool("isMoving", true);
         }
-        else { GlobalAudioScript.instance.WalkSounds(0); }
+        else { GlobalAudioScript.instance.WalkSounds(0); animator.SetBool("isMoving", false); }
     }
 
 
