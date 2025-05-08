@@ -6,6 +6,8 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI _scoreTXT;
+    public TextMeshProUGUI _fishBitsTXT;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         _scoreTXT.text = "Fish: " + GameManager.instance.currentScore.ToString();
+        _fishBitsTXT.text = "Fish Bits: " + GameManager.instance.fishBits.ToString();
+
     }
 }

@@ -111,17 +111,17 @@ public class FishBehaviour : MonoBehaviour
 
         Fish _helicoprion = new Fish();
         _helicoprion._fishCode = 8;
-        _helicoprion._rarity = 3;
+        _helicoprion._rarity = 5;
         _helicoprion._name = "Helicoprion";
         _helicoprion._difficulty = Difficulty.Rare;
         fishDictionary.Add(_helicoprion._fishCode, _helicoprion);
 
         Fish _kingOssis = new Fish();
         _kingOssis._fishCode = 9;
-        _kingOssis._rarity = 6;
+        _kingOssis._rarity = 0;
         _kingOssis._name = "King Ossis";
         _kingOssis._difficulty = Difficulty.God;
-        _kingOssis.isGodFish = true;
+        //_kingOssis.isGodFish = true;
         //_kingOssis.hasBeenCaught = false;
         fishDictionary.Add(_kingOssis._fishCode, _kingOssis);
 
@@ -156,25 +156,25 @@ public class FishBehaviour : MonoBehaviour
 
         Fish _lemonShark = new Fish();
         _lemonShark._fishCode = 14;
-        _lemonShark._rarity = 3;
+        _lemonShark._rarity = 5;
         _lemonShark._name = "Lemon Shark";
         _lemonShark._difficulty = Difficulty.Rare;
         fishDictionary.Add(_lemonShark._fishCode, _lemonShark);
 
         Fish _megaphoton = new Fish();
         _megaphoton._fishCode = 15;
-        _megaphoton._rarity = 5;
+        _megaphoton._rarity = 20;
         _megaphoton._name = "Megaphoton";
         _megaphoton._difficulty = Difficulty.Legendary;
         fishDictionary.Add(_megaphoton._fishCode, _megaphoton);
 
         Fish _queenVitae = new Fish();
         _queenVitae._fishCode = 16;
-        _queenVitae._rarity = 6;
+        _queenVitae._rarity = 0;
         _queenVitae._name = "Queen Vitae";
         _queenVitae._difficulty = Difficulty.God;
-        _queenVitae.isGodFish = true;
-        _queenVitae.hasBeenCaught = false;
+        //_queenVitae.isGodFish = true;
+        //_queenVitae.hasBeenCaught = false;
         fishDictionary.Add(_queenVitae._fishCode, _queenVitae);
 
         //Galaxia
@@ -194,55 +194,53 @@ public class FishBehaviour : MonoBehaviour
 
         Fish _glider = new Fish();
         _glider._fishCode = 19;
-        _glider._rarity = 3;
+        _glider._rarity = 5;
         _glider._name = "Glider";
         _glider._difficulty = Difficulty.Rare;
         fishDictionary.Add(_glider._fishCode, _glider);
 
         Fish _astralOcta = new Fish();
         _astralOcta._fishCode = 20;
-        _astralOcta._rarity = 4;
+        _astralOcta._rarity = 10;
         _astralOcta._name = "Astral Octa";
         _astralOcta._difficulty = Difficulty.Epic;
         fishDictionary.Add(_astralOcta._fishCode, _astralOcta);
 
         Fish _AEX11_N2 = new Fish();
         _AEX11_N2._fishCode = 21;
-        _AEX11_N2._rarity = 4;
+        _AEX11_N2._rarity = 10;
         _AEX11_N2._name = "AEX11-N2";
         _AEX11_N2._difficulty = Difficulty.Epic;
         fishDictionary.Add(_AEX11_N2._fishCode, _AEX11_N2);
 
         Fish _magnaLarva = new Fish();
         _magnaLarva._fishCode = 22;
-        _magnaLarva._rarity = 4;
+        _magnaLarva._rarity = 10;
         _magnaLarva._name = "Magna Larva";
         _magnaLarva._difficulty = Difficulty.Epic;
         fishDictionary.Add(_magnaLarva._fishCode, _magnaLarva);
 
         Fish _nyanCatfish = new Fish();
         _nyanCatfish._fishCode = 23;
-        _nyanCatfish._rarity = 5;
+        _nyanCatfish._rarity = 20;
         _nyanCatfish._name = "Nyan Catfish";
         _nyanCatfish._difficulty = Difficulty.Legendary;
         fishDictionary.Add(_nyanCatfish._fishCode, _nyanCatfish);
 
         Fish _ultranova = new Fish();
         _ultranova._fishCode = 24;
-        _ultranova._rarity = 6;
+        _ultranova._rarity = 0;
         _ultranova._name = "Ultranova";
         _ultranova._difficulty = Difficulty.God;
-        _ultranova.isGodFish = true;
-        _ultranova.hasBeenCaught = false;
+        //_ultranova.isGodFish = true;
+        //_ultranova.hasBeenCaught = false;
         fishDictionary.Add(_ultranova._fishCode, _ultranova);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //galaxy = Galaxy.Tutoria;
-
-        
+      
 
 
     }
@@ -257,6 +255,18 @@ public class FishBehaviour : MonoBehaviour
         else
         {
             return "Unknown Fish";
+        }
+    }
+    public int GetFishRarityByCode(int code)
+    {
+
+        if (fishDictionary.TryGetValue(code, out Fish fish))
+        {
+            return fish._rarity;
+        }
+        else
+        {
+            return 0;
         }
     }
 

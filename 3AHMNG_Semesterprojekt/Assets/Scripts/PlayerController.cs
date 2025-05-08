@@ -14,11 +14,22 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     [SerializeField] private LayerMask fishArea;
+    [SerializeField] private LayerMask fishHarvister;
+    [SerializeField] private LayerMask fishUpgrade;
+    [SerializeField] public GameObject _harvisterInteractTXT;
     [SerializeField] public GameObject _interactTXT;
+    [SerializeField] public GameObject _upgradeInteractTXT;
+
     [SerializeField] public GameObject _fishBitTXT;
     [SerializeField] private GameObject _fishingOBJ;
+    [SerializeField] private GameObject _harvisterOBJ;
+    [SerializeField] private GameObject _upgradeOBJ;
+
+    [SerializeField] private GameObject _upgradeUI;
+
     [SerializeField] private GameObject _cameraPos;
     [SerializeField] private Camera _camera;
+
     public Animator animator;
     public GameObject rodGO;
     private CameraSmoothness _cameraScp;
@@ -29,19 +40,13 @@ public class PlayerController : MonoBehaviour
         instance = this;
         rb = GetComponent<Rigidbody>();
         _interactTXT.SetActive(false);
+        _harvisterInteractTXT.SetActive(false);
+        _upgradeUI.SetActive(false);
         _cameraScp = _camera.GetComponent<CameraSmoothness>();
         
     }
 
-    //IEnumerator StartFishing()
-    //{
-    //    transform.position = new Vector3(17, -1.2f, -0.5f);
-    //    _interactTXT.SetActive(false);
-    //    _cameraScp.enabled = false;
-    //    _camera.transform.position = _cameraPos.transform.position;
-    //    _camera.transform.rotation = Quaternion.Euler(90, 0, 0);
-    //    yield return null;
-    //}
+   
 
     // Update is called once per frame
     void Update()
@@ -65,6 +70,54 @@ public class PlayerController : MonoBehaviour
         else
         {
             _interactTXT.SetActive(false);
+        }
+
+        //Harvister Raycast
+        Vector3 rayOrigin2 = transform.position;
+        Vector3 rayDirection2 = _harvisterOBJ.transform.position - transform.position;
+        float maxRayDistance2 = 3;
+        RaycastHit rayHit2;
+        if (Physics.Raycast(rayOrigin2, rayDirection2, out rayHit2, maxRayDistance2, fishHarvister))
+        {
+            _harvisterInteractTXT.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
+                GameManager.instance.currentScore = 0;
+                GameManager.instance.fishBits += GameManager.instance.currentValue;
+                GameManager.instance.currentValue = 0;
+
+                Debug.Log("Fish: " + GameManager.instance.currentScore);
+                Debug.Log("Fish Bits: " + GameManager.instance.fishBits);
+                Debug.Log("Fish Value: " + GameManager.instance.currentValue);
+            }
+        }
+        else
+        {
+            _harvisterInteractTXT.SetActive(false);
+        }
+
+        //Upgrade Machine Raycast
+        Vector3 rayOrigin3 = transform.position;
+        Vector3 rayDirection3 = _upgradeOBJ.transform.position - transform.position;
+        float maxRayDistance3 = 3;
+        RaycastHit rayHit3;
+        if (Physics.Raycast(rayOrigin3, rayDirection3, out rayHit3, maxRayDistance3, fishUpgrade))
+        {
+            _upgradeInteractTXT.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                _upgradeUI.SetActive(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                _upgradeUI.SetActive(false);
+            }
+        }
+        else
+        {
+            _upgradeInteractTXT.SetActive(false);
         }
     }
 

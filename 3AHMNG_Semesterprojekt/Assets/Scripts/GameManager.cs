@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    //FISH VARIBLES
     public int currentScore = 0;
+    public int currentValue = 0;
+    public int fishBits = 0;
     
     public int scorePerNote = 100;
     public int hitNote;

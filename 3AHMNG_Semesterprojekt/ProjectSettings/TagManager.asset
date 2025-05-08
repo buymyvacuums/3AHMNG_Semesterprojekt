@@ -8,6 +8,7 @@ TagManager:
   - GlobalSoundScript
   - Space
   - SpaceAmbience
+  - Harvistor
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Arrow
   - Hidden
-  - 
-  - 
+  - Harvistor
+  - Upgrade Machine
   - 
   - 
   - 
