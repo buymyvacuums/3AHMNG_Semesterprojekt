@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int currentValue = 0;
     public int fishBits = 0;
     
+    //Rythm stuff
     public int scorePerNote = 100;
     public int hitNote;
     public int missedNote;
@@ -36,8 +37,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //Debug.LogWarning("Multiple instances of " + instance.GetType().Name + " #1", gameObject);
-            //Debug.LogWarning("Destroyed " + this.gameObject.name + " because there must only be one " + instance.GetType().Name);
             Destroy(gameObject);
         }
 
@@ -50,28 +49,25 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        //GALAXY TESTER
+        //GALAXY SWITCHER
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             FishBehaviour._instance.galaxy = Galaxy.Tutoria;
             BackgroundManager.instance.ChangeBackground(0);
             Debug.Log("Galaxy: Tutoria");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Prehistoria;
             BackgroundManager.instance.ChangeBackground(1);
             Debug.Log("Galaxy: Prehistoria");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Biologica;
             BackgroundManager.instance.ChangeBackground(2);
             Debug.Log("Galaxy: Biologica");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Galaxia;
             BackgroundManager.instance.ChangeBackground(3);
             Debug.Log("Galaxy: Galaxia");
         }
