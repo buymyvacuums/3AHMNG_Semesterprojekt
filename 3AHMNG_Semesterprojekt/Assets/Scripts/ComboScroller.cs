@@ -184,7 +184,7 @@ public class ComboScroller : MonoBehaviour
 
         _wonTXT.text = "You caught " + fishName;
         _wonTXT.gameObject.SetActive(true);
-        _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode);
+        _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode, FishBehaviour._instance.GetFishSizeByCode(GameManager.instance.fishCode));
         // Play Victory Sound
 
         yield return new WaitForSeconds(1);
