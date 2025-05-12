@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
                 GameManager.instance.currentScore = 0;
                 GameManager.instance.fishBits += GameManager.instance.currentValue;
                 GameManager.instance.currentValue = 0;
+                //GameManager.instance.SaveProgress();
 
                 Debug.Log("Fish: " + GameManager.instance.currentScore);
                 Debug.Log("Fish Bits: " + GameManager.instance.fishBits);

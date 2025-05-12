@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.Sqlite;
+//using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public enum Galaxy
@@ -279,12 +279,20 @@ public class FishBehaviour : MonoBehaviour
         return false;
     }
 
+    public delegate void GodFishCaughtEvent();
+    public static event GodFishCaughtEvent OnGodFishCaught;
+
     public void MarkFishAsCaught(int fishCode)
     {
         if (fishDictionary.TryGetValue(fishCode, out Fish fish))
         {
             fish.hasBeenCaught = true;
             Debug.Log($"{fish._name} has been marked as caught.");
+
+            if (fish._difficulty == Difficulty.God)
+            {
+                OnGodFishCaught?.Invoke(); // Notify listeners
+            }
         }
     }
 
@@ -299,6 +307,26 @@ public class FishBehaviour : MonoBehaviour
 
         // Set the difficulty to the fish's difficulty
         difficulty = selectedFish._difficulty;
+    }
+
+    public List<int> GetCaughtFishIDs()
+    {
+        List<int> ids = new List<int>();
+        foreach (var pair in fishDictionary)
+        {
+            if (pair.Value.hasBeenCaught) // FIXED
+                ids.Add(pair.Key);
+        }
+        return ids;
+    }
+
+    public void SetCaughtFish(List<int> caughtIDs)
+    {
+        foreach (var id in caughtIDs)
+        {
+            if (fishDictionary.ContainsKey(id))
+                fishDictionary[id].hasBeenCaught = true; // FIXED
+        }
     }
 
 

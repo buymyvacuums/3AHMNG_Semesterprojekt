@@ -181,6 +181,7 @@ public class ComboScroller : MonoBehaviour
         // Mark the fish as caught!
         FishBehaviour._instance.MarkFishAsCaught(GameManager.instance.fishCode);
 
+
         _wonTXT.text = "You caught " + fishName;
         _wonTXT.gameObject.SetActive(true);
         _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode);
@@ -193,6 +194,7 @@ public class ComboScroller : MonoBehaviour
         Debug.Log("Value = " + GameManager.instance.currentValue);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
+        //GameManager.instance.SaveProgress();
         SceneManager.LoadScene("Main");
     }
 
@@ -205,6 +207,7 @@ public class ComboScroller : MonoBehaviour
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akFail);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
+        //GameManager.instance.SaveProgress();
         SceneManager.LoadScene("Main");
     }
 }
