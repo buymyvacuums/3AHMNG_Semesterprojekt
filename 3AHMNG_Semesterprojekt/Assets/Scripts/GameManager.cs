@@ -27,21 +27,25 @@ public class GameManager : MonoBehaviour
 
     public GameObject _wellDoneTXT;
 
-    // Start is called before the first frame update
+    private static bool _initialized = false;
+
     void Start()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (!_initialized)
+            {
+                FishBehaviour.galaxy = Galaxy.Tutoria;
+                _initialized = true;
+            }
         }
         else
         {
             Destroy(gameObject);
         }
-
-        FishBehaviour._instance.galaxy = Galaxy.Tutoria;
-
     }
 
 
@@ -50,23 +54,22 @@ public class GameManager : MonoBehaviour
     {
         
         //GALAXY SWITCHER
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (FishBehaviour.galaxy == Galaxy.Tutoria)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Tutoria;
             BackgroundManager.instance.ChangeBackground(0);
             Debug.Log("Galaxy: Tutoria");
         }
-        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
+        if (FishBehaviour.galaxy == Galaxy.Prehistoria)
         {
             BackgroundManager.instance.ChangeBackground(1);
             Debug.Log("Galaxy: Prehistoria");
         }
-        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
+        if (FishBehaviour.galaxy == Galaxy.Biologica)
         {
             BackgroundManager.instance.ChangeBackground(2);
             Debug.Log("Galaxy: Biologica");
         }
-        if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
+        if (FishBehaviour.galaxy == Galaxy.Galaxia)
         {
             BackgroundManager.instance.ChangeBackground(3);
             Debug.Log("Galaxy: Galaxia");
@@ -90,13 +93,13 @@ public class GameManager : MonoBehaviour
     {
         fishCode = 0;
 
-        if (FishBehaviour._instance.galaxy == Galaxy.Tutoria)
+        if (FishBehaviour.galaxy == Galaxy.Tutoria)
         {
             fishCode = Random.Range(1, 4);
             Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
         }
         
-        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
+        if (FishBehaviour.galaxy == Galaxy.Prehistoria)
         {
             if(FishBehaviour._instance.HasCaughtFish(9))
             {
@@ -111,7 +114,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Set fishCode to: " + fishCode);
             }
         }
-        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
+        if (FishBehaviour.galaxy == Galaxy.Biologica)
         {
             if (FishBehaviour._instance.HasCaughtFish(16) == false)
             {
@@ -125,7 +128,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Set fishCode to: " + fishCode);
             }
         }
-        if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
+        if (FishBehaviour.galaxy == Galaxy.Galaxia)
         {
             if (FishBehaviour._instance.HasCaughtFish(24) == false)
             {

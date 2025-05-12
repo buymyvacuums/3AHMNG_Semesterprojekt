@@ -1,58 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
+[System.Serializable]
+public class GalaxyData
+{
+    public Galaxy galaxy;
+    public string galaxyName;
+    public int price;
+    public bool isUnlocked;
+}
+
 public class Upgrade_UI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _galaxyPriceTXT;
-    [SerializeField] private TextMeshProUGUI _galaxyToBuy;
+    [SerializeField] private GameObject galaxySelectionPanel;
+    [SerializeField] private Button[] galaxyButtons;
+    [SerializeField] private TextMeshProUGUI[] galaxyButtonTexts;
 
-    [SerializeField] private int _galaxyPrice;
+    [SerializeField] private List<GalaxyData> galaxies;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //_galaxyPrice = 10;
-        //_galaxyPriceTXT.text = "Costs " + _galaxyPrice.ToString() + " Fish Bits";
-        //_galaxyToBuy.text = "Prehistoria";
+        // Unlock starting galaxy
+        galaxies[0].isUnlocked = true;
+
+        UpdateGalaxyButtons();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenGalaxySelection()
     {
-        if(FishBehaviour._instance.galaxy == Galaxy.Tutoria)
+        galaxySelectionPanel.SetActive(true);
+        UpdateGalaxyButtons();
+    }
+
+    public void CloseGalaxySelection()
+    {
+        galaxySelectionPanel.SetActive(false);
+    }
+
+    private void UpdateGalaxyButtons()
+    {
+        for (int i = 0; i < galaxies.Count; i++)
         {
-            _galaxyPrice = 10;
-            _galaxyPriceTXT.text = "Costs " + _galaxyPrice.ToString() + " Fish Bits";
-            _galaxyToBuy.text = "Prehistoria";
-        }
-        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
-        {
-            _galaxyPrice = 40;
-            _galaxyPriceTXT.text = "Costs " + _galaxyPrice.ToString() + " Fish Bits";
-            _galaxyToBuy.text = "Biologica";
-        }
-        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
-        {
-            _galaxyPrice = 80;
-            _galaxyPriceTXT.text = "Costs " + _galaxyPrice.ToString() + " Fish Bits";
-            _galaxyToBuy.text = "Galaxia";
+            var data = galaxies[i];
+            var button = galaxyButtons[i];
+            var text = galaxyButtonTexts[i];
+
+            if (data.isUnlocked)
+            {
+                text.text = $"{data.galaxyName}\n(Select)";
+                button.interactable = true;
+            }
+            else
+            {
+                text.text = $"{data.galaxyName}\nCost: {data.price}";
+                button.interactable = GameManager.instance.fishBits >= data.price;
+            }
         }
     }
 
-    public void UpgradeGalaxy()
+    public void OnGalaxyButtonClicked(int index)
     {
-        if(GameManager.instance.fishBits >= _galaxyPrice)
+        var selected = galaxies[index];
+
+        if (selected.isUnlocked)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Prehistoria;
-            GameManager.instance.fishBits -= _galaxyPrice;
+            FishBehaviour.galaxy = selected.galaxy;
+            Debug.Log("Switched to: " + selected.galaxyName);
         }
-        if(GameManager.instance.fishBits < _galaxyPrice)
+        else if (GameManager.instance.fishBits >= selected.price)
         {
-            Debug.Log("Cannot buy");
+            GameManager.instance.fishBits -= selected.price;
+            selected.isUnlocked = true;
+            FishBehaviour.galaxy = selected.galaxy;
+            Debug.Log("Unlocked and switched to: " + selected.galaxyName);
         }
+        else
+        {
+            Debug.Log("Not enough Fish Bits to unlock.");
+        }
+
+        UpdateGalaxyButtons();
     }
 }

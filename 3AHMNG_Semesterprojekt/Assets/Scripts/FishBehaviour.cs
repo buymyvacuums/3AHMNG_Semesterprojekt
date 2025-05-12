@@ -30,7 +30,7 @@ public class Fish
     public int _fishCode;
     public GameObject _combo;
     public Sprite _fishSprite;
-    public Galaxy _galaxy;
+    public  Galaxy _galaxy;
     public Difficulty _difficulty;
 
     public bool isGodFish;
@@ -45,7 +45,7 @@ public class FishBehaviour : MonoBehaviour
 
     public Difficulty difficulty;
 
-    public Galaxy galaxy;
+    public static Galaxy galaxy;
 
 
 
