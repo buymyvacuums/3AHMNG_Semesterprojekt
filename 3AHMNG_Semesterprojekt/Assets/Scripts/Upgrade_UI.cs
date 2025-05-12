@@ -27,6 +27,7 @@ public class Upgrade_UI : MonoBehaviour
         // Unlock starting galaxy
         galaxies[0].isUnlocked = true;
 
+        LoadUnlockedGalaxies();
         UpdateGalaxyButtons();
     }
 
@@ -62,6 +63,30 @@ public class Upgrade_UI : MonoBehaviour
         }
     }
 
+    private void SaveUnlockedGalaxies()
+    {
+        for (int i = 0; i < galaxies.Count; i++)
+        {
+            PlayerPrefs.SetInt("GalaxyUnlocked_" + galaxies[i].galaxy.ToString(), galaxies[i].isUnlocked ? 1 : 0);
+        }
+
+        PlayerPrefs.SetString("CurrentGalaxy", FishBehaviour.galaxy.ToString());
+        PlayerPrefs.Save();
+    }
+
+    private void LoadUnlockedGalaxies()
+    {
+        for (int i = 0; i < galaxies.Count; i++)
+        {
+            string key = "GalaxyUnlocked_" + galaxies[i].galaxy.ToString();
+            galaxies[i].isUnlocked = PlayerPrefs.GetInt(key, i == 0 ? 1 : 0) == 1; // default: first is unlocked
+        }
+
+        string savedGalaxy = PlayerPrefs.GetString("CurrentGalaxy", galaxies[0].galaxy.ToString());
+        if (System.Enum.TryParse(savedGalaxy, out Galaxy currentGalaxy))
+            FishBehaviour.galaxy = currentGalaxy;
+    }
+
     public void OnGalaxyButtonClicked(int index)
     {
         var selected = galaxies[index];
@@ -69,6 +94,7 @@ public class Upgrade_UI : MonoBehaviour
         if (selected.isUnlocked)
         {
             FishBehaviour.galaxy = selected.galaxy;
+            SaveUnlockedGalaxies();
             Debug.Log("Switched to: " + selected.galaxyName);
         }
         else if (GameManager.instance.fishBits >= selected.price)
@@ -76,6 +102,7 @@ public class Upgrade_UI : MonoBehaviour
             GameManager.instance.fishBits -= selected.price;
             selected.isUnlocked = true;
             FishBehaviour.galaxy = selected.galaxy;
+            SaveUnlockedGalaxies();
             Debug.Log("Unlocked and switched to: " + selected.galaxyName);
         }
         else
