@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
 
     public static PlayerController instance;
-
+    [Header("Fish")]
     [SerializeField] private LayerMask fishArea;
     [SerializeField] private LayerMask fishHarvister;
     [SerializeField] private LayerMask fishUpgrade;
