@@ -90,7 +90,7 @@ public class FishBehaviour : MonoBehaviour
         _leedsichthys._rarity = 1;
         _leedsichthys._name = "Leedsichthys";
         _leedsichthys._difficulty = Difficulty.Common;
-        _leedsichthys._size = 8;
+        _leedsichthys._size = 4.5f;
         fishDictionary.Add(_leedsichthys._fishCode, _leedsichthys);
 
         Fish _sacabambaspis = new Fish();

@@ -198,6 +198,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053736}
   m_CullTransparentMesh: 1
+--- !u!1 &12956624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 97cdef8d893ea0845b13ec30187bed48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1878408697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &12956625 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1878408697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &12956626
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12956624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 97cdef8d893ea0845b13ec30187bed48, type: 3}
 --- !u!1 &67647230
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,8 +913,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to upgrade
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba9458fd9ec8145479c6666b69eb1a28, type: 2}
+  m_sharedMaterial: {fileID: 7463270119698456807, guid: ba9458fd9ec8145479c6666b69eb1a28,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1367,8 +1402,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to fish
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba9458fd9ec8145479c6666b69eb1a28, type: 2}
+  m_sharedMaterial: {fileID: 7463270119698456807, guid: ba9458fd9ec8145479c6666b69eb1a28,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1451,9 +1487,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467577635}
-  - component: {fileID: 467577636}
   - component: {fileID: 467577631}
   - component: {fileID: 467577630}
+  - component: {fileID: 467577636}
   m_Layer: 0
   m_Name: Player_Cube
   m_TagString: Untagged
@@ -1540,8 +1576,8 @@ Transform:
   - {fileID: 809410216}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &467577636
-CapsuleCollider:
+--- !u!65 &467577636
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1558,11 +1594,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.36
-  m_Height: 1.5076429
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.10382108, z: 0.9999995}
+  serializedVersion: 3
+  m_Size: {x: 0.7493713, y: 1.5113698, z: 4.97}
+  m_Center: {x: -0.017529659, y: -0.09471298, z: 0}
 --- !u!1 &475564181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,6 +3227,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915046359}
   m_CullTransparentMesh: 1
+--- !u!4 &926969546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5524107443400527864, guid: 220cee8ca724ab54fa2cba82db007264,
+    type: 3}
+  m_PrefabInstance: {fileID: 2353130034973641725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997725576
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,8 +5063,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to harvest fish
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba9458fd9ec8145479c6666b69eb1a28, type: 2}
+  m_sharedMaterial: {fileID: 7463270119698456807, guid: ba9458fd9ec8145479c6666b69eb1a28,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5306,8 +5347,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fish Bits: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba9458fd9ec8145479c6666b69eb1a28, type: 2}
+  m_sharedMaterial: {fileID: 7463270119698456807, guid: ba9458fd9ec8145479c6666b69eb1a28,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6079,6 +6121,104 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8877238476396287250, guid: d09a91fa752bdce4fb5a3e06978eee70, type: 3}
+--- !u!1001 &1878408697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 926969546}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.591631
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.96
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.51
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      propertyPath: m_Name
+      value: ColliderMap_Ship
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -7511558181221131132, guid: 97cdef8d893ea0845b13ec30187bed48, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97cdef8d893ea0845b13ec30187bed48,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 12956626}
+  m_SourcePrefab: {fileID: 100100000, guid: 97cdef8d893ea0845b13ec30187bed48, type: 3}
 --- !u!1 &1883979823
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,8 +6812,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fish: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba9458fd9ec8145479c6666b69eb1a28, type: 2}
+  m_sharedMaterial: {fileID: 7463270119698456807, guid: ba9458fd9ec8145479c6666b69eb1a28,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7385,9 +7526,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2212105787807852760, guid: 220cee8ca724ab54fa2cba82db007264, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5524107443400527864, guid: 220cee8ca724ab54fa2cba82db007264,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 12956625}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7993475847091480638, guid: 220cee8ca724ab54fa2cba82db007264,
         type: 3}
