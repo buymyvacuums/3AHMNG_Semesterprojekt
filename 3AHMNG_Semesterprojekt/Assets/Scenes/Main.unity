@@ -2082,6 +2082,26 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7df4882d6d7d1ce44a1ab615ecca498f,
       type: 2}
+  _akGalaxyMenuOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 729c9e15d59783f4d84556e49277cfeb,
+      type: 2}
+  _akGalaxyMenuClose:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2c67e6b137da81449a679d0166f512a,
+      type: 2}
+  _akGalaxyBuy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a70676aa7e222f043953596e0d9c1142,
+      type: 2}
+  _akGalaxyMenuSelect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 607688b93e7f55249823a433630f16f0,
+      type: 2}
   _akPWalk:
     idInternal: 0
     valueGuidInternal: 

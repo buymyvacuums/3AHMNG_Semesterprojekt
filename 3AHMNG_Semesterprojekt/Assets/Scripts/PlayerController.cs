@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _upgradeUI.SetActive(true);
+                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
             }
         }
         else
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour
     public void ExitGalaxyMenu()
     {
         _upgradeUI.SetActive(false);
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuClose);
     }
 
     void FixedUpdate()

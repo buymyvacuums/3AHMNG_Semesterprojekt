@@ -818,6 +818,72 @@
 								<ItemRef Name="2 PlayerFeedback" ID="{ED8BDBE5-BE02-4B2C-99F7-946CB118740A}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<Sound Name="Open Beeps" ID="{C654D0F6-5500-4B22-9269-F72AC3D58B9A}" ShortID="169825751">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Open Beeps" ID="{97BA8038-526B-4541-8DB4-062AC2453896}">
+									<Language>SFX</Language>
+									<AudioFile>Open Beeps.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="125728501"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Open Beeps" ID="{97BA8038-526B-4541-8DB4-062AC2453896}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Close Beeps" ID="{37EAC7B1-AD5B-47C3-8344-EDE1A1D830AF}" ShortID="73767836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Close Beeps" ID="{64940CB5-A3B5-4EEC-A358-7BFE2566AB95}">
+									<Language>SFX</Language>
+									<AudioFile>Close Beeps.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1031632235"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Close Beeps" ID="{64940CB5-A3B5-4EEC-A358-7BFE2566AB95}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Upgrade_Bought 1" ID="{B1780515-FC16-4DEF-9187-C941AF269F4C}" ShortID="1061970973">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Upgrade_Bought 1" ID="{E2F6EDAC-C067-4D3F-A907-A2CC1C8B026A}">
+									<Language>SFX</Language>
+									<AudioFile>Upgrade_Bought 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="460848510"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Upgrade_Bought 1" ID="{E2F6EDAC-C067-4D3F-A907-A2CC1C8B026A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

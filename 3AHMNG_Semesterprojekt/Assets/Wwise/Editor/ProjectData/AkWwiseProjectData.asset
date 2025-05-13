@@ -549,7 +549,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ae6252ffa5436444bd8bbaeccf39a4cc
       Path: Events\Default Work Unit\placeholders\Play_Shredder
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_ShredderLoop
@@ -569,9 +569,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: b8ceb050856a1e448a4dd6b99f97e7c2
       Path: Events\Default Work Unit\placeholders\Play_ShredderLoop
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 10
+      maxDuration: 6.2347975
+      minDuration: 6.2347975
     - name: Play_Test
       guid: 7ad253eb1babad499786837988855208
       id: 3187507146
@@ -629,7 +629,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: be2b7f517dc5ee47bf4fee9d13d4e158
       Path: Events\Default Work Unit\placeholders\spacemusic
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Stop_Test

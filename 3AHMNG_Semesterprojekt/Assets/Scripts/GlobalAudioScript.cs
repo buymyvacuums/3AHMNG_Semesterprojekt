@@ -13,6 +13,10 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akWalkLoop;
     [SerializeField] public AK.Wwise.Event _akShredderLoop;
     [SerializeField] public AK.Wwise.Event _akShredderActivate;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuOpen;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuClose;
+    [SerializeField] public AK.Wwise.Event _akGalaxyBuy;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuSelect;
     [SerializeField] private AK.Wwise.RTPC _akPWalk;
 
     [SerializeField] private AK.Wwise.Event _spaceMusic;

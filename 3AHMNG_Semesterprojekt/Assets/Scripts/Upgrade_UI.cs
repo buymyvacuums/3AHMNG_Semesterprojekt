@@ -37,11 +37,13 @@ public class Upgrade_UI : MonoBehaviour
     {
         galaxySelectionPanel.SetActive(true);
         UpdateGalaxyButtons();
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
     }
 
     public void CloseGalaxySelection()
     {
         galaxySelectionPanel.SetActive(false);
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuClose);
     }
 
     private void UpdateGalaxyButtons()
@@ -97,6 +99,7 @@ public class Upgrade_UI : MonoBehaviour
         {
             FishBehaviour.galaxy = selected.galaxy;
             currentGalaxyTXT.text = "[Current Galaxy: " + FishBehaviour.galaxy.ToString() + "]";
+            GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuSelect);
             SaveUnlockedGalaxies();
             Debug.Log("Switched to: " + selected.galaxyName);
         }
@@ -106,6 +109,7 @@ public class Upgrade_UI : MonoBehaviour
             selected.isUnlocked = true;
             FishBehaviour.galaxy = selected.galaxy;
             currentGalaxyTXT.text = "[Current Galaxy: " + FishBehaviour.galaxy.ToString() + "]";
+            GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyBuy);
             SaveUnlockedGalaxies();
             Debug.Log("Unlocked and switched to: " + selected.galaxyName);
         }
