@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishHarvester : MonoBehaviour
+public class HarvesterScript : MonoBehaviour
 {
-    [SerializeField] public AK.Wwise.Event _akShredder;
     // Start is called before the first frame update
     void Start()
     {

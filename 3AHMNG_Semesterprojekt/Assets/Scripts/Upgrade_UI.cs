@@ -19,6 +19,7 @@ public class Upgrade_UI : MonoBehaviour
     [SerializeField] private GameObject galaxySelectionPanel;
     [SerializeField] private Button[] galaxyButtons;
     [SerializeField] private TextMeshProUGUI[] galaxyButtonTexts;
+    [SerializeField] private TextMeshProUGUI currentGalaxyTXT;
 
     [SerializeField] private List<GalaxyData> galaxies;
 
@@ -26,6 +27,7 @@ public class Upgrade_UI : MonoBehaviour
     {
         // Unlock starting galaxy
         galaxies[0].isUnlocked = true;
+        currentGalaxyTXT.text = "[Current Galaxy: " + FishBehaviour.galaxy.ToString() + "]";
 
         LoadUnlockedGalaxies();
         UpdateGalaxyButtons();
@@ -52,12 +54,12 @@ public class Upgrade_UI : MonoBehaviour
 
             if (data.isUnlocked)
             {
-                text.text = $"{data.galaxyName}\n(Select)";
+                text.text = $"{data.galaxyName}\n[Select]";
                 button.interactable = true;
             }
             else
             {
-                text.text = $"{data.galaxyName}\nCost: {data.price}";
+                text.text = $"{data.galaxyName}\n[{data.price}]";
                 button.interactable = GameManager.instance.fishBits >= data.price;
             }
         }
@@ -94,6 +96,7 @@ public class Upgrade_UI : MonoBehaviour
         if (selected.isUnlocked)
         {
             FishBehaviour.galaxy = selected.galaxy;
+            currentGalaxyTXT.text = "[Current Galaxy: " + FishBehaviour.galaxy.ToString() + "]";
             SaveUnlockedGalaxies();
             Debug.Log("Switched to: " + selected.galaxyName);
         }
@@ -102,6 +105,7 @@ public class Upgrade_UI : MonoBehaviour
             GameManager.instance.fishBits -= selected.price;
             selected.isUnlocked = true;
             FishBehaviour.galaxy = selected.galaxy;
+            currentGalaxyTXT.text = "[Current Galaxy: " + FishBehaviour.galaxy.ToString() + "]";
             SaveUnlockedGalaxies();
             Debug.Log("Unlocked and switched to: " + selected.galaxyName);
         }

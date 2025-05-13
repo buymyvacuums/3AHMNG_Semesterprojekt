@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584549189357668643
+    m_lastTime: -8584544462793369410
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -529,6 +529,46 @@ MonoBehaviour:
         ObjectType: 4
         guid: 907bc580945f2e44bed67d40454357ab
       Path: Events\Default Work Unit\placeholders
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Shredder
+      guid: ae6252ffa5436444bd8bbaeccf39a4cc
+      id: 3549617269
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Play_Shredder
+        ObjectType: 3
+        guid: ae6252ffa5436444bd8bbaeccf39a4cc
+      Path: Events\Default Work Unit\placeholders\Play_Shredder
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ShredderLoop
+      guid: b8ceb050856a1e448a4dd6b99f97e7c2
+      id: 120479175
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Play_ShredderLoop
+        ObjectType: 3
+        guid: b8ceb050856a1e448a4dd6b99f97e7c2
+      Path: Events\Default Work Unit\placeholders\Play_ShredderLoop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

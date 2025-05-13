@@ -23,14 +23,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	300009681	reel	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\reel_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\fishinglooop\fishingloop\reel loop\reel		153400
 	363098602	plunge	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\plunge_CD0E3DAF.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\plunge		200196
 	364352627	hit1	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit1_358D8159.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit1		25696
-	429769565	1_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\1_Steps_2E182594.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\1_Steps		55650
+	429769565	1_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\1_Steps_C083901D.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\1_Steps		55650
 	493269055	bite	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\bite_BC8A249A.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\bite		101524
 	506642230	Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192		1303992
 	530510900	spacemusic	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Background Music_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\spacemusic		12968596
-	611830599	2_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\2_Steps_133677D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\2_Steps		45644
+	611830599	2_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\2_Steps_0A8C2349.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\2_Steps		45644
 	703031689	Fishing Music	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\Fishing Music_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\fishinglooop\fishingloop\Fishing Music		2273336
 	759204815	hit3	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit3_756D0C85.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit3		25696
 	822219929	hit2	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\hit2_DC641980.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\hit2		25696
 	862933871	throw	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\throw_011058B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\throw		23176
-	1014845396	3_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\3_Steps_9A86F632.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\3_Steps		40186
+	1014845396	3_Steps	C:\Projekte\3AHMNG_Semesterprojekt\3AHMNG_Semesterprojekt_Wwise\.cache\Windows\SFX\3_Steps_63AA2267.wem		\Actor-Mixer Hierarchy\Default Work Unit\placeholders\walkloop\3_Steps		40186
 

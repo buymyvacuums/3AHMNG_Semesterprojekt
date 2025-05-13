@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{50FC32C1-49FE-91E8-9900-79C2D0036A80}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{AE294D42-BF57-00D7-39A0-6E4149386362}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -39,7 +39,7 @@
 				</File>
 				<File Id="429769565" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>1_Steps.wav</ShortName>
-					<CachePath>SFX/1_Steps_2E182594.wem</CachePath>
+					<CachePath>SFX/1_Steps_C083901D.wem</CachePath>
 				</File>
 				<File Id="493269055" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bite.wav</ShortName>
@@ -55,7 +55,7 @@
 				</File>
 				<File Id="611830599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>2_Steps.wav</ShortName>
-					<CachePath>SFX/2_Steps_133677D8.wem</CachePath>
+					<CachePath>SFX/2_Steps_0A8C2349.wem</CachePath>
 				</File>
 				<File Id="703031689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fishing Music.wav</ShortName>
@@ -75,7 +75,7 @@
 				</File>
 				<File Id="1014845396" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3_Steps.wav</ShortName>
-					<CachePath>SFX/3_Steps_9A86F632.wem</CachePath>
+					<CachePath>SFX/3_Steps_63AA2267.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -282,5 +282,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{50DDC2D9-65C5-0E0C-FE53-EF9B910003A9}</FileHash>
+	<FileHash>{EECC3B94-228C-7EE0-C7EA-CC1924EC634A}</FileHash>
 </SoundBanksInfo>

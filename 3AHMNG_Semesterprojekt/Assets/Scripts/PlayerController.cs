@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             _harvisterInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
+                GlobalAudioScript.instance.PlaySoundFrom(GlobalAudioScript.instance._akShredderActivate, _harvisterOBJ);
                 GameManager.instance.currentScore = 0;
                 GameManager.instance.fishBits += GameManager.instance.currentValue;
                 GameManager.instance.currentValue = 0;
@@ -110,16 +110,15 @@ public class PlayerController : MonoBehaviour
             {
                 _upgradeUI.SetActive(true);
             }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                _upgradeUI.SetActive(false);
-            }
         }
         else
         {
             _upgradeInteractTXT.SetActive(false);
         }
+    }
+    public void ExitGalaxyMenu()
+    {
+        _upgradeUI.SetActive(false);
     }
 
     void FixedUpdate()
