@@ -86,7 +86,7 @@ public class ComboScroller : MonoBehaviour
             GameObject randomArrow = _arrows[randomIndex];
 
             Vector3 spawnPos = randomArrow.transform.position;
-            spawnPos.y = i + 10;
+            spawnPos.y = (i * 2) + 5;
 
             Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
         }
