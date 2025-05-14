@@ -90,7 +90,7 @@ public class FishBehaviour : MonoBehaviour
         _leedsichthys._rarity = 1;
         _leedsichthys._name = "Leedsichthys";
         _leedsichthys._difficulty = Difficulty.Common;
-        _leedsichthys._size = 4.5f;
+        _leedsichthys._size = 5f;
         fishDictionary.Add(_leedsichthys._fishCode, _leedsichthys);
 
         Fish _sacabambaspis = new Fish();
@@ -98,7 +98,7 @@ public class FishBehaviour : MonoBehaviour
         _sacabambaspis._rarity = 1;
         _sacabambaspis._name = "Sacabambaspis";
         _sacabambaspis._difficulty = Difficulty.Common;
-        _sacabambaspis._size = 3;
+        _sacabambaspis._size = 2.5f;
         fishDictionary.Add(_sacabambaspis._fishCode, _sacabambaspis);
 
         Fish _horseshoeCrab = new Fish();
@@ -122,7 +122,7 @@ public class FishBehaviour : MonoBehaviour
         _helicoprion._rarity = 5;
         _helicoprion._name = "Helicoprion";
         _helicoprion._difficulty = Difficulty.Rare;
-        _helicoprion._size = 6;
+        _helicoprion._size = 5;
         fishDictionary.Add(_helicoprion._fishCode, _helicoprion);
 
         Fish _kingOssis = new Fish();
@@ -130,7 +130,7 @@ public class FishBehaviour : MonoBehaviour
         _kingOssis._rarity = 0;
         _kingOssis._name = "King Ossis";
         _kingOssis._difficulty = Difficulty.God;
-        _kingOssis._size = 7;
+        _kingOssis._size = 6;
         //_kingOssis.isGodFish = true;
         //_kingOssis.hasBeenCaught = false;
         fishDictionary.Add(_kingOssis._fishCode, _kingOssis);
@@ -141,7 +141,7 @@ public class FishBehaviour : MonoBehaviour
         _floralFlounder._rarity = 1;
         _floralFlounder._name = "Floral Flounder";
         _floralFlounder._difficulty = Difficulty.Common;
-        _floralFlounder._size = 4;
+        _floralFlounder._size = 3;
         fishDictionary.Add(_floralFlounder._fishCode, _floralFlounder);
 
         Fish _honeyCarp = new Fish();
@@ -149,7 +149,7 @@ public class FishBehaviour : MonoBehaviour
         _honeyCarp._rarity = 1;
         _honeyCarp._name = "Honey Carp";
         _honeyCarp._difficulty = Difficulty.Common;
-        _honeyCarp._size = 2;
+        _honeyCarp._size = 1;
         fishDictionary.Add(_honeyCarp._fishCode, _honeyCarp);
 
         Fish _bloomster = new Fish();
@@ -157,7 +157,7 @@ public class FishBehaviour : MonoBehaviour
         _bloomster._rarity = 2;
         _bloomster._name = "Bloomster";
         _bloomster._difficulty = Difficulty.Uncommon;
-        _bloomster._size = 3;
+        _bloomster._size = 2;
         fishDictionary.Add(_bloomster._fishCode, _bloomster);
 
         Fish _grassmuncher = new Fish();
@@ -165,7 +165,7 @@ public class FishBehaviour : MonoBehaviour
         _grassmuncher._rarity = 2;
         _grassmuncher._name = "Grassmuncher";
         _grassmuncher._difficulty = Difficulty.Uncommon;
-        _grassmuncher._size = 0.5f;
+        _grassmuncher._size = 1f;
         fishDictionary.Add(_grassmuncher._fishCode, _grassmuncher);
 
         Fish _lemonShark = new Fish();
@@ -173,7 +173,7 @@ public class FishBehaviour : MonoBehaviour
         _lemonShark._rarity = 5;
         _lemonShark._name = "Lemon Shark";
         _lemonShark._difficulty = Difficulty.Rare;
-        _lemonShark._size = 6;
+        _lemonShark._size = 4;
         fishDictionary.Add(_lemonShark._fishCode, _lemonShark);
 
         Fish _megaphoton = new Fish();
@@ -181,7 +181,7 @@ public class FishBehaviour : MonoBehaviour
         _megaphoton._rarity = 20;
         _megaphoton._name = "Megaphoton";
         _megaphoton._difficulty = Difficulty.Legendary;
-        _megaphoton._size = 8;
+        _megaphoton._size = 6;
         fishDictionary.Add(_megaphoton._fishCode, _megaphoton);
 
         Fish _queenVitae = new Fish();
@@ -189,7 +189,7 @@ public class FishBehaviour : MonoBehaviour
         _queenVitae._rarity = 0;
         _queenVitae._name = "Queen Vitae";
         _queenVitae._difficulty = Difficulty.God;
-        _queenVitae._size = 7;
+        _queenVitae._size = 4;
         //_queenVitae.isGodFish = true;
         //_queenVitae.hasBeenCaught = false;
         fishDictionary.Add(_queenVitae._fishCode, _queenVitae);
@@ -240,7 +240,7 @@ public class FishBehaviour : MonoBehaviour
         _magnaLarva._rarity = 10;
         _magnaLarva._name = "Magna Larva";
         _magnaLarva._difficulty = Difficulty.Epic;
-        _magnaLarva._size = 5;
+        _magnaLarva._size = 3.5f;
         fishDictionary.Add(_magnaLarva._fishCode, _magnaLarva);
 
         Fish _nyanCatfish = new Fish();
@@ -248,7 +248,7 @@ public class FishBehaviour : MonoBehaviour
         _nyanCatfish._rarity = 20;
         _nyanCatfish._name = "Nyan Catfish";
         _nyanCatfish._difficulty = Difficulty.Legendary;
-        _nyanCatfish._size = 5;
+        _nyanCatfish._size = 4;
         fishDictionary.Add(_nyanCatfish._fishCode, _nyanCatfish);
 
         Fish _ultranova = new Fish();

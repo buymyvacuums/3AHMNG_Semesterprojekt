@@ -22,6 +22,7 @@ public class FishSpriteVisualizer : MonoBehaviour
     {
 
         fishImage.sprite = fishSprite[i-1];
+        fishImage.SetNativeSize();
         fishImage.transform.localScale = Vector3.one * size;
 
     }

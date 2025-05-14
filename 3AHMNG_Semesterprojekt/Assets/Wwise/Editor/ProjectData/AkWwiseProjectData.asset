@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584544462793369410
+    m_lastTime: -8584543901273774367
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -435,6 +435,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.43623188
       minDuration: 0.43623188
+    - name: Galaxy_Buy
+      guid: 979b10d49d9dbb48ba5e173403f67474
+      id: 1306164848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Galaxy_Buy
+        ObjectType: 3
+        guid: 979b10d49d9dbb48ba5e173403f67474
+      Path: Events\Default Work Unit\placeholders\Galaxy_Buy
+      maxAttenuation: 0
+      maxDuration: 2.7064896
+      minDuration: 2.7064896
+    - name: Galaxy_Select
+      guid: f1825f09b488a945bf9b7a7c5356821d
+      id: 828246776
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Galaxy_Select
+        ObjectType: 3
+        guid: f1825f09b488a945bf9b7a7c5356821d
+      Path: Events\Default Work Unit\placeholders\Galaxy_Select
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: GalaxyMenu_Close
+      guid: c6374f987a247c4fabda495540c7588e
+      id: 2178867337
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: GalaxyMenu_Close
+        ObjectType: 3
+        guid: c6374f987a247c4fabda495540c7588e
+      Path: Events\Default Work Unit\placeholders\GalaxyMenu_Close
+      maxAttenuation: 0
+      maxDuration: 0.30839583
+      minDuration: 0.30839583
+    - name: GalaxyMenu_Open
+      guid: be553f540d779b4a9502291c8f6c4d3d
+      id: 3220367451
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: GalaxyMenu_Open
+        ObjectType: 3
+        guid: be553f540d779b4a9502291c8f6c4d3d
+      Path: Events\Default Work Unit\placeholders\GalaxyMenu_Open
+      maxAttenuation: 0
+      maxDuration: 0.33810416
+      minDuration: 0.33810416
     - name: hit1
       guid: 309c3eaff081d14b930f18438b030167
       id: 3232033841
