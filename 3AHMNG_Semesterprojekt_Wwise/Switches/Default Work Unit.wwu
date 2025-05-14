@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="shredder" ID="{B8E07AF5-5141-440D-B989-67D21A8C6DBF}">
+					<ChildrenList>
+						<Switch Name="idle" ID="{47C9EE95-1DBE-47B5-944F-49D3A0CF578D}"/>
+						<Switch Name="activate" ID="{7F41A6DB-C930-46A8-8D8B-99C77E6E3207}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

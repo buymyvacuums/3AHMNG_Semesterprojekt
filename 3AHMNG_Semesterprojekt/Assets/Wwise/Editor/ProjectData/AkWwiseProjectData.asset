@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584543824338473049
+    m_lastTime: -8584543754220456265
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -692,6 +692,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SetShredderActivate
+      guid: 9ec29f9b0d3bc14a8bf18302316fbd4e
+      id: 1660271739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: SetShredderActivate
+        ObjectType: 3
+        guid: 9ec29f9b0d3bc14a8bf18302316fbd4e
+      Path: Events\Default Work Unit\placeholders\SetShredderActivate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: spacemusic
       guid: be2b7f517dc5ee47bf4fee9d13d4e158
       id: 931648338
@@ -712,6 +732,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: stop_spacemusic
+      guid: 5ad6f1f121315e4d96225a0a942981b7
+      id: 2267004695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: stop_spacemusic
+        ObjectType: 3
+        guid: 5ad6f1f121315e4d96225a0a942981b7
+      Path: Events\Default Work Unit\placeholders\stop_spacemusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Test
       guid: fd3ccafafef2894abc1ee11703b2c1bd
       id: 2051061508
@@ -863,8 +903,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 6bafa40fa7e95c4ba65e83ed56f45a8b
     GuidInternal: 
-    m_lastTime: -8584550622356985172
-    List: []
+    m_lastTime: -8584543754219008718
+    List:
+    - name: shredder
+      guid: f57ae0b841510d44b98967d21a8c6dbf
+      id: 2621922
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6bafa40fa7e95c4ba65e83ed56f45a8b
+      - ElementName: shredder
+        ObjectType: 11
+        guid: f57ae0b841510d44b98967d21a8c6dbf
+      Path: Switches\Default Work Unit\shredder
+      values:
+      - name: activate
+        guid: dba6417f30c9a8468d8b99c77e6e3207
+        id: 4166407614
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6bafa40fa7e95c4ba65e83ed56f45a8b
+        - ElementName: shredder
+          ObjectType: 11
+          guid: f57ae0b841510d44b98967d21a8c6dbf
+        - ElementName: activate
+          ObjectType: 10
+          guid: dba6417f30c9a8468d8b99c77e6e3207
+      - name: idle
+        guid: 95eec947be1db547944f49d3a0cf578d
+        id: 1874288895
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6bafa40fa7e95c4ba65e83ed56f45a8b
+        - ElementName: shredder
+          ObjectType: 11
+          guid: f57ae0b841510d44b98967d21a8c6dbf
+        - ElementName: idle
+          ObjectType: 10
+          guid: 95eec947be1db547944f49d3a0cf578d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -879,9 +969,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584550622356985172
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 010000000500000006000000070000000b0000000c0000000d0000000e00000016000000170000001a000000
   ExpandedWaapiItemIds: 010000000500000006000000070000000b0000000c0000000d0000000e00000016000000170000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
