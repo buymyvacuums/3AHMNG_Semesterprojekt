@@ -27,12 +27,29 @@ namespace AK
         static const AkUniqueID PLAY_SHREDDERLOOP = 120479175U;
         static const AkUniqueID PLAY_TEST = 3187507146U;
         static const AkUniqueID REEL = 2512485637U;
+        static const AkUniqueID SETSHREDDERACTIVATE = 1660271739U;
         static const AkUniqueID SPACEMUSIC = 931648338U;
+        static const AkUniqueID STOP_SPACEMUSIC = 2267004695U;
         static const AkUniqueID STOP_TEST = 2051061508U;
         static const AkUniqueID SUCCESS = 3625060726U;
         static const AkUniqueID THROW = 745179803U;
         static const AkUniqueID WALKLOOP = 2636529496U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace SHREDDER
+        {
+            static const AkUniqueID GROUP = 2621922U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ACTIVATE = 4166407614U;
+                static const AkUniqueID IDLE = 1874288895U;
+            } // namespace SWITCH
+        } // namespace SHREDDER
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

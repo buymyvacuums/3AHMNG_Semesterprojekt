@@ -196,10 +196,20 @@
 						</Event>
 						<Event Name="Play_Shredder" ID="{FF5262AE-43A5-4464-BD8B-BAECCF39A4CC}">
 							<ChildrenList>
+								<Action Name="" ID="{D011A65E-27CA-4D13-BF85-BE0967DD5F59}" ShortID="971058159">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="idle" ID="{47C9EE95-1DBE-47B5-944F-49D3A0CF578D}" WorkUnitID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{0CAE4EAF-71DB-450B-8344-6AA820DDCE68}" ShortID="455802919">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Shredderloop" ID="{78EF901B-3188-4F3D-9F5F-EBDB56815BBB}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="shredder" ID="{F075A3A9-824E-49D6-84AF-0B1CEEF46ED1}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -282,6 +292,45 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="hit1" ID="{2ACAC7C8-419B-4B8E-8F9F-250373D3E6B4}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stop_spacemusic" ID="{F1F1D65A-3121-4D5E-9622-5A0A942981B7}">
+							<ChildrenList>
+								<Action Name="" ID="{9DBD03F2-9BD7-4C5C-96EF-03517496AA83}" ShortID="1049894121">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="spacemusic" ID="{FEEB68E6-9B72-4D68-9156-5DD495BB7375}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SetShredderActivate" ID="{9B9FC29E-3B0D-4AC1-8BF1-8302316FBD4E}">
+							<ChildrenList>
+								<Action Name="" ID="{91204A58-B346-475F-925E-0B01617202C8}" ShortID="806857925">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="activate" ID="{7F41A6DB-C930-46A8-8D8B-99C77E6E3207}" WorkUnitID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{40361867-0F15-4DD2-B6D8-85AE50FF7FB5}" ShortID="734908894">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+										<Property Name="Delay" Type="Real64" Value="6.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="idle" ID="{47C9EE95-1DBE-47B5-944F-49D3A0CF578D}" WorkUnitID="{0FA4AF6B-E9A7-4B5C-A65E-83ED56F45A8B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

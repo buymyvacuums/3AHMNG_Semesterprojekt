@@ -33,6 +33,21 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Shredder" ID="{F6B4A1C1-6B93-493F-842A-FAE5C05E2297}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Shredder" ID="{FF5262AE-43A5-4464-BD8B-BAECCF39A4CC}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SetShredderActivate" ID="{9B9FC29E-3B0D-4AC1-8BF1-8302316FBD4E}" WorkUnitID="{BA96F9A6-4189-4A94-99A0-20DE96F15427}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

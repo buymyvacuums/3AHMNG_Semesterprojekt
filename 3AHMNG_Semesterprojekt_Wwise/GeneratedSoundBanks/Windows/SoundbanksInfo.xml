@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{ABFDBF3C-3CB0-9FB5-FD92-69394FDAD60A}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{CE4D4511-B215-E0E2-F653-914593C40C6D}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -158,9 +158,26 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3549617269" Name="Play_Shredder" MaxAttenuation="10" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="955796916"/>
-					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2621922" Id="1874288895" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="955796916"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2621922" Id="4166407614"/>
+							<MediaRefs>
+								<MediaRef Id="501501009"/>
+								<MediaRef Id="797557860"/>
+								<MediaRef Id="902818430"/>
+								<MediaRef Id="955796916"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2621922" Id="1874288895" Name="idle"/>
+					</ActionSetSwitch>
 				</Event>
 				<Event Id="120479175" Name="Play_ShredderLoop" MaxAttenuation="10" DurationType="OneShot" DurationMin="6.2347975" DurationMax="6.2347975">
 					<MediaRefs>
@@ -181,11 +198,18 @@
 						<MediaRef Id="703031689"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1660271739" Name="SetShredderActivate" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2621922" Id="1874288895" Name="idle"/>
+						<ActionSetSwitchEntry GroupId="2621922" Id="4166407614" Name="activate"/>
+					</ActionSetSwitch>
+				</Event>
 				<Event Id="931648338" Name="spacemusic" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="530510900"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2267004695" Name="stop_spacemusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2051061508" Name="Stop_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3625060726" Name="success" DurationType="OneShot" DurationMin="0.44231883" DurationMax="0.44231883">
 					<MediaRefs>
@@ -209,6 +233,14 @@
 			<GameParameters>
 				<GameParameter Id="2108779966" Name="walk"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2621922" Name="shredder">
+					<Switches>
+						<Switch Id="1874288895" Name="idle"/>
+						<Switch Id="4166407614" Name="activate"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6A904E35-95D8-7D67-BCF2-F084459BDD07}">
 			<ShortName>Init</ShortName>
@@ -227,6 +259,14 @@
 			<GameParameters>
 				<GameParameter Id="2108779966" Name="walk"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2621922" Name="shredder">
+					<Switches>
+						<Switch Id="1874288895" Name="idle"/>
+						<Switch Id="4166407614" Name="activate"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -343,5 +383,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F71FAC9D-7A85-E9F9-90D1-A46D5397A193}</FileHash>
+	<FileHash>{8E1B0E08-0DC3-B9E9-A25C-14F25BF908CC}</FileHash>
 </SoundBanksInfo>

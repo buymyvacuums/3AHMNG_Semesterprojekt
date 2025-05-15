@@ -35,7 +35,7 @@ public class GlobalAudioScript : MonoBehaviour
     private void Start()
     {
        PlaySound(_akWalkLoop);
-        PlaySound(_spaceMusic);
+        //PlaySound(_spaceMusic);
     }
 
     // Update is called once per frame
