@@ -17,6 +17,8 @@ public class ComboScroller : MonoBehaviour
 
     public TextMeshProUGUI _wonTXT;
     public GameObject fishImage;
+    public GameObject rarityDisplay;
+    [SerializeField] private GameObject buttons;
     private FishSpriteVisualizer _fishSpriteVisualizer;
 
     public GameObject[] _arrows;
@@ -35,37 +37,37 @@ public class ComboScroller : MonoBehaviour
         if (FishBehaviour._instance.difficulty == Difficulty.Common)
         {
             ComboScroller._ComboInstance._comboLength = 5;
-            Tempo = 50f;
+            beatTempo = 3;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.Uncommon)
         {
             ComboScroller._ComboInstance._comboLength = 8;
-            Tempo = 40f;
+            beatTempo = 4;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.Rare)
         {
             ComboScroller._ComboInstance._comboLength = 12;
-            Tempo = 30f;
+            beatTempo = 5;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.Epic)
         {
             ComboScroller._ComboInstance._comboLength = 15;
-            Tempo = 20f;
+            beatTempo = 5.5f;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.Legendary)
         {
             ComboScroller._ComboInstance._comboLength = 18;
-            Tempo = 15f;
+            beatTempo = 6;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.God)
         {
             ComboScroller._ComboInstance._comboLength = 21;
-            Tempo = 15f;
+            beatTempo = 6.5f;
         }
         hasStarted = false;
         
@@ -74,17 +76,14 @@ public class ComboScroller : MonoBehaviour
     void Start()
     {
         _fishSpriteVisualizer = FindObjectOfType<FishSpriteVisualizer>();
-        beatTempo = beatTempo / Tempo;
-
 
         
         _failTXT.SetActive(false);
         _wonTXT.gameObject.SetActive(false);
         fishImage.SetActive(false);
+        rarityDisplay.SetActive(false);
 
         StartCoroutine(StartSequence());
-
-        
     }
 
 
@@ -99,7 +98,7 @@ public class ComboScroller : MonoBehaviour
                 GameObject randomArrow = _arrows[randomIndex];
 
                 Vector3 spawnPos = randomArrow.transform.position;
-                spawnPos.y = (i * Random.Range(1, 3)) + 10;
+                spawnPos.y = (i * 1.5f) + 10;
 
                 Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
             }
@@ -108,28 +107,28 @@ public class ComboScroller : MonoBehaviour
 
         if (GameManager.instance.hitNote + GameManager.instance.missedNote == _comboLength)
         {
-            if (GameManager.instance.hitNote >= _comboLength / 1.5f)
+            if (GameManager.instance.hitNote >= _comboLength -3)
             {
-                StartCoroutine(EndFishing());
+                EndFishing();
             }
             else { StartCoroutine(FishFailed()); }
         } 
     }
 
-    IEnumerator EndFishing()
+    public void EndFishing()
     {
-        yield return new WaitForSeconds(0.2f);
-
         string fishName = FishBehaviour._instance.GetFishNameByCode(GameManager.instance.fishCode);
 
         // Mark the fish as caught!
         FishBehaviour._instance.MarkFishAsCaught(GameManager.instance.fishCode);
 
-
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akSuccess);
         _wonTXT.text = "You caught a " + fishName + "!";
-        _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode, FishBehaviour._instance.GetFishSizeByCode(GameManager.instance.fishCode));
+        _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode, FishBehaviour._instance.GetFishSizeByCode(GameManager.instance.fishCode),FishBehaviour._instance.GetFishRarityAsInt(GameManager.instance.fishCode));
         _wonTXT.gameObject.SetActive(true);
         fishImage.SetActive(true);
+        rarityDisplay.SetActive(true);
+        buttons.SetActive(false);
 
         //God Check
         if(GameManager.instance.fishCode == 9)
@@ -138,8 +137,7 @@ public class ComboScroller : MonoBehaviour
         }
 
         //Return to main
-        yield return new WaitForSeconds(1);
-        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akSuccess);
+        
         GameManager.instance.currentScore += 1;
         GameManager.instance.currentValue += FishBehaviour._instance.GetFishRarityByCode(GameManager.instance.fishCode);
         Debug.Log("Value = " + GameManager.instance.currentValue);
@@ -147,14 +145,14 @@ public class ComboScroller : MonoBehaviour
         GameManager.instance.missedNote = 0;
         //GameManager.instance.SaveProgress();
         Debug.Log("God progress: " + GameManager.instance._god);
-        SceneManager.LoadScene("Main");
     }
 
     IEnumerator FishFailed()
     {
+        yield return null;
+        
         _failTXT.gameObject.SetActive(true);
         //Play Fail Sound
-        
         yield return new WaitForSeconds(1);
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akFail);
         GameManager.instance.hitNote = 0;
@@ -174,5 +172,10 @@ public class ComboScroller : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _timer.gameObject.SetActive(false);
         hasStarted = true;
+    }
+
+    public void LoadMain()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

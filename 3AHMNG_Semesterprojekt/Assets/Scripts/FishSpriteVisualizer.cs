@@ -7,6 +7,9 @@ public class FishSpriteVisualizer : MonoBehaviour
 {
     private Image fishImage;
     [SerializeField] private Sprite[] fishSprite;
+
+    public Image RarityImage;
+    [SerializeField] private Sprite[] starSprite;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,12 +21,14 @@ public class FishSpriteVisualizer : MonoBehaviour
     {
         
     }
-    public void ChangeFishSprite(int i, float size)
+    public void ChangeFishSprite(int i, float size,int rarity)
     {
 
         fishImage.sprite = fishSprite[i-1];
         fishImage.SetNativeSize();
         fishImage.transform.localScale = Vector3.one * size;
+        RarityImage.sprite = starSprite[rarity];
+        RarityImage.SetNativeSize();
 
     }
 }

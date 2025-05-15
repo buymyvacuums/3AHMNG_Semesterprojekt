@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 //using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
@@ -293,6 +294,38 @@ public class FishBehaviour : MonoBehaviour
         {
             return 0;
         }
+    }
+    public int GetFishRarityAsInt(int code)
+    {
+        int i = 0;
+        if (fishDictionary.TryGetValue(code, out Fish fish))
+        {
+            if (fish._difficulty == Difficulty.Common)
+            {
+                i = 0;
+            }
+            else if (fish._difficulty == Difficulty.Uncommon)
+            {
+                i = 1;
+            }
+            else if (fish._difficulty == Difficulty.Rare)
+            {
+                i = 2;
+            }
+            else if (fish._difficulty == Difficulty.Epic)
+            {
+                i = 3;
+            }
+            else if (fish._difficulty == Difficulty.Legendary)
+            {
+                i = 4;
+            }
+            else if (fish._difficulty == Difficulty.God)
+            {
+                i = 5;
+            }
+        }
+        return i;
     }
     public float GetFishSizeByCode(int code)
     {
