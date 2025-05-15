@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{50FC32C1-49FE-91E8-9900-79C2D0036A80}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{ABFDBF3C-3CB0-9FB5-FD92-69394FDAD60A}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -25,6 +25,10 @@
 					<ShortName>hit4.wav</ShortName>
 					<CachePath>SFX/hit4_72A06AA3.wem</CachePath>
 				</File>
+				<File Id="125728501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Open Beeps.wav</ShortName>
+					<CachePath>SFX/Open Beeps_10C4C929.wem</CachePath>
+				</File>
 				<File Id="300009681" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reel.wav</ShortName>
 					<CachePath>SFX/reel_10C4C929.wem</CachePath>
@@ -39,11 +43,19 @@
 				</File>
 				<File Id="429769565" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>1_Steps.wav</ShortName>
-					<CachePath>SFX/1_Steps_2E182594.wem</CachePath>
+					<CachePath>SFX/1_Steps_C083901D.wem</CachePath>
+				</File>
+				<File Id="460848510" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Upgrade_Bought 1.wav</ShortName>
+					<CachePath>SFX/Upgrade_Bought 1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="493269055" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bite.wav</ShortName>
 					<CachePath>SFX/bite_BC8A249A.wem</CachePath>
+				</File>
+				<File Id="501501009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chainsaw cutting flesh.wav</ShortName>
+					<CachePath>SFX/Chainsaw cutting flesh_10C4C929.wem</CachePath>
 				</File>
 				<File Id="506642230" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight, Impact, Designed, Anime, Magic, Attack, Shing 04 SND77192.wav</ShortName>
@@ -55,7 +67,7 @@
 				</File>
 				<File Id="611830599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>2_Steps.wav</ShortName>
-					<CachePath>SFX/2_Steps_133677D8.wem</CachePath>
+					<CachePath>SFX/2_Steps_0A8C2349.wem</CachePath>
 				</File>
 				<File Id="703031689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fishing Music.wav</ShortName>
@@ -65,6 +77,10 @@
 					<ShortName>hit3.wav</ShortName>
 					<CachePath>SFX/hit3_756D0C85.wem</CachePath>
 				</File>
+				<File Id="797557860" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>2 PlayerFeedback.wav</ShortName>
+					<CachePath>SFX/2 PlayerFeedback_10C4C929.wem</CachePath>
+				</File>
 				<File Id="822219929" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hit2.wav</ShortName>
 					<CachePath>SFX/hit2_DC641980.wem</CachePath>
@@ -73,9 +89,21 @@
 					<ShortName>throw.wav</ShortName>
 					<CachePath>SFX/throw_011058B9.wem</CachePath>
 				</File>
+				<File Id="902818430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chainsaw throw fish.wav</ShortName>
+					<CachePath>SFX/Chainsaw throw fish_CA226853.wem</CachePath>
+				</File>
+				<File Id="955796916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chainsaw.wav</ShortName>
+					<CachePath>SFX/Chainsaw_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1014845396" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3_Steps.wav</ShortName>
-					<CachePath>SFX/3_Steps_9A86F632.wem</CachePath>
+					<CachePath>SFX/3_Steps_63AA2267.wem</CachePath>
+				</File>
+				<File Id="1031632235" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Close Beeps.wav</ShortName>
+					<CachePath>SFX/Close Beeps_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -87,6 +115,26 @@
 				<Event Id="2596272617" Name="fail" DurationType="OneShot" DurationMin="0.43623188" DurationMax="0.43623188">
 					<MediaRefs>
 						<MediaRef Id="50014804"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1306164848" Name="Galaxy_Buy" DurationType="OneShot" DurationMin="2.7064896" DurationMax="2.7064896">
+					<MediaRefs>
+						<MediaRef Id="460848510"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="828246776" Name="Galaxy_Select" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+					<MediaRefs>
+						<MediaRef Id="364352627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2178867337" Name="GalaxyMenu_Close" DurationType="OneShot" DurationMin="0.30839583" DurationMax="0.30839583">
+					<MediaRefs>
+						<MediaRef Id="1031632235"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3220367451" Name="GalaxyMenu_Open" DurationType="OneShot" DurationMin="0.33810416" DurationMax="0.33810416">
+					<MediaRefs>
+						<MediaRef Id="125728501"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3232033841" Name="hit1" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
@@ -109,6 +157,19 @@
 						<MediaRef Id="91520667"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3549617269" Name="Play_Shredder" MaxAttenuation="10" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="955796916"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="120479175" Name="Play_ShredderLoop" MaxAttenuation="10" DurationType="OneShot" DurationMin="6.2347975" DurationMax="6.2347975">
+					<MediaRefs>
+						<MediaRef Id="501501009"/>
+						<MediaRef Id="797557860"/>
+						<MediaRef Id="902818430"/>
+						<MediaRef Id="955796916"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3187507146" Name="Play_Test" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="506642230"/>
@@ -120,7 +181,7 @@
 						<MediaRef Id="703031689"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="931648338" Name="spacemusic" DurationType="Infinite">
+				<Event Id="931648338" Name="spacemusic" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="530510900"/>
 					</MediaRefs>
@@ -282,5 +343,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{50DDC2D9-65C5-0E0C-FE53-EF9B910003A9}</FileHash>
+	<FileHash>{F71FAC9D-7A85-E9F9-90D1-A46D5397A193}</FileHash>
 </SoundBanksInfo>

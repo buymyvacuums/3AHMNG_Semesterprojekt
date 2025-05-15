@@ -11,7 +11,14 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akFail;
     [SerializeField] public AK.Wwise.Event _akSuccess;
     [SerializeField] public AK.Wwise.Event _akWalkLoop;
+    [SerializeField] public AK.Wwise.Event _akShredderLoop;
+    [SerializeField] public AK.Wwise.Event _akShredderActivate;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuOpen;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuClose;
+    [SerializeField] public AK.Wwise.Event _akGalaxyBuy;
+    [SerializeField] public AK.Wwise.Event _akGalaxyMenuSelect;
     [SerializeField] private AK.Wwise.RTPC _akPWalk;
+
     [SerializeField] private AK.Wwise.Event _spaceMusic;
 
     private void Awake()
@@ -28,7 +35,7 @@ public class GlobalAudioScript : MonoBehaviour
     private void Start()
     {
        PlaySound(_akWalkLoop);
-        _spaceMusic?.Post(GameObject.FindGameObjectWithTag("SpaceAmbience"));
+        PlaySound(_spaceMusic);
     }
 
     // Update is called once per frame
@@ -38,6 +45,8 @@ public class GlobalAudioScript : MonoBehaviour
     }
 
     public void PlaySound(AK.Wwise.Event sound) { sound?.Post(this.gameObject); }
+
+    public void PlaySoundFrom(AK.Wwise.Event sound, GameObject GO) { sound?.Post(GO.gameObject); }
     public void WalkSounds(float value)
     {
         _akPWalk.SetValue(gameObject, value);

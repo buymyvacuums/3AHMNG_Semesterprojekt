@@ -9,7 +9,7 @@ public class CameraSmoothness : MonoBehaviour
     private float smoothTime = 0.25f;
     private Vector3 velocity = Vector3.zero;
 
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform target; 
 
     // Update is called once per frame
     void Update()

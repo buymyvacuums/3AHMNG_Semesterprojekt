@@ -194,6 +194,99 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Shredder" ID="{FF5262AE-43A5-4464-BD8B-BAECCF39A4CC}">
+							<ChildrenList>
+								<Action Name="" ID="{0CAE4EAF-71DB-450B-8344-6AA820DDCE68}" ShortID="455802919">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shredderloop" ID="{78EF901B-3188-4F3D-9F5F-EBDB56815BBB}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ShredderLoop" ID="{50B0CEB8-6A85-441E-8A4D-D6B99F97E7C2}">
+							<ChildrenList>
+								<Action Name="" ID="{9963735D-D69F-49E6-A420-A976A6FB8923}" ShortID="491036133">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shredderloop" ID="{78EF901B-3188-4F3D-9F5F-EBDB56815BBB}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{35FECBFA-3420-4A9F-B0A6-FA417D79F3CC}" ShortID="121458223">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ShredderActivate" ID="{1DBD6FCE-DA9B-41F6-B2A9-778FF9D5AA0F}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1B3752B3-4DC4-4002-9DD4-8DB0D0EFD112}" ShortID="1072415118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="Delay" Type="Real64" Value="5.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B6BA9073-7403-4A86-9484-6118252D9753}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shredderloop" ID="{78EF901B-3188-4F3D-9F5F-EBDB56815BBB}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GalaxyMenu_Open" ID="{543F55BE-770D-4A9B-9502-291C8F6C4D3D}">
+							<ChildrenList>
+								<Action Name="" ID="{A130421C-B22C-44DA-BDDE-8234E68FDCC0}" ShortID="395589835">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Open Beeps" ID="{C654D0F6-5500-4B22-9269-F72AC3D58B9A}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GalaxyMenu_Close" ID="{984F37C6-247A-4F7C-ABDA-495540C7588E}">
+							<ChildrenList>
+								<Action Name="" ID="{E7DBB07F-D06D-4AEA-9970-1F6CD97055A1}" ShortID="829658931">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Close Beeps" ID="{37EAC7B1-AD5B-47C3-8344-EDE1A1D830AF}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Galaxy_Buy" ID="{D4109B97-9D9D-48BB-BA5E-173403F67474}">
+							<ChildrenList>
+								<Action Name="" ID="{667BB685-EA70-4B44-8026-7855AF52D9AD}" ShortID="999611125">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Upgrade_Bought 1" ID="{B1780515-FC16-4DEF-9187-C941AF269F4C}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Galaxy_Select" ID="{095F82F1-88B4-45A9-BF9B-7A7C5356821D}">
+							<ChildrenList>
+								<Action Name="" ID="{EA3AE438-7218-4C80-85DB-1FF5B0B2FF33}" ShortID="472738944">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hit1" ID="{2ACAC7C8-419B-4B8E-8F9F-250373D3E6B4}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

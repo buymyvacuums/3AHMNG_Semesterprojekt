@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
 
     public static PlayerController instance;
-
+    [Header("Fish")]
     [SerializeField] private LayerMask fishArea;
     [SerializeField] private LayerMask fishHarvister;
     [SerializeField] private LayerMask fishUpgrade;
@@ -82,10 +82,11 @@ public class PlayerController : MonoBehaviour
             _harvisterInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
+                GlobalAudioScript.instance.PlaySoundFrom(GlobalAudioScript.instance._akShredderActivate, _harvisterOBJ);
                 GameManager.instance.currentScore = 0;
                 GameManager.instance.fishBits += GameManager.instance.currentValue;
                 GameManager.instance.currentValue = 0;
+                //GameManager.instance.SaveProgress();
 
                 Debug.Log("Fish: " + GameManager.instance.currentScore);
                 Debug.Log("Fish Bits: " + GameManager.instance.fishBits);
@@ -108,17 +109,18 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _upgradeUI.SetActive(true);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                _upgradeUI.SetActive(false);
+                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
             }
         }
         else
         {
             _upgradeInteractTXT.SetActive(false);
         }
+    }
+    public void ExitGalaxyMenu()
+    {
+        _upgradeUI.SetActive(false);
+        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuClose);
     }
 
     void FixedUpdate()

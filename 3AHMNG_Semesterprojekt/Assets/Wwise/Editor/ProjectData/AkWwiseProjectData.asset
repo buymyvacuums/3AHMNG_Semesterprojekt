@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ce4cd0a4fa4e6644b26f6b0f4e8ce7d1
     GuidInternal: 
-    m_lastTime: -8584593835197752109
+    m_lastTime: -8584550622356985172
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584593835197752109
+    m_lastTime: -8584550622356975165
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5fa7370285552e4cbab601d8a9be981e
     GuidInternal: 
-    m_lastTime: -8584581854818053466
+    m_lastTime: -8584550622359756174
     List:
     - name: Ambience
       guid: 35d400884ec7a04fb3bad60aba346ef7
@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: dd0c7b8377c1b74185fe70c0e3120a6f
     GuidInternal: 
-    m_lastTime: -8584557609101857247
+    m_lastTime: -8584550622357005178
     List:
     - name: MainSoundbank
       guid: 58a72b3d45dd9c4aafb2fbdf59d4653b
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584549189357668643
+    m_lastTime: -8584543824338473049
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -435,6 +435,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.43623188
       minDuration: 0.43623188
+    - name: Galaxy_Buy
+      guid: 979b10d49d9dbb48ba5e173403f67474
+      id: 1306164848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Galaxy_Buy
+        ObjectType: 3
+        guid: 979b10d49d9dbb48ba5e173403f67474
+      Path: Events\Default Work Unit\placeholders\Galaxy_Buy
+      maxAttenuation: 0
+      maxDuration: 2.7064896
+      minDuration: 2.7064896
+    - name: Galaxy_Select
+      guid: f1825f09b488a945bf9b7a7c5356821d
+      id: 828246776
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Galaxy_Select
+        ObjectType: 3
+        guid: f1825f09b488a945bf9b7a7c5356821d
+      Path: Events\Default Work Unit\placeholders\Galaxy_Select
+      maxAttenuation: 0
+      maxDuration: 0.13333334
+      minDuration: 0.13333334
+    - name: GalaxyMenu_Close
+      guid: c6374f987a247c4fabda495540c7588e
+      id: 2178867337
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: GalaxyMenu_Close
+        ObjectType: 3
+        guid: c6374f987a247c4fabda495540c7588e
+      Path: Events\Default Work Unit\placeholders\GalaxyMenu_Close
+      maxAttenuation: 0
+      maxDuration: 0.30839583
+      minDuration: 0.30839583
+    - name: GalaxyMenu_Open
+      guid: be553f540d779b4a9502291c8f6c4d3d
+      id: 3220367451
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: GalaxyMenu_Open
+        ObjectType: 3
+        guid: be553f540d779b4a9502291c8f6c4d3d
+      Path: Events\Default Work Unit\placeholders\GalaxyMenu_Open
+      maxAttenuation: 0
+      maxDuration: 0.33810416
+      minDuration: 0.33810416
     - name: hit1
       guid: 309c3eaff081d14b930f18438b030167
       id: 3232033841
@@ -532,6 +612,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Shredder
+      guid: ae6252ffa5436444bd8bbaeccf39a4cc
+      id: 3549617269
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Play_Shredder
+        ObjectType: 3
+        guid: ae6252ffa5436444bd8bbaeccf39a4cc
+      Path: Events\Default Work Unit\placeholders\Play_Shredder
+      maxAttenuation: 10
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ShredderLoop
+      guid: b8ceb050856a1e448a4dd6b99f97e7c2
+      id: 120479175
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: Play_ShredderLoop
+        ObjectType: 3
+        guid: b8ceb050856a1e448a4dd6b99f97e7c2
+      Path: Events\Default Work Unit\placeholders\Play_ShredderLoop
+      maxAttenuation: 10
+      maxDuration: 6.2347975
+      minDuration: 6.2347975
     - name: Play_Test
       guid: 7ad253eb1babad499786837988855208
       id: 3187507146
@@ -589,7 +709,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: be2b7f517dc5ee47bf4fee9d13d4e158
       Path: Events\Default Work Unit\placeholders\spacemusic
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Stop_Test
@@ -701,7 +821,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c1900241dad3f349b9bd515f65558efb
     GuidInternal: 
-    m_lastTime: -8584557609102236234
+    m_lastTime: -8584550622360594882
     List:
     - name: walk
       guid: 3767e52c1555e9478eb04eb5467b33cb
@@ -729,7 +849,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 77e22245e568964cb12e851cad99e075
     GuidInternal: 
-    m_lastTime: -8584593835197772164
+    m_lastTime: -8584550622356995170
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -743,7 +863,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 6bafa40fa7e95c4ba65e83ed56f45a8b
     GuidInternal: 
-    m_lastTime: -8584593835197772164
+    m_lastTime: -8584550622356985172
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -757,7 +877,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 1cd0c96f2dc3bb449290910f6e68b695
     GuidInternal: 
-    m_lastTime: -8584593835197762200
+    m_lastTime: -8584550622356985172
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 010000000500000006000000070000000b0000000c0000000d0000000e00000016000000170000001a000000

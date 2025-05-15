@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int currentValue = 0;
     public int fishBits = 0;
     
+    //Rythm stuff
     public int scorePerNote = 100;
     public int hitNote;
     public int missedNote;
@@ -26,23 +27,25 @@ public class GameManager : MonoBehaviour
 
     public GameObject _wellDoneTXT;
 
-    // Start is called before the first frame update
+    private static bool _initialized = false;
+
     void Start()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (!_initialized)
+            {
+                FishBehaviour.galaxy = Galaxy.Tutoria;
+                _initialized = true;
+            }
         }
         else
         {
-            //Debug.LogWarning("Multiple instances of " + instance.GetType().Name + " #1", gameObject);
-            //Debug.LogWarning("Destroyed " + this.gameObject.name + " because there must only be one " + instance.GetType().Name);
             Destroy(gameObject);
         }
-
-        FishBehaviour._instance.galaxy = Galaxy.Tutoria;
-
     }
 
 
@@ -50,28 +53,24 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        //GALAXY TESTER
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        //GALAXY SWITCHER
+        if (FishBehaviour.galaxy == Galaxy.Tutoria)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Tutoria;
             BackgroundManager.instance.ChangeBackground(0);
             Debug.Log("Galaxy: Tutoria");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (FishBehaviour.galaxy == Galaxy.Prehistoria)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Prehistoria;
             BackgroundManager.instance.ChangeBackground(1);
             Debug.Log("Galaxy: Prehistoria");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (FishBehaviour.galaxy == Galaxy.Biologica)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Biologica;
             BackgroundManager.instance.ChangeBackground(2);
             Debug.Log("Galaxy: Biologica");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (FishBehaviour.galaxy == Galaxy.Galaxia)
         {
-            FishBehaviour._instance.galaxy = Galaxy.Galaxia;
             BackgroundManager.instance.ChangeBackground(3);
             Debug.Log("Galaxy: Galaxia");
         }
@@ -90,57 +89,52 @@ public class GameManager : MonoBehaviour
         Debug.Log("Missed Note");
     }
 
+    private List<int> GetFishPoolForGalaxy(Galaxy galaxy)
+    {
+        List<int> pool = new List<int>();
+
+        int start = 1, end = 3;
+
+        switch (galaxy)
+        {
+            case Galaxy.Tutoria: start = 1; end = 3; break;
+            case Galaxy.Prehistoria: start = 4; end = 9; break;
+            case Galaxy.Biologica: start = 10; end = 16; break;
+            case Galaxy.Galaxia: start = 17; end = 24; break;
+        }
+
+        for (int i = start; i <= end; i++)
+        {
+            bool isGodFish = FishBehaviour._instance.fishDictionary[i]._difficulty == Difficulty.God;
+            bool alreadyCaught = FishBehaviour._instance.HasCaughtFish(i);
+
+            if (!isGodFish || !alreadyCaught)
+                pool.Add(i);
+        }
+
+        return pool;
+    }
+
+
     public IEnumerator Wait()
     {
         fishCode = 0;
 
-        if (FishBehaviour._instance.galaxy == Galaxy.Tutoria)
+        if (FishBehaviour.galaxy == Galaxy.Tutoria)
         {
-            fishCode = Random.Range(1, 4);
-            Debug.Log("Set fishCode to: " + fishCode);  // Debug log here
+            fishCode = Random.Range(1, 4); // Leave unchanged if no God Fish in Tutoria
         }
-        
-        if (FishBehaviour._instance.galaxy == Galaxy.Prehistoria)
+        else
         {
-            if(FishBehaviour._instance.HasCaughtFish(9))
+            List<int> possibleFish = GetFishPoolForGalaxy(FishBehaviour.galaxy);
+            if (possibleFish.Count > 0)
             {
-                Debug.Log("GOTT IST TOT");
-                fishCode = Random.Range(4, 9);
-                Debug.Log("Set fishCode to: " + fishCode);
+                fishCode = possibleFish[Random.Range(0, possibleFish.Count)];
             }
-
             else
             {
-                fishCode = Random.Range(4, 10);
-                Debug.Log("Set fishCode to: " + fishCode);
-            }
-        }
-        if (FishBehaviour._instance.galaxy == Galaxy.Biologica)
-        {
-            if (FishBehaviour._instance.HasCaughtFish(16) == false)
-            {
-                fishCode = Random.Range(10, 17);
-                Debug.Log("Set fishCode to: " + fishCode);
-            }
-
-            else if (FishBehaviour._instance.HasCaughtFish(16))
-            {
-                fishCode = Random.Range(10, 16);
-                Debug.Log("Set fishCode to: " + fishCode);
-            }
-        }
-        if (FishBehaviour._instance.galaxy == Galaxy.Galaxia)
-        {
-            if (FishBehaviour._instance.HasCaughtFish(24) == false)
-            {
-                fishCode = Random.Range(17, 25);
-                Debug.Log("Set fishCode to: " + fishCode);
-            }
-
-            else if (FishBehaviour._instance.HasCaughtFish(24))
-            {
-                fishCode = Random.Range(17, 24);
-                Debug.Log("Set fishCode to: " + fishCode);
+                Debug.LogWarning("No fish available in this galaxy!");
+                yield break;
             }
         }
 
@@ -161,4 +155,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Fishing_Rythm");
     }
 
-    }
+    
+
+}
+
+

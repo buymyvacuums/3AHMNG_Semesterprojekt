@@ -593,9 +593,14 @@
 						</RandomSequenceContainer>
 						<Sound Name="spacemusic" ID="{FEEB68E6-9B72-4D68-9156-5DD495BB7375}" ShortID="471345490">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="New Attenuation_01" ID="{334F685B-4E9E-4898-A482-6596476FBF7F}" WorkUnitID="{4642A86A-26DF-4BDC-9BD4-8AC1A59CE2CB}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
 								</Reference>
@@ -614,6 +619,269 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Background Music" ID="{A58C5B56-3804-4934-BF28-AB5D9CC5377A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Shredderloop" ID="{78EF901B-3188-4F3D-9F5F-EBDB56815BBB}" ShortID="523972865">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="New Attenuation" ID="{B48688E9-C9B5-4947-8E51-34E582EC41D9}" WorkUnitID="{4642A86A-26DF-4BDC-9BD4-8AC1A59CE2CB}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Chainsaw" ID="{51B8AA7E-EF2C-46B0-B594-CC1D995D7293}" ShortID="6397662">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Chainsaw" ID="{F78772BD-5191-45E1-BBAF-EDC6BC4BB902}">
+											<Language>SFX</Language>
+											<AudioFile>Chainsaw.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="955796916"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Chainsaw" ID="{F78772BD-5191-45E1-BBAF-EDC6BC4BB902}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Chainsaw" ID="{51B8AA7E-EF2C-46B0-B594-CC1D995D7293}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="ShredderActivate" ID="{1DBD6FCE-DA9B-41F6-B2A9-778FF9D5AA0F}" ShortID="299856274">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="New Attenuation" ID="{B48688E9-C9B5-4947-8E51-34E582EC41D9}" WorkUnitID="{4642A86A-26DF-4BDC-9BD4-8AC1A59CE2CB}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Chainsaw throw fish" ID="{258245A2-D2C9-471C-94BE-FF3B8F92EC33}" ShortID="915047703">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Chainsaw throw fish" ID="{8B09FF76-5892-4CE9-A987-76B1F9C2499C}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.605302617230098"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Chainsaw throw fish.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="902818430"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Chainsaw throw fish" ID="{8B09FF76-5892-4CE9-A987-76B1F9C2499C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="2 PlayerFeedback" ID="{ED8BDBE5-BE02-4B2C-99F7-946CB118740A}" ShortID="1055887048">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="2 PlayerFeedback" ID="{9882360F-0DDE-45CD-BF1C-C2C290CDB1C4}">
+											<Language>SFX</Language>
+											<AudioFile>2 PlayerFeedback.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="797557860"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="2 PlayerFeedback" ID="{9882360F-0DDE-45CD-BF1C-C2C290CDB1C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="ChainsawCutting" ID="{7604B324-DFE0-46FB-B016-1267FB5EAC5A}" ShortID="442989582">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Chainsaw cutting flesh" ID="{121B7553-B92B-41C8-A8A9-C25D78DB3CB2}" ShortID="402389720">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Chainsaw cutting flesh" ID="{22951EC2-85ED-4406-8969-CA73EFCAE27E}">
+													<Language>SFX</Language>
+													<AudioFile>Chainsaw cutting flesh.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="501501009"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Chainsaw cutting flesh" ID="{22951EC2-85ED-4406-8969-CA73EFCAE27E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Chainsaw" ID="{510B6850-3FAF-47DA-A5E6-E93A0E8A9DAE}" ShortID="94664514">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Chainsaw" ID="{27B8F6B4-75B2-4B40-8F41-F6B1F042F260}">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Chainsaw.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="955796916"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Chainsaw" ID="{27B8F6B4-75B2-4B40-8F41-F6B1F042F260}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Chainsaw throw fish" ID="{258245A2-D2C9-471C-94BE-FF3B8F92EC33}"/>
+								<ItemRef Name="ChainsawCutting" ID="{7604B324-DFE0-46FB-B016-1267FB5EAC5A}"/>
+								<ItemRef Name="2 PlayerFeedback" ID="{ED8BDBE5-BE02-4B2C-99F7-946CB118740A}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<Sound Name="Open Beeps" ID="{C654D0F6-5500-4B22-9269-F72AC3D58B9A}" ShortID="169825751">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Open Beeps" ID="{97BA8038-526B-4541-8DB4-062AC2453896}">
+									<Language>SFX</Language>
+									<AudioFile>Open Beeps.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="125728501"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Open Beeps" ID="{97BA8038-526B-4541-8DB4-062AC2453896}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Close Beeps" ID="{37EAC7B1-AD5B-47C3-8344-EDE1A1D830AF}" ShortID="73767836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Close Beeps" ID="{64940CB5-A3B5-4EEC-A358-7BFE2566AB95}">
+									<Language>SFX</Language>
+									<AudioFile>Close Beeps.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1031632235"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Close Beeps" ID="{64940CB5-A3B5-4EEC-A358-7BFE2566AB95}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Upgrade_Bought 1" ID="{B1780515-FC16-4DEF-9187-C941AF269F4C}" ShortID="1061970973">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF93CC69-34AE-4184-8374-705E71F9E50A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0237A75F-5585-4C2E-BAB6-01D8A9BE981E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Upgrade_Bought 1" ID="{E2F6EDAC-C067-4D3F-A907-A2CC1C8B026A}">
+									<Language>SFX</Language>
+									<AudioFile>Upgrade_Bought 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="460848510"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Upgrade_Bought 1" ID="{E2F6EDAC-C067-4D3F-A907-A2CC1C8B026A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

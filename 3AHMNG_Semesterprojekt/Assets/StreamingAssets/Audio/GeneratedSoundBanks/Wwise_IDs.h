@@ -15,10 +15,16 @@ namespace AK
     {
         static const AkUniqueID BITE = 1645043423U;
         static const AkUniqueID FAIL = 2596272617U;
+        static const AkUniqueID GALAXY_BUY = 1306164848U;
+        static const AkUniqueID GALAXY_SELECT = 828246776U;
+        static const AkUniqueID GALAXYMENU_CLOSE = 2178867337U;
+        static const AkUniqueID GALAXYMENU_OPEN = 3220367451U;
         static const AkUniqueID HIT1 = 3232033841U;
         static const AkUniqueID HIT2 = 3232033842U;
         static const AkUniqueID HIT3 = 3232033843U;
         static const AkUniqueID HIT4 = 3232033844U;
+        static const AkUniqueID PLAY_SHREDDER = 3549617269U;
+        static const AkUniqueID PLAY_SHREDDERLOOP = 120479175U;
         static const AkUniqueID PLAY_TEST = 3187507146U;
         static const AkUniqueID REEL = 2512485637U;
         static const AkUniqueID SPACEMUSIC = 931648338U;
