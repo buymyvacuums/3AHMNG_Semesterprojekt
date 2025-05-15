@@ -34,6 +34,14 @@ public class PlayerController : MonoBehaviour
     public GameObject rodGO;
     private CameraSmoothness _cameraScp;
 
+    enum PlayerState
+    {
+        Free,
+        Fishing
+    }
+
+    private PlayerState _state;
+
     // Use this for initialization
     void Start()
     {
@@ -43,7 +51,7 @@ public class PlayerController : MonoBehaviour
         _harvisterInteractTXT.SetActive(false);
         _upgradeUI.SetActive(false);
         _cameraScp = _camera.GetComponent<CameraSmoothness>();
-        
+        _state = PlayerState.Free;
     }
 
    
@@ -51,25 +59,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Raycast-Fishing Area open
-        Vector3 rayOrigin = transform.position;
-        Vector3 rayDirection = _fishingOBJ.transform.position - transform.position;
-        float maxRayDistance = 3;
-        RaycastHit rayHit;
-        if(Physics.Raycast(rayOrigin, rayDirection, out rayHit, maxRayDistance, fishArea))
+        if (_state == PlayerState.Free)
         {
-            _interactTXT.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E) ) 
+            //Raycast-Fishing Area open
+            Vector3 rayOrigin = transform.position;
+            Vector3 rayDirection = _fishingOBJ.transform.position - transform.position;
+            float maxRayDistance = 3;
+            RaycastHit rayHit;
+            if (Physics.Raycast(rayOrigin, rayDirection, out rayHit, maxRayDistance, fishArea))
             {
-                animator.SetBool("isFishing", true);
-                rodGO.SetActive(true);
-                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
-                StartCoroutine(GameManager.instance.Wait());
+                _interactTXT.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    _state = PlayerState.Fishing;
+                    animator.SetBool("isFishing", true);
+                    rodGO.SetActive(true);
+                    GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akThrow);
+                    StartCoroutine(GameManager.instance.Wait());
+                }
             }
-        }
-        else
-        {
-            _interactTXT.SetActive(false);
+            else
+            {
+                _interactTXT.SetActive(false);
+            }
         }
 
         //Harvister Raycast
@@ -125,18 +137,21 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Movement
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        rb.velocity = movement * speed * Time.fixedDeltaTime;
-        
-        if (Input.GetAxisRaw("Horizontal") > 0) { transform.localScale = new Vector3(-3.5f, transform.localScale.y, transform.localScale.z); }
-        else if (Input.GetAxisRaw("Horizontal") < 0) { transform.localScale = new Vector3(3.5f, transform.localScale.y, transform.localScale.z); }
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        if (_state == PlayerState.Free)
         {
-            GlobalAudioScript.instance.WalkSounds(1);
-            animator.SetBool("isMoving", true);
+            //Movement
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            rb.velocity = movement * speed * Time.fixedDeltaTime;
+
+            if (Input.GetAxisRaw("Horizontal") > 0) { transform.localScale = new Vector3(-3.5f, transform.localScale.y, transform.localScale.z); }
+            else if (Input.GetAxisRaw("Horizontal") < 0) { transform.localScale = new Vector3(3.5f, transform.localScale.y, transform.localScale.z); }
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            {
+                GlobalAudioScript.instance.WalkSounds(1);
+                animator.SetBool("isMoving", true);
+            }
+            else { GlobalAudioScript.instance.WalkSounds(0); animator.SetBool("isMoving", false); }
         }
-        else { GlobalAudioScript.instance.WalkSounds(0); animator.SetBool("isMoving", false); }
     }
 
 
