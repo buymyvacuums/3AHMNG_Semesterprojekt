@@ -86,7 +86,7 @@ public class ComboScroller : MonoBehaviour
             GameObject randomArrow = _arrows[randomIndex];
 
             Vector3 spawnPos = randomArrow.transform.position;
-            spawnPos.y = i + 10;
+            spawnPos.y = (i * 2) + 5;
 
             Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
         }
@@ -196,13 +196,12 @@ public class ComboScroller : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         string fishName = FishBehaviour._instance.GetFishNameByCode(GameManager.instance.fishCode);
-        Debug.Log("Caught fish: " + fishName);
 
         // Mark the fish as caught!
         FishBehaviour._instance.MarkFishAsCaught(GameManager.instance.fishCode);
 
 
-        _wonTXT.text = "You caught " + fishName;
+        _wonTXT.text = "You caught a " + fishName + "!";
         _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode, FishBehaviour._instance.GetFishSizeByCode(GameManager.instance.fishCode));
         _wonTXT.gameObject.SetActive(true);
         fishImage.SetActive(true);
