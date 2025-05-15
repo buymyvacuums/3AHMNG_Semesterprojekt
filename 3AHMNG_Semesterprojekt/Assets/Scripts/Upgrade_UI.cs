@@ -67,7 +67,7 @@ public class Upgrade_UI : MonoBehaviour
         }
     }
 
-    private void SaveUnlockedGalaxies()
+    public void SaveUnlockedGalaxies()
     {
         for (int i = 0; i < galaxies.Count; i++)
         {
@@ -78,7 +78,7 @@ public class Upgrade_UI : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private void LoadUnlockedGalaxies()
+    public void LoadUnlockedGalaxies()
     {
         for (int i = 0; i < galaxies.Count; i++)
         {
@@ -89,6 +89,12 @@ public class Upgrade_UI : MonoBehaviour
         string savedGalaxy = PlayerPrefs.GetString("CurrentGalaxy", galaxies[0].galaxy.ToString());
         if (System.Enum.TryParse(savedGalaxy, out Galaxy currentGalaxy))
             FishBehaviour.galaxy = currentGalaxy;
+    }
+
+    static public void DeleteKey()
+    {
+        PlayerPrefs.DeleteKey("GalaxyUnlocked_");
+        PlayerPrefs.DeleteKey("CurrentGalaxy");
     }
 
     public void OnGalaxyButtonClicked(int index)

@@ -21,6 +21,7 @@ public class StartMenuController : MonoBehaviour
     public void OnNewGame()
     {
         //SaveManager.DeleteSave();
+        PlayerPrefs.DeleteAll(); 
         SceneManager.LoadScene("Main");
     }
 

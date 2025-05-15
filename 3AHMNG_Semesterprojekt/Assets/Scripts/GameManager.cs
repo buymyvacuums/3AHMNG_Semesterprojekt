@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
 
     private static bool _initialized = false;
 
+    //God fish collection
+    public bool _godCheck = false;
+    public int _god = 0;
+
     void Start()
     {
         if (instance == null)
@@ -138,7 +142,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        PlayerController.instance._interactTXT.SetActive(false);
         missedNote = 0;
         hitNote = 0;
         _rndStartTime = Random.Range(1f, 6f);
