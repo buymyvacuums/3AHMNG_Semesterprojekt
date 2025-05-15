@@ -145,7 +145,8 @@ public class GameManager : MonoBehaviour
         missedNote = 0;
         hitNote = 0;
         _rndStartTime = Random.Range(1f, 6f);
-        
+        PlayerController.instance._interactTXT.SetActive(false);
+
         //Start Waiting Sound
         yield return new WaitForSeconds(_rndStartTime);
         PlayerController.instance._fishBitTXT.gameObject.SetActive(true);

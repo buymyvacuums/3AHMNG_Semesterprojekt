@@ -64,7 +64,7 @@ public class ComboScroller : MonoBehaviour
         if (FishBehaviour._instance.difficulty == Difficulty.God)
         {
             ComboScroller._ComboInstance._comboLength = 21;
-            Tempo = 10f;
+            Tempo = 15f;
         }
         
     }
@@ -90,86 +90,6 @@ public class ComboScroller : MonoBehaviour
 
             Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
         }
-
-        //Combo Randomizer
-        //    if (_comboLength == 5)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
-        //    if (_comboLength == 8)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
-        //    if (_comboLength == 12)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
-        //    if (_comboLength == 15)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
-        //    if (_comboLength == 18)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
-        //    if (_comboLength == 21)
-        //    {
-        //        for (int i = 0; i < _comboLength; i++)
-        //        {
-        //            int randomIndex = Random.Range(0, _arrows.Length);
-        //            GameObject randomArrow = _arrows[randomIndex];
-
-        //            Vector3 spawnPos = randomArrow.transform.position;
-        //            spawnPos.y = i + 3;
-
-        //            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        //        }
-        //    }
     }
 
 
@@ -205,8 +125,14 @@ public class ComboScroller : MonoBehaviour
         _fishSpriteVisualizer.ChangeFishSprite(GameManager.instance.fishCode, FishBehaviour._instance.GetFishSizeByCode(GameManager.instance.fishCode));
         _wonTXT.gameObject.SetActive(true);
         fishImage.SetActive(true);
-        // Play Victory Sound
 
+        //God Check
+        if(GameManager.instance.fishCode == 9)
+        {
+            GameManager.instance._god += 1;
+        }
+
+        //Return to main
         yield return new WaitForSeconds(1);
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akSuccess);
         GameManager.instance.currentScore += 1;
@@ -215,6 +141,7 @@ public class ComboScroller : MonoBehaviour
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
         //GameManager.instance.SaveProgress();
+        Debug.Log("God progress: " + GameManager.instance._god);
         SceneManager.LoadScene("Main");
     }
 
