@@ -37,7 +37,11 @@ public class KnowsObject : MonoBehaviour
         if(other.gameObject.tag == "Activator")
         {
             canBePressed = true;
-            Debug.Log("a");
+        }
+        else if (other.gameObject.tag == "MissZone")
+        {
+            Destroy(gameObject);
+            GameManager.instance.NoteMissed();
         }
     }
 
@@ -47,11 +51,7 @@ public class KnowsObject : MonoBehaviour
         if (other.gameObject.tag == "Activator")
         {
             canBePressed = false;
+        }
 
-        }
-        else if (other.gameObject.tag == "MissZone")
-        {
-            GameManager.instance.NoteMissed();
-        }
     }
 }

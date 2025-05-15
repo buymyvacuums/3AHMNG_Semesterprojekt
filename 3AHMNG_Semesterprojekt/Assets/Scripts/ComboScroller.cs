@@ -13,6 +13,7 @@ public class ComboScroller : MonoBehaviour
     public int _comboLength;
 
     [SerializeField] private GameObject _failTXT;
+    [SerializeField] private TextMeshProUGUI _timer;
 
     public TextMeshProUGUI _wonTXT;
     public GameObject fishImage;
@@ -66,6 +67,7 @@ public class ComboScroller : MonoBehaviour
             ComboScroller._ComboInstance._comboLength = 21;
             Tempo = 15f;
         }
+        hasStarted = false;
         
     }
     // Start is called before the first frame update
@@ -80,35 +82,38 @@ public class ComboScroller : MonoBehaviour
         _wonTXT.gameObject.SetActive(false);
         fishImage.SetActive(false);
 
-        for (int i = 0; i < _comboLength; i++)
-        {
-            int randomIndex = Random.Range(0, _arrows.Length);
-            GameObject randomArrow = _arrows[randomIndex];
+        StartCoroutine(StartSequence());
 
-            Vector3 spawnPos = randomArrow.transform.position;
-            spawnPos.y = (i * 2) + 5;
-
-            Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
-        }
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (hasStarted)
+        {
+            for (int i = 0; i < _comboLength; i++)
+            {
+                int randomIndex = Random.Range(0, _arrows.Length);
+                GameObject randomArrow = _arrows[randomIndex];
 
-        if (GameManager.instance.hitNote == _comboLength)
-        {
-            
-            StartCoroutine(EndFishing());
+                Vector3 spawnPos = randomArrow.transform.position;
+                spawnPos.y = (i * Random.Range(1, 3)) + 10;
+
+                Instantiate(randomArrow, spawnPos, randomArrow.transform.rotation);
+            }
+            hasStarted = false;
         }
-        else if(GameManager.instance.missedNote == _comboLength)
+
+        if (GameManager.instance.hitNote + GameManager.instance.missedNote == _comboLength)
         {
-            
-            StartCoroutine(FishFailed());
-        }
-        
+            if (GameManager.instance.hitNote >= _comboLength / 1.5f)
+            {
+                StartCoroutine(EndFishing());
+            }
+            else { StartCoroutine(FishFailed()); }
+        } 
     }
 
     IEnumerator EndFishing()
@@ -156,5 +161,18 @@ public class ComboScroller : MonoBehaviour
         GameManager.instance.missedNote = 0;
         //GameManager.instance.SaveProgress();
         SceneManager.LoadScene("Main");
+    }
+    IEnumerator StartSequence()
+    {
+        yield return null;
+        
+        _timer.text = "1";
+        yield return new WaitForSeconds(0.5f);
+        _timer.text = "2";
+        yield return new WaitForSeconds(0.5f);
+        _timer.text = "3";
+        yield return new WaitForSeconds(0.5f);
+        _timer.gameObject.SetActive(false);
+        hasStarted = true;
     }
 }
