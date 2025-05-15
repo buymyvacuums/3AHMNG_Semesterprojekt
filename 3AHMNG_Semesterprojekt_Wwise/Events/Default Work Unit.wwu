@@ -336,6 +336,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="stop_reel" ID="{D4B3E05E-0158-43D9-A3DF-35A2CE8E54F0}">
+							<ChildrenList>
+								<Action Name="" ID="{F363D320-EDE7-4DE9-9675-F6C9ADC08447}" ShortID="127105335">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fishinglooop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

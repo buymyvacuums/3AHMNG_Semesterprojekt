@@ -7,7 +7,6 @@ public class GlobalAudioScript : MonoBehaviour
     public static GlobalAudioScript instance;
     [SerializeField] public AK.Wwise.Event _akThrow;
     [SerializeField] public AK.Wwise.Event _akBite;
-    [SerializeField] public AK.Wwise.Event _akReel;
     [SerializeField] public AK.Wwise.Event _akFail;
     [SerializeField] public AK.Wwise.Event _akSuccess;
     [SerializeField] public AK.Wwise.Event _akWalkLoop;
@@ -18,8 +17,6 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akGalaxyBuy;
     [SerializeField] public AK.Wwise.Event _akGalaxyMenuSelect;
     [SerializeField] private AK.Wwise.RTPC _akPWalk;
-
-    [SerializeField] private AK.Wwise.Event _spaceMusic;
 
     private void Awake()
     {

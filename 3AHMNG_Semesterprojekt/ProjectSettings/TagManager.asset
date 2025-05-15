@@ -9,6 +9,7 @@ TagManager:
   - Space
   - SpaceAmbience
   - Harvistor
+  - MissZone
   layers:
   - Default
   - TransparentFX

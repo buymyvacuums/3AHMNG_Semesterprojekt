@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f979e5e2341b664b932f3a2cffafbc2, type: 3}
+  m_Name: D4B3E05E-0158-43D9-A3DF-35A2CE8E54F0
+  m_EditorClassIdentifier: 
+  objectName: stop_reel
+  id: 3004317808
+  guid: D4B3E05E-0158-43D9-A3DF-35A2CE8E54F0

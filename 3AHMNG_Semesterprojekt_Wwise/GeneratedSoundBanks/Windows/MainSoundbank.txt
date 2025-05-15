@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2512485637	reel			\Default Work Unit\placeholders\reel	
 	2596272617	fail			\Default Work Unit\placeholders\fail	
 	2636529496	walkloop			\Default Work Unit\placeholders\walkloop	
+	3004317808	stop_reel			\Default Work Unit\placeholders\stop_reel	
 	3187507146	Play_Test			\Default Work Unit\TEST\Play_Test	
 	3220367451	GalaxyMenu_Open			\Default Work Unit\placeholders\GalaxyMenu_Open	
 	3232033841	hit1			\Default Work Unit\placeholders\hit1	

@@ -83,14 +83,15 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         hitNote += 1;
-        Debug.Log("Hit on Time");
-        
+        StartCoroutine(ComboFeedback.instance.PerfectHit(ComboFeedback.instance.perfectTXT));
+        //Debug.Log("Note Hit");
     }
 
     public void NoteMissed()
     {
         missedNote += 1;
-        Debug.Log("Missed Note");
+        StartCoroutine(ComboFeedback.instance.PerfectHit(ComboFeedback.instance.missTXT));
+        //Debug.Log("Note Missed");
     }
 
     private List<int> GetFishPoolForGalaxy(Galaxy galaxy)
@@ -155,7 +156,6 @@ public class GameManager : MonoBehaviour
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akBite);
         
         yield return new WaitForSeconds(0.3f);
-        GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akReel);
         SceneManager.LoadScene("Fishing_Rythm");
     }
 

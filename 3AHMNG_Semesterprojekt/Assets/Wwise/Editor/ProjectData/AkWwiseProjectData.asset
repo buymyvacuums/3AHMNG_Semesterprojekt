@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584542856714159246
+    m_lastTime: -8584542845145714972
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -732,6 +732,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: stop_reel
+      guid: 5ee0b3d45801d943a3df35a2ce8e54f0
+      id: 3004317808
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: stop_reel
+        ObjectType: 3
+        guid: 5ee0b3d45801d943a3df35a2ce8e54f0
+      Path: Events\Default Work Unit\placeholders\stop_reel
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: stop_spacemusic
       guid: 5ad6f1f121315e4d96225a0a942981b7
       id: 2267004695
@@ -970,7 +990,7 @@ MonoBehaviour:
     m_lastTime: -8584550622356985172
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000000600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

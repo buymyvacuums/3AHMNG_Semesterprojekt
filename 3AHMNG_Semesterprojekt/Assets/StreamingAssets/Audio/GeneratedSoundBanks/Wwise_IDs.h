@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID REEL = 2512485637U;
         static const AkUniqueID SETSHREDDERACTIVATE = 1660271739U;
         static const AkUniqueID SPACEMUSIC = 931648338U;
+        static const AkUniqueID STOP_REEL = 3004317808U;
         static const AkUniqueID STOP_SPACEMUSIC = 2267004695U;
         static const AkUniqueID STOP_TEST = 2051061508U;
         static const AkUniqueID SUCCESS = 3625060726U;
