@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing_Rythm.unity
     guid: a095e297e7b84fd41a6dfdc4feda191f
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 61c16cef5514aa545a88dc6e526f9ee5
   m_configObjects: {}

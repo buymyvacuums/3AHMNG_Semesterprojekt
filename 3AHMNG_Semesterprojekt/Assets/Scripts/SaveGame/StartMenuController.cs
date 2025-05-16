@@ -34,4 +34,8 @@ public class StartMenuController : MonoBehaviour
     {
         Application.Quit();
     }
+    public void OnStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
