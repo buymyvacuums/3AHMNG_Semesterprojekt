@@ -33,13 +33,29 @@ public class BackgroundManager : MonoBehaviour
         
     }
 
-    public void ChangeBackground(int i)
+    public void ChangeBackground()
     {
         GameObject[] bgImage = GameObject.FindGameObjectsWithTag("Space");
         foreach (var GO in bgImage)
         {
             Image bgImageComp = GO.GetComponent<Image>();
-            bgImageComp.sprite = bgSprite[i];
+            if (FishBehaviour.galaxy == Galaxy.Tutoria)
+            {
+                bgImageComp.sprite = bgSprite[0];
+            }
+            if (FishBehaviour.galaxy == Galaxy.Prehistoria)
+            {
+                bgImageComp.sprite = bgSprite[1];
+            }
+            if (FishBehaviour.galaxy == Galaxy.Biologica)
+            {
+                bgImageComp.sprite = bgSprite[2];
+            }
+            if (FishBehaviour.galaxy == Galaxy.Galaxia)
+            {
+                bgImageComp.sprite = bgSprite[3];
+            }
+
         }
     }
 }

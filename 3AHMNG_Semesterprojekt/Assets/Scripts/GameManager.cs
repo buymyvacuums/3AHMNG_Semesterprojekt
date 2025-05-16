@@ -56,28 +56,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        //GALAXY SWITCHER
-        if (FishBehaviour.galaxy == Galaxy.Tutoria)
+        BackgroundManager.instance.ChangeBackground();
+        if (LightChanger.instance != null)
         {
-            BackgroundManager.instance.ChangeBackground(0);
-            Debug.Log("Galaxy: Tutoria");
+            LightChanger.instance.ChangeLighting();
         }
-        if (FishBehaviour.galaxy == Galaxy.Prehistoria)
-        {
-            BackgroundManager.instance.ChangeBackground(1);
-            Debug.Log("Galaxy: Prehistoria");
-        }
-        if (FishBehaviour.galaxy == Galaxy.Biologica)
-        {
-            BackgroundManager.instance.ChangeBackground(2);
-            Debug.Log("Galaxy: Biologica");
-        }
-        if (FishBehaviour.galaxy == Galaxy.Galaxia)
-        {
-            BackgroundManager.instance.ChangeBackground(3);
-            Debug.Log("Galaxy: Galaxia");
-        }
+    }
+    public void ChangeGalaxy()
+    {
+
     }
 
     public void NoteHit()

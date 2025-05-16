@@ -61,13 +61,13 @@ public class ComboScroller : MonoBehaviour
         if (FishBehaviour._instance.difficulty == Difficulty.Legendary)
         {
             ComboScroller._ComboInstance._comboLength = 18;
-            beatTempo = 6;
+            beatTempo = 6.5f;
         }
 
         if (FishBehaviour._instance.difficulty == Difficulty.God)
         {
             ComboScroller._ComboInstance._comboLength = 21;
-            beatTempo = 6.5f;
+            beatTempo = 7f;
         }
         hasStarted = false;
         

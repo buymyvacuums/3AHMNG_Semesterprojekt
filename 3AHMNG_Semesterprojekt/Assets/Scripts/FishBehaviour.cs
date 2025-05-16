@@ -131,7 +131,7 @@ public class FishBehaviour : MonoBehaviour
         _kingOssis._rarity = 0;
         _kingOssis._name = "King Ossis";
         _kingOssis._difficulty = Difficulty.God;
-        _kingOssis._size = 6;
+        _kingOssis._size = 2.2f;
         //_kingOssis.isGodFish = true;
         //_kingOssis.hasBeenCaught = false;
         fishDictionary.Add(_kingOssis._fishCode, _kingOssis);
@@ -190,7 +190,7 @@ public class FishBehaviour : MonoBehaviour
         _queenVitae._rarity = 0;
         _queenVitae._name = "Queen Vitae";
         _queenVitae._difficulty = Difficulty.God;
-        _queenVitae._size = 4;
+        _queenVitae._size = 2.2f;
         //_queenVitae.isGodFish = true;
         //_queenVitae.hasBeenCaught = false;
         fishDictionary.Add(_queenVitae._fishCode, _queenVitae);
