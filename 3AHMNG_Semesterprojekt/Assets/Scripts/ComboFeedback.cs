@@ -25,8 +25,8 @@ public class ComboFeedback : MonoBehaviour
     public IEnumerator PerfectHit(Sprite TXT)
     {
         yield return null;
-        int rndX = Random.Range(100, 700);
-        int rndY = Random.Range(100, 400);
+        int rndX = Random.Range(100, 1800);
+        int rndY = Random.Range(100, 1000);
         Vector3 rndPos = new Vector3(rndX, rndY, 0);
         GameObject FeedBackGO = Instantiate(FeedbackTXT, rndPos, Quaternion.identity, transform);
         FeedBackGO.GetComponent<Image>().sprite = TXT;

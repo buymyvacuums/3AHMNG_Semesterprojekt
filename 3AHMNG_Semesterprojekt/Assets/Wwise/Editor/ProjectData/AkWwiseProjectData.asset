@@ -473,8 +473,8 @@ MonoBehaviour:
         guid: f1825f09b488a945bf9b7a7c5356821d
       Path: Events\Default Work Unit\placeholders\Galaxy_Select
       maxAttenuation: 0
-      maxDuration: 0.13333334
-      minDuration: 0.13333334
+      maxDuration: 2.5327814
+      minDuration: 2.5327814
     - name: GalaxyMenu_Close
       guid: c6374f987a247c4fabda495540c7588e
       id: 2178867337
@@ -533,8 +533,8 @@ MonoBehaviour:
         guid: 309c3eaff081d14b930f18438b030167
       Path: Events\Default Work Unit\placeholders\hit1
       maxAttenuation: 0
-      maxDuration: 0.13333334
-      minDuration: 0.13333334
+      maxDuration: 0.1
+      minDuration: 0.1
     - name: hit2
       guid: 40bf55f0c6d1bf42b80b22d8930a9cf3
       id: 3232033842
@@ -553,8 +553,8 @@ MonoBehaviour:
         guid: 40bf55f0c6d1bf42b80b22d8930a9cf3
       Path: Events\Default Work Unit\placeholders\hit2
       maxAttenuation: 0
-      maxDuration: 0.13333334
-      minDuration: 0.13333334
+      maxDuration: 0.1
+      minDuration: 0.1
     - name: hit3
       guid: 6bdbf12f81b7824084ac1fe34e7925a3
       id: 3232033843
@@ -573,8 +573,8 @@ MonoBehaviour:
         guid: 6bdbf12f81b7824084ac1fe34e7925a3
       Path: Events\Default Work Unit\placeholders\hit3
       maxAttenuation: 0
-      maxDuration: 0.13333334
-      minDuration: 0.13333334
+      maxDuration: 0.1
+      minDuration: 0.1
     - name: hit4
       guid: d97c68733555274398540b486ac37c9d
       id: 3232033844
@@ -593,8 +593,8 @@ MonoBehaviour:
         guid: d97c68733555274398540b486ac37c9d
       Path: Events\Default Work Unit\placeholders\hit4
       maxAttenuation: 0
-      maxDuration: 0.13333334
-      minDuration: 0.13333334
+      maxDuration: 0.1
+      minDuration: 0.1
     - name: placeholders
       guid: 907bc580945f2e44bed67d40454357ab
       id: 2644623831
@@ -750,8 +750,8 @@ MonoBehaviour:
         guid: 5ee0b3d45801d943a3df35a2ce8e54f0
       Path: Events\Default Work Unit\placeholders\stop_reel
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: stop_spacemusic
       guid: 5ad6f1f121315e4d96225a0a942981b7
       id: 2267004695
@@ -810,8 +810,8 @@ MonoBehaviour:
         guid: fe538d2bee0f1845b76eb2fae68e41f1
       Path: Events\Default Work Unit\placeholders\success
       maxAttenuation: 0
-      maxDuration: 0.44231883
-      minDuration: 0.44231883
+      maxDuration: 1.3789228
+      minDuration: 1.3789228
     - name: TEST
       guid: a80b3d83bfaa6d449144d751f08c7819
       id: 3157003241
@@ -990,7 +990,7 @@ MonoBehaviour:
     m_lastTime: -8584550622356985172
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

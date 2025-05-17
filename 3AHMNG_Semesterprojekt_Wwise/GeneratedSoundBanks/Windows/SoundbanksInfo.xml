@@ -9,17 +9,17 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{CE4D4511-B215-E0E2-F653-914593C40C6D}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{74F15A6C-93F7-3BDB-1008-A43126C940A1}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
-				<File Id="22914865" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>success.wav</ShortName>
-					<CachePath>SFX/success_EA8B7334.wem</CachePath>
-				</File>
 				<File Id="50014804" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fail.wav</ShortName>
 					<CachePath>SFX/fail_87E9F8D1.wem</CachePath>
+				</File>
+				<File Id="63737832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alone in the Universe.wav</ShortName>
+					<CachePath>SFX/Alone in the Universe_10C4C929.wem</CachePath>
 				</File>
 				<File Id="91520667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hit4.wav</ShortName>
@@ -69,6 +69,14 @@
 					<ShortName>2_Steps.wav</ShortName>
 					<CachePath>SFX/2_Steps_0A8C2349.wem</CachePath>
 				</File>
+				<File Id="623913263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Upgrade_Bought 2.wav</ShortName>
+					<CachePath>SFX/Upgrade_Bought 2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="652610852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Snare.wav</ShortName>
+					<CachePath>SFX/Snare_10C4C929.wem</CachePath>
+				</File>
 				<File Id="703031689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fishing Music.wav</ShortName>
 					<CachePath>SFX/Fishing Music_10C4C929.wem</CachePath>
@@ -105,6 +113,10 @@
 					<ShortName>Close Beeps.wav</ShortName>
 					<CachePath>SFX/Close Beeps_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1060988544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>1 PlayerFeedback.wav</ShortName>
+					<CachePath>SFX/1 PlayerFeedback_CFFE14E1.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="1645043423" Name="bite" DurationType="OneShot" DurationMin="0.43708605" DurationMax="0.60227287">
@@ -122,9 +134,9 @@
 						<MediaRef Id="460848510"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="828246776" Name="Galaxy_Select" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="828246776" Name="Galaxy_Select" DurationType="OneShot" DurationMin="2.5327814" DurationMax="2.5327814">
 					<MediaRefs>
-						<MediaRef Id="364352627"/>
+						<MediaRef Id="623913263"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2178867337" Name="GalaxyMenu_Close" DurationType="OneShot" DurationMin="0.30839583" DurationMax="0.30839583">
@@ -137,24 +149,34 @@
 						<MediaRef Id="125728501"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3232033841" Name="hit1" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="3232033841" Name="hit1" DurationType="OneShot" DurationMin="0.1" DurationMax="0.1">
 					<MediaRefs>
 						<MediaRef Id="364352627"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3232033842" Name="hit2" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="3232033842" Name="hit2" DurationType="OneShot" DurationMin="0.1" DurationMax="0.1">
 					<MediaRefs>
 						<MediaRef Id="822219929"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3232033843" Name="hit3" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="3232033843" Name="hit3" DurationType="OneShot" DurationMin="0.1" DurationMax="0.1">
 					<MediaRefs>
 						<MediaRef Id="759204815"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3232033844" Name="hit4" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="3232033844" Name="hit4" DurationType="OneShot" DurationMin="0.1" DurationMax="0.1">
 					<MediaRefs>
 						<MediaRef Id="91520667"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1221582335" Name="perfecthit" DurationType="OneShot" DurationMin="0.06666667" DurationMax="0.06666667">
+					<MediaRefs>
+						<MediaRef Id="652610852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2970769112" Name="play_credits" DurationType="OneShot" DurationMin="36" DurationMax="36">
+					<MediaRefs>
+						<MediaRef Id="63737832"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3549617269" Name="Play_Shredder" MaxAttenuation="10" DurationType="Infinite">
@@ -209,11 +231,13 @@
 						<MediaRef Id="530510900"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="873807182" Name="stop_credits" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3004317808" Name="stop_reel" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2267004695" Name="stop_spacemusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2051061508" Name="Stop_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3625060726" Name="success" DurationType="OneShot" DurationMin="0.44231883" DurationMax="0.44231883">
+				<Event Id="3625060726" Name="success" DurationType="OneShot" DurationMin="1.3789228" DurationMax="1.3789228">
 					<MediaRefs>
-						<MediaRef Id="22914865"/>
+						<MediaRef Id="1060988544"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="745179803" Name="throw" DurationType="OneShot" DurationMin="1.4274094" DurationMax="1.6711655">
@@ -383,5 +407,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8E1B0E08-0DC3-B9E9-A25C-14F25BF908CC}</FileHash>
+	<FileHash>{ED295C68-992F-5482-93DD-48C47C42DB07}</FileHash>
 </SoundBanksInfo>

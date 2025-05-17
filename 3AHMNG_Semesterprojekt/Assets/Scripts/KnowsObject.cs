@@ -26,7 +26,7 @@ public class KnowsObject : MonoBehaviour
             if(canBePressed)
             {
                 Destroy(gameObject);
-
+                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akHit);
                 GameManager.instance.NoteHit();
             }
         }

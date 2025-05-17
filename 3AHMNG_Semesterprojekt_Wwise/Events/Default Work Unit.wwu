@@ -100,7 +100,7 @@
 								<Action Name="" ID="{CC96CBB3-67D2-4EBA-AB55-892F2EE89DBD}" ShortID="402968006">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="success" ID="{84F7C6D8-82ED-4634-B7E2-28AABEC69D4A}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="1 PlayerFeedback" ID="{B20C44ED-84B7-4440-A405-C0FAF1BFECA2}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -291,7 +291,7 @@
 								<Action Name="" ID="{EA3AE438-7218-4C80-85DB-1FF5B0B2FF33}" ShortID="472738944">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="hit1" ID="{2ACAC7C8-419B-4B8E-8F9F-250373D3E6B4}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+											<ObjectRef Name="Upgrade_Bought 2" ID="{60EBEF1C-CDC8-4095-A0DF-31ABF18ACA61}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -345,6 +345,42 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="fishinglooop" ID="{B2E22DBE-3BAD-497D-A75F-B8CAC41D0331}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_credits" ID="{1355188F-5352-49FF-BC41-DE83332B5938}">
+							<ChildrenList>
+								<Action Name="" ID="{8EAE0C1E-4821-4767-AD0F-58166D205789}" ShortID="298166106">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Alone in the Universe" ID="{95F1DD8A-07EC-4E46-B667-AEA92BA910BD}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stop_credits" ID="{50A5B85B-1A16-4C62-BA98-55BA0F23A833}">
+							<ChildrenList>
+								<Action Name="" ID="{9F2E19EE-F31F-470D-A3FE-F595D17FFE09}" ShortID="213815918">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Alone in the Universe" ID="{95F1DD8A-07EC-4E46-B667-AEA92BA910BD}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="perfecthit" ID="{97C73FBC-F8DD-47DE-820F-C9F2FCB7B91F}">
+							<ChildrenList>
+								<Action Name="" ID="{6F275C29-9FCF-46A1-9B54-F8BBF43B7621}" ShortID="580159229">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Snare" ID="{6FFB5BF0-58E6-49F0-A3ED-605AF99769C3}" WorkUnitID="{001A2D58-B9D2-47BA-81E5-99ED637A8816}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

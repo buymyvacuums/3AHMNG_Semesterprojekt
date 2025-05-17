@@ -16,6 +16,8 @@ public class GlobalAudioScript : MonoBehaviour
     [SerializeField] public AK.Wwise.Event _akGalaxyMenuClose;
     [SerializeField] public AK.Wwise.Event _akGalaxyBuy;
     [SerializeField] public AK.Wwise.Event _akGalaxyMenuSelect;
+    [SerializeField] public AK.Wwise.Event _akHit;
+    [SerializeField] public AK.Wwise.Event _akMiss;
     [SerializeField] private AK.Wwise.RTPC _akPWalk;
 
     private void Awake()

@@ -23,12 +23,15 @@ namespace AK
         static const AkUniqueID HIT2 = 3232033842U;
         static const AkUniqueID HIT3 = 3232033843U;
         static const AkUniqueID HIT4 = 3232033844U;
+        static const AkUniqueID PERFECTHIT = 1221582335U;
+        static const AkUniqueID PLAY_CREDITS = 2970769112U;
         static const AkUniqueID PLAY_SHREDDER = 3549617269U;
         static const AkUniqueID PLAY_SHREDDERLOOP = 120479175U;
         static const AkUniqueID PLAY_TEST = 3187507146U;
         static const AkUniqueID REEL = 2512485637U;
         static const AkUniqueID SETSHREDDERACTIVATE = 1660271739U;
         static const AkUniqueID SPACEMUSIC = 931648338U;
+        static const AkUniqueID STOP_CREDITS = 873807182U;
         static const AkUniqueID STOP_REEL = 3004317808U;
         static const AkUniqueID STOP_SPACEMUSIC = 2267004695U;
         static const AkUniqueID STOP_TEST = 2051061508U;

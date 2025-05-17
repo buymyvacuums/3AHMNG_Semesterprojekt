@@ -1096,7 +1096,7 @@ MonoBehaviour:
   - {fileID: -1067659557, guid: c174dbd0cdfabdb4cbf93cd70ac77066, type: 3}
   - {fileID: -789029476, guid: c174dbd0cdfabdb4cbf93cd70ac77066, type: 3}
   - {fileID: 1429645298, guid: c174dbd0cdfabdb4cbf93cd70ac77066, type: 3}
-  - {fileID: 21300000, guid: fb870cd6c80e0e54f8d83388a22f175d, type: 3}
+  - {fileID: 21300000, guid: 5892a9e175a6b834083fd40d5efe56ec, type: 3}
   RarityImage: {fileID: 1109603170}
   starSprite:
   - {fileID: 1360910623, guid: 9cb6a9c7e0adf454bb17f2473cdba7f3, type: 3}
@@ -1960,8 +1960,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FeedbackTXT: {fileID: 9029099035161050062, guid: bc6049e471941c6449029e1ccf0ded57,
     type: 3}
-  perfectTXT: {fileID: 21300004, guid: 9d063b79be80b2b4886e4c74b45f8a29, type: 3}
-  missTXT: {fileID: 21300006, guid: 9d063b79be80b2b4886e4c74b45f8a29, type: 3}
+  perfectTXT: {fileID: -1508084882, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
+  missTXT: {fileID: -1385306801, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
 --- !u!114 &1459458153
 MonoBehaviour:
   m_ObjectHideFlags: 0

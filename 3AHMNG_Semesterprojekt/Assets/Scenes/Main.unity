@@ -2136,6 +2136,16 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 607688b93e7f55249823a433630f16f0,
       type: 2}
+  _akHit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e079c113462e2547a8d7fcc25e56688,
+      type: 2}
+  _akMiss:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9f4fc6b530ff07d4ca782ac4209434e4,
+      type: 2}
   _akPWalk:
     idInternal: 0
     valueGuidInternal: 
