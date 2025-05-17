@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a6f996ba8941944a99a020de96f15427
     GuidInternal: 
-    m_lastTime: -8584542845145714972
+    m_lastTime: -8584541115595752577
     List:
     - name: bite
       guid: ffc2bc20e21fc8459a598ad1b031c570
@@ -595,6 +595,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.1
       minDuration: 0.1
+    - name: perfecthit
+      guid: bc3fc797ddf8de47820fc9f2fcb7b91f
+      id: 1221582335
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: perfecthit
+        ObjectType: 3
+        guid: bc3fc797ddf8de47820fc9f2fcb7b91f
+      Path: Events\Default Work Unit\placeholders\perfecthit
+      maxAttenuation: 0
+      maxDuration: 0.06666667
+      minDuration: 0.06666667
     - name: placeholders
       guid: 907bc580945f2e44bed67d40454357ab
       id: 2644623831
@@ -612,6 +632,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: play_credits
+      guid: 8f1855135253ff49bc41de83332b5938
+      id: 2970769112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: play_credits
+        ObjectType: 3
+        guid: 8f1855135253ff49bc41de83332b5938
+      Path: Events\Default Work Unit\placeholders\play_credits
+      maxAttenuation: 0
+      maxDuration: 36
+      minDuration: 36
     - name: Play_Shredder
       guid: ae6252ffa5436444bd8bbaeccf39a4cc
       id: 3549617269
@@ -732,6 +772,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: stop_credits
+      guid: 5bb8a550161a624cba9855ba0f23a833
+      id: 873807182
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a6f996ba8941944a99a020de96f15427
+      - ElementName: placeholders
+        ObjectType: 4
+        guid: 907bc580945f2e44bed67d40454357ab
+      - ElementName: stop_credits
+        ObjectType: 3
+        guid: 5bb8a550161a624cba9855ba0f23a833
+      Path: Events\Default Work Unit\placeholders\stop_credits
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: stop_reel
       guid: 5ee0b3d45801d943a3df35a2ce8e54f0
       id: 3004317808

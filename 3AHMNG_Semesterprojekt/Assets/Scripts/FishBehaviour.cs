@@ -257,7 +257,7 @@ public class FishBehaviour : MonoBehaviour
         _ultranova._rarity = 0;
         _ultranova._name = "Ultranova";
         _ultranova._difficulty = Difficulty.God;
-        _ultranova._size = 7;
+        _ultranova._size = 2.2f;
         //_ultranova.isGodFish = true;
         //_ultranova.hasBeenCaught = false;
         fishDictionary.Add(_ultranova._fishCode, _ultranova);

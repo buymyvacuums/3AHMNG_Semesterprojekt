@@ -8,6 +8,7 @@ public class StartMenuController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1.0f;
         if (continueButton != null)
             continueButton.interactable = SaveManager.SaveExists();
     }
