@@ -30,7 +30,10 @@ public class TutorialManager : MonoBehaviour
         }
         else if(popUpIndex == 1)
         {
-
+            if(GameManager.instance.currentScore == 1)
+            {
+                popUpIndex++;
+            }
         }
     }
 }
