@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1802707930050265951}
   - component: {fileID: 1402716276029132870}
   m_Layer: 0
-  m_Name: Air stuff
+  m_Name: Stars Air stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
