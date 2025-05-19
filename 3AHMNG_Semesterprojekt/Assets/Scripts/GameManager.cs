@@ -7,8 +7,16 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public enum Tutorial
+    {
+        WalkStage,
+        FishStage,
+        HarvestStage,
+        UpgradeStage,
+        FinishedStage
+    }
 
+    public Tutorial _tutState;
     public static GameManager instance;
 
     //FISH VARIBLES
@@ -61,10 +69,6 @@ public class GameManager : MonoBehaviour
         {
             LightChanger.instance.ChangeLighting();
         }
-    }
-    public void ChangeGalaxy()
-    {
-
     }
 
     public void NoteHit()
