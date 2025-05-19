@@ -30,7 +30,28 @@ public class TutorialManager : MonoBehaviour
         }
         else if(popUpIndex == 1)
         {
-            if(GameManager.instance.currentScore == 1)
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 2)
+        {
+            if (GameManager.instance.currentScore == 1)
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 3)
+        {
+            if (GameManager.instance.currentValue == 1)
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 4)
+        {
+            if (GameManager.instance.fishBits == 1)
             {
                 popUpIndex++;
             }
