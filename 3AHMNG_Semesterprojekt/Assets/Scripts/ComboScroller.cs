@@ -117,6 +117,10 @@ public class ComboScroller : MonoBehaviour
 
     public void EndFishing()
     {
+        if (TutorialManager.instance != null && TutorialManager.instance.i == 3)
+        {
+            TutorialManager.instance.i = 4;
+        }
         string fishName = FishBehaviour._instance.GetFishNameByCode(GameManager.instance.fishCode);
 
         // Mark the fish as caught!

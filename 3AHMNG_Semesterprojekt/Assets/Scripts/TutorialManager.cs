@@ -2,28 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
+    public static TutorialManager instance;
     [SerializeField] private TextMeshProUGUI tutorialUI;
     [SerializeField] private string[] tutText;
     [SerializeField] private GameObject tutorialCanvas;
-    private int i = 0;
-
+    public int i = 0;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else { Destroy(gameObject); }
+    }
     private void Start()
     {
+        tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
+        tutorialUI = tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();
         tutorialCanvas.SetActive(true);
-        tutorialUI.text = tutText[0];
+        tutorialUI.text = tutText[i];
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        tutorialUI.text = tutText[i];
+        if (i == 0 || i == 1 || i == 2 || i == 5 || i == 7)
         {
-            i++;
-            tutorialUI.text = tutText[i];
-            if (i == 3) { }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                i++;
+                if (i == 8)
+                {
+                    Destroy(tutorialCanvas);
+                    Destroy(gameObject);
+                }
+            }
         }
+        
+
 
 
         //    for (int i = 0; i < popUps.Length; i++)
@@ -74,6 +97,21 @@ public class TutorialManager : MonoBehaviour
         //        }
         //    }
     }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        if (scene.name == "Main")
+        {
+            tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
+            tutorialUI = tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();
+            if (tutorialCanvas != null)
+            {
+                tutorialUI.text = tutText[i];
+            }
+        }
+    }
 
-    public void 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

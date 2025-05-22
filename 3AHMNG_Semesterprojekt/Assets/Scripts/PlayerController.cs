@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
                 _interactTXT.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    
                     _state = PlayerState.Fishing;
                     GlobalAudioScript.instance.WalkSounds(0); animator.SetBool("isMoving", false);
                     animator.SetBool("isFishing", true);
@@ -95,6 +96,10 @@ public class PlayerController : MonoBehaviour
             _harvisterInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (TutorialManager.instance != null && TutorialManager.instance.i == 4)
+                {
+                    TutorialManager.instance.i = 5;
+                }
                 GlobalAudioScript.instance.PlaySoundFrom(GlobalAudioScript.instance._akShredderActivate, _harvisterOBJ);
                 GameManager.instance.currentScore = 0;
                 GameManager.instance.fishBits += GameManager.instance.currentValue;
@@ -121,6 +126,10 @@ public class PlayerController : MonoBehaviour
             _upgradeInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (TutorialManager.instance != null && TutorialManager.instance.i == 6)
+                {
+                    TutorialManager.instance.i = 7;
+                }
                 _upgradeUI.SetActive(true);
                 GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
             }

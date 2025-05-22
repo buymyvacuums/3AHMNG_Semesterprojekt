@@ -58,6 +58,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+
     }
 
 
@@ -150,7 +157,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Fishing_Rythm");
     }
 
-    
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; 
+    }
 
 }
 

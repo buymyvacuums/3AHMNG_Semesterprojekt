@@ -2558,7 +2558,7 @@ GameObject:
   - component: {fileID: 580690089}
   m_Layer: 5
   m_Name: Tutorial UI
-  m_TagString: Untagged
+  m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6400,7 +6400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0510027ce449749a5f649919b62b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialUI: {fileID: 2040319675}
+  tutorialUI: {fileID: 0}
   tutText:
   - A while ago, all 3 Godfish have escaped into the universe, leaving earth to rot
     away without their divine energy to uphold the balance of nature.
@@ -6413,7 +6413,8 @@ MonoBehaviour:
     to the next galaxy.
   - You can find the Terminal on the left.
   - This is the end of the tutorial, have fun!
-  tutorialCanvas: {fileID: 580690088}
+  tutorialCanvas: {fileID: 0}
+  i: 0
 --- !u!1 &1743972386
 GameObject:
   m_ObjectHideFlags: 0
