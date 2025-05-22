@@ -34,9 +34,12 @@ public class Fish
     public  Galaxy _galaxy;
     public Difficulty _difficulty;
     public float _size;
-
-    public bool isGodFish;
     public bool hasBeenCaught;
+}
+
+public class God : Fish
+{
+    public bool isGodFish;
 }
 
 
@@ -132,8 +135,6 @@ public class FishBehaviour : MonoBehaviour
         _kingOssis._name = "King Ossis";
         _kingOssis._difficulty = Difficulty.God;
         _kingOssis._size = 2.2f;
-        //_kingOssis.isGodFish = true;
-        //_kingOssis.hasBeenCaught = false;
         fishDictionary.Add(_kingOssis._fishCode, _kingOssis);
 
         //Biologica
@@ -191,8 +192,6 @@ public class FishBehaviour : MonoBehaviour
         _queenVitae._name = "Queen Vitae";
         _queenVitae._difficulty = Difficulty.God;
         _queenVitae._size = 2.2f;
-        //_queenVitae.isGodFish = true;
-        //_queenVitae.hasBeenCaught = false;
         fishDictionary.Add(_queenVitae._fishCode, _queenVitae);
 
         //Galaxia
@@ -258,8 +257,6 @@ public class FishBehaviour : MonoBehaviour
         _ultranova._name = "Ultranova";
         _ultranova._difficulty = Difficulty.God;
         _ultranova._size = 2.2f;
-        //_ultranova.isGodFish = true;
-        //_ultranova.hasBeenCaught = false;
         fishDictionary.Add(_ultranova._fishCode, _ultranova);
     }
 
@@ -358,11 +355,6 @@ public class FishBehaviour : MonoBehaviour
         {
             fish.hasBeenCaught = true;
             Debug.Log($"{fish._name} has been marked as caught.");
-
-            if (fish._difficulty == Difficulty.God)
-            {
-                OnGodFishCaught?.Invoke(); // Notify listeners
-            }
         }
     }
 

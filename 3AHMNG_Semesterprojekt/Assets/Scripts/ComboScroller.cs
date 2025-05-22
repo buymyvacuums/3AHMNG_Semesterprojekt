@@ -135,20 +135,19 @@ public class ComboScroller : MonoBehaviour
         buttons.SetActive(false);
 
         //God Check
-        if(GameManager.instance.fishCode == 9)
-        {
-            GameManager.instance._god += 1;
-        }
+        if (GameManager.instance.fishCode == 9) { GameManager.instance.KingOssisCaught = true; GameManager.instance.currentScore -= 1; }
+        if (GameManager.instance.fishCode == 16) { GameManager.instance.QueenVitaeCaught = true; GameManager.instance.currentScore -= 1; }
+        if (GameManager.instance.fishCode == 24) { GameManager.instance.UltranovaCaught = true; GameManager.instance.currentScore -= 1; }
+
 
         //Return to main
-        
+
         GameManager.instance.currentScore += 1;
         GameManager.instance.currentValue += FishBehaviour._instance.GetFishRarityByCode(GameManager.instance.fishCode);
         Debug.Log("Value = " + GameManager.instance.currentValue);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
         //GameManager.instance.SaveProgress();
-        Debug.Log("God progress: " + GameManager.instance._god);
     }
 
     IEnumerator FishFailed()

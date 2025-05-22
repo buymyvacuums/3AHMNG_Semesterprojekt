@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -123,12 +124,22 @@ public class PlayerController : MonoBehaviour
         RaycastHit rayHit3;
         if (Physics.Raycast(rayOrigin3, rayDirection3, out rayHit3, maxRayDistance3, fishUpgrade))
         {
+            if (GameManager.instance.AllGodsCaught() == true) 
+            {
+                _upgradeInteractTXT.GetComponent<TextMeshProUGUI>().text = "Press E to go home.";
+            }
             _upgradeInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
-                _upgradeUI.SetActive(true);
-                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
+                if (GameManager.instance.AllGodsCaught() == true)
+                {
+                    SceneManager.LoadScene("WinScreen");
+                }
+                else
+                {
+                    _upgradeUI.SetActive(true);
+                    GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
+                }
             }
         }
         else

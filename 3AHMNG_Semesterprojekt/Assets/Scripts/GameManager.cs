@@ -7,16 +7,6 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    public enum Tutorial
-    {
-        WalkStage,
-        FishStage,
-        HarvestStage,
-        UpgradeStage,
-        FinishedStage
-    }
-
-    public Tutorial _tutState;
     public static GameManager instance;
 
     //FISH VARIBLES
@@ -37,9 +27,10 @@ public class GameManager : MonoBehaviour
 
     private static bool _initialized = false;
 
-    //God fish collection
-    public bool _godCheck = false;
-    public int _god = 0;
+    //God fish 
+    public bool KingOssisCaught = false;
+    public bool QueenVitaeCaught = false;
+    public bool UltranovaCaught = false;
 
     void Start()
     {
@@ -109,10 +100,6 @@ public class GameManager : MonoBehaviour
 
         for (int i = start; i <= end; i++)
         {
-            bool isGodFish = FishBehaviour._instance.fishDictionary[i]._difficulty == Difficulty.God;
-            bool alreadyCaught = FishBehaviour._instance.HasCaughtFish(i);
-
-            if (!isGodFish || !alreadyCaught)
                 pool.Add(i);
         }
 
@@ -133,7 +120,16 @@ public class GameManager : MonoBehaviour
             List<int> possibleFish = GetFishPoolForGalaxy(FishBehaviour.galaxy);
             if (possibleFish.Count > 0)
             {
-                fishCode = possibleFish[Random.Range(0, possibleFish.Count)];
+                while (true)
+                {
+                    fishCode = possibleFish[Random.Range(0, possibleFish.Count)];
+                    Debug.Log(fishCode);
+                    if (fishCode == 9 && KingOssisCaught) { continue; }
+                    if (fishCode == 16 && QueenVitaeCaught) { continue; }
+                    if (fishCode == 24 && UltranovaCaught) { continue; }
+                    else { break; }
+                }
+
             }
             else
             {
@@ -162,6 +158,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; 
     }
+
+    public bool AllGodsCaught()
+    {
+        if (KingOssisCaught && QueenVitaeCaught && UltranovaCaught) { return true; }
+        return false;
+    }
+    
 
 }
 

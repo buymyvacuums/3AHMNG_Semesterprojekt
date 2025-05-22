@@ -54,12 +54,12 @@ public class TutorialManager : MonoBehaviour
             if (tutorialIndex >= 8)
             {
                 tutorialActive = false;
-                tutorialCanvas.SetActive(false);
+                tutorialCanvas?.SetActive(false);
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 tutorialActive = false;
-                tutorialCanvas.SetActive(false);
+                tutorialCanvas?.SetActive(false);
             }
         }
         
