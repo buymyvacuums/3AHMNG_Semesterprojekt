@@ -6414,7 +6414,6 @@ MonoBehaviour:
   - You can find the Terminal on the left.
   - This is the end of the tutorial, have fun!
   tutorialCanvas: {fileID: 0}
-  i: 0
 --- !u!1 &1743972386
 GameObject:
   m_ObjectHideFlags: 0

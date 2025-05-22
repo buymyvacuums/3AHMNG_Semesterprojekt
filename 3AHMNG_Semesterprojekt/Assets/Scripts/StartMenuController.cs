@@ -14,6 +14,7 @@ public class StartMenuController : MonoBehaviour
     public void OnContinue()
     {
         //SaveManager.LoadGame();
+        TutorialManager.tutorialIndex = 0;
         SceneManager.LoadScene("Main"); // replace with your main game scene name
     }
 

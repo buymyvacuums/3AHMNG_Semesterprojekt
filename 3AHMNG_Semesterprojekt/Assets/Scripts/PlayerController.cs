@@ -96,9 +96,9 @@ public class PlayerController : MonoBehaviour
             _harvisterInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (TutorialManager.instance != null && TutorialManager.instance.i == 4)
+                if (TutorialManager.tutorialIndex == 4)
                 {
-                    TutorialManager.instance.i = 5;
+                    TutorialManager.tutorialIndex = 5;
                 }
                 GlobalAudioScript.instance.PlaySoundFrom(GlobalAudioScript.instance._akShredderActivate, _harvisterOBJ);
                 GameManager.instance.currentScore = 0;
@@ -126,9 +126,9 @@ public class PlayerController : MonoBehaviour
             _upgradeInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (TutorialManager.instance != null && TutorialManager.instance.i == 6)
+                if (TutorialManager.tutorialIndex == 6)
                 {
-                    TutorialManager.instance.i = 7;
+                    TutorialManager.tutorialIndex = 7;
                 }
                 _upgradeUI.SetActive(true);
                 GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
