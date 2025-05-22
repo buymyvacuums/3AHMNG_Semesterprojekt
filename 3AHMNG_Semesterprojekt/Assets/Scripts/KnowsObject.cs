@@ -8,6 +8,8 @@ public class KnowsObject : MonoBehaviour
 
     public KeyCode keyToPress;
 
+    private GameObject button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,7 @@ public class KnowsObject : MonoBehaviour
             if(canBePressed)
             {
                 Destroy(gameObject);
-                GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akHit);
-                GameManager.instance.NoteHit();
+                GameManager.instance.NoteHit(button?.GetComponent<ButtonController>().hitSound);
             }
         }
     }
@@ -37,6 +38,7 @@ public class KnowsObject : MonoBehaviour
         if(other.gameObject.tag == "Activator")
         {
             canBePressed = true;
+            button = other.gameObject;
         }
         else if (other.gameObject.tag == "MissZone")
         {

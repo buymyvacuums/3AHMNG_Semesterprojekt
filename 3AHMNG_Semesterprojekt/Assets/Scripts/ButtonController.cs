@@ -32,7 +32,6 @@ public class ButtonController : MonoBehaviour
         if (Input.GetKeyDown(_keyToPress))
         {
             _spriteRenderer.sprite = _pressedImg;
-            GlobalAudioScript.instance.PlaySound(hitSound);
         }
         if (Input.GetKeyUp(_keyToPress))
         {

@@ -78,9 +78,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NoteHit()
+    public void NoteHit(AK.Wwise.Event hitSound)
     {
         hitNote += 1;
+        GlobalAudioScript.instance.PlaySound(hitSound);
         StartCoroutine(ComboFeedback.instance.PerfectHit(ComboFeedback.instance.perfectTXT));
         //Debug.Log("Note Hit");
     }
