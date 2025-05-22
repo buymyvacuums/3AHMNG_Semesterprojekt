@@ -94,11 +94,11 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(rayOrigin2, rayDirection2, out rayHit2, maxRayDistance2, fishHarvister))
         {
             _harvisterInteractTXT.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && GameManager.instance.currentScore != 0)
             {
-                if (TutorialManager.tutorialIndex == 4)
+                if (TutorialManager.instance.tutorialIndex <= 4)
                 {
-                    TutorialManager.tutorialIndex = 5;
+                    TutorialManager.instance.tutorialIndex = 5;
                 }
                 GlobalAudioScript.instance.PlaySoundFrom(GlobalAudioScript.instance._akShredderActivate, _harvisterOBJ);
                 GameManager.instance.currentScore = 0;
@@ -126,10 +126,7 @@ public class PlayerController : MonoBehaviour
             _upgradeInteractTXT.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (TutorialManager.tutorialIndex == 6)
-                {
-                    TutorialManager.tutorialIndex = 7;
-                }
+                
                 _upgradeUI.SetActive(true);
                 GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyMenuOpen);
             }

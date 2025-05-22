@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void ExitMain()
     {
+        TutorialManager.instance.ResetTutorial();
         SceneManager.LoadScene("Start");
     }
 }

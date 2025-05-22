@@ -17,8 +17,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _scoreTXT.text = "Fish: " + GameManager.instance.currentScore.ToString();
-        _fishBitsTXT.text = "Fish Bits: " + GameManager.instance.fishBits.ToString();
+        _scoreTXT.text = GameManager.instance.currentScore.ToString();
+        _fishBitsTXT.text = GameManager.instance.fishBits.ToString();
 
     }
 }

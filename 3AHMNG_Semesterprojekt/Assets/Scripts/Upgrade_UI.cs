@@ -118,6 +118,10 @@ public class Upgrade_UI : MonoBehaviour
             GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akGalaxyBuy);
             SaveUnlockedGalaxies();
             Debug.Log("Unlocked and switched to: " + selected.galaxyName);
+            if (TutorialManager.instance.tutorialIndex <= 6)
+            {
+                TutorialManager.instance.tutorialIndex = 7;
+            }
         }
         else
         {

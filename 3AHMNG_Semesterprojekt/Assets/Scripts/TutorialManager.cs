@@ -7,54 +7,82 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
+    public static TutorialManager instance;
     [SerializeField] private TextMeshProUGUI tutorialUI;
     [SerializeField] private string[] tutText;
     [SerializeField] private GameObject tutorialCanvas;
-    public static int tutorialIndex = 0;
+    public int tutorialIndex;
+    public bool tutorialActive = true;
     private void Awake()
     {
 
     }
     private void Start()
     {
-        tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
-        tutorialUI = tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        tutorialCanvas.SetActive(true);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else { Destroy(gameObject); }
 
-        //SceneManager.sceneLoaded += OnSceneLoaded;
+        tutorialIndex = 0;
+        tutorialActive = true;
+        tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
+        tutorialUI = tutorialCanvas?.GetComponentInChildren<TextMeshProUGUI>();
+        tutorialCanvas?.SetActive(true);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void Update()
     {
-        tutorialUI.text = tutText[tutorialIndex];
-        if (tutorialIndex == 0 || tutorialIndex == 1 || tutorialIndex == 2 || tutorialIndex == 5 || tutorialIndex == 7)
+        if (tutorialActive)
         {
-            tutorialUI.text = tutText[tutorialIndex] + "\n[Space]";
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (tutorialIndex <= 7)
             {
-                tutorialIndex++;
-                if (tutorialIndex == 8)
+                tutorialUI.text = tutText[tutorialIndex];
+            }
+            if (tutorialIndex == 0 || tutorialIndex == 1 || tutorialIndex == 2 || tutorialIndex == 5 || tutorialIndex == 7)
+            {
+                tutorialUI.text = tutText[tutorialIndex] + "\n[Space]";
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Destroy(tutorialCanvas);
-                    Destroy(gameObject);
+                    tutorialIndex++;
+
                 }
             }
+            if (tutorialIndex >= 8)
+            {
+                tutorialActive = false;
+                tutorialCanvas.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                tutorialActive = false;
+                tutorialCanvas.SetActive(false);
+            }
+        }
+        
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        if (scene.name == "Main")
+        {
+            tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
+            tutorialUI = tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();
+            if (tutorialActive == false) { tutorialCanvas.SetActive(false); }
+
         }
     }
-    //private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
-    //{
-    //    if (scene.name == "Main")
-    //    {
-    //        tutorialCanvas = GameObject.FindGameObjectWithTag("Tutorial");
-    //        tutorialUI = tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();
-    //        if (tutorialCanvas != null)
-    //        {
-    //            tutorialUI.text = tutText[i];
-    //        }
-    //    }
-    //}
 
-    //private void OnDestroy()
-    //{
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //}
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void ResetTutorial()
+    {
+        tutorialIndex = 0;
+        tutorialCanvas?.SetActive(true);
+        tutorialActive = true;
+    }
 }
