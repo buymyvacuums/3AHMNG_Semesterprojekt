@@ -346,9 +346,6 @@ public class FishBehaviour : MonoBehaviour
         return false;
     }
 
-    public delegate void GodFishCaughtEvent();
-    public static event GodFishCaughtEvent OnGodFishCaught;
-
     public void MarkFishAsCaught(int fishCode)
     {
         if (fishDictionary.TryGetValue(fishCode, out Fish fish))

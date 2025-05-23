@@ -41,14 +41,4 @@ public class GodFishDisplay : MonoBehaviour
         }
     }
 
-    void OnEnable()
-    {
-        FishBehaviour.OnGodFishCaught += UpdateGodFishUI;
-    }
-
-    void OnDisable()
-    {
-        FishBehaviour.OnGodFishCaught -= UpdateGodFishUI;
-    }
-
 }
