@@ -24,7 +24,10 @@ public class ComboScroller : MonoBehaviour
     public GameObject[] _arrows;
     private float Tempo;
 
-
+    public int points;
+    public int misses;
+    public TextMeshProUGUI scoreCounter;
+    public TextMeshProUGUI missCounter;
 
     public static ComboScroller _ComboInstance;
 
@@ -69,6 +72,7 @@ public class ComboScroller : MonoBehaviour
             ComboScroller._ComboInstance._comboLength = 21;
             beatTempo = 8f;
         }
+        scoreCounter.text = "0/" + (_comboLength*5);
         hasStarted = false;
         
     }
@@ -107,15 +111,15 @@ public class ComboScroller : MonoBehaviour
 
         if (GameManager.instance.hitNote + GameManager.instance.missedNote == _comboLength)
         {
-            if (GameManager.instance.hitNote >= _comboLength -3)
+            if (misses <= 3)
             {
-                EndFishing();
+                FishCaught();
             }
-            else { StartCoroutine(FishFailed()); }
+            else { StartCoroutine(FishEscaped()); }
         } 
     }
 
-    public void EndFishing()
+    public void FishCaught()
     {
         if (TutorialManager.instance.tutorialIndex <= 3)
         {
@@ -147,10 +151,12 @@ public class ComboScroller : MonoBehaviour
         Debug.Log("Value = " + GameManager.instance.currentValue);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
+        points = 0;
+        misses = 0;
         //GameManager.instance.SaveProgress();
     }
 
-    IEnumerator FishFailed()
+    IEnumerator FishEscaped()
     {
         yield return null;
         
@@ -160,6 +166,8 @@ public class ComboScroller : MonoBehaviour
         GlobalAudioScript.instance.PlaySound(GlobalAudioScript.instance._akFail);
         GameManager.instance.hitNote = 0;
         GameManager.instance.missedNote = 0;
+        points = 0;
+        misses = 0;
         //GameManager.instance.SaveProgress();
         SceneManager.LoadScene("Main");
     }

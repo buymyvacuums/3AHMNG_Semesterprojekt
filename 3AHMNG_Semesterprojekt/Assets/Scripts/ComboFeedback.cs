@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,15 +23,14 @@ public class ComboFeedback : MonoBehaviour
         
     }
 
-    public IEnumerator PerfectHit(Sprite TXT)
+    public IEnumerator HitNote(string TXT)
     {
         yield return null;
         int rndX = Random.Range(100, 1800);
         int rndY = Random.Range(100, 1000);
         Vector3 rndPos = new Vector3(rndX, rndY, 0);
         GameObject FeedBackGO = Instantiate(FeedbackTXT, rndPos, Quaternion.identity, transform);
-        FeedBackGO.GetComponent<Image>().sprite = TXT;
-        FeedBackGO.GetComponent<Image>().SetNativeSize();
+        FeedBackGO.GetComponentInChildren<TextMeshProUGUI>().text = TXT;
         FeedBackGO.transform.localScale = Vector3.one;
         yield return new WaitForSeconds(1);
         Destroy(FeedBackGO);

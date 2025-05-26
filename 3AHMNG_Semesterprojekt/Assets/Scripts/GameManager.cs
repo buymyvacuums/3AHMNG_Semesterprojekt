@@ -69,18 +69,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NoteHit(AK.Wwise.Event hitSound)
+    public void NoteHit(AK.Wwise.Event hitSound, int points, string text)
     {
         hitNote += 1;
+        ComboScroller._ComboInstance.points += points;
         GlobalAudioScript.instance.PlaySound(hitSound);
-        StartCoroutine(ComboFeedback.instance.PerfectHit(ComboFeedback.instance.perfectTXT));
+        StartCoroutine(ComboFeedback.instance.HitNote(text));
+        ComboScroller._ComboInstance.scoreCounter.text = ComboScroller._ComboInstance.points.ToString() + "/" + ComboScroller._ComboInstance._comboLength * 5;
         //Debug.Log("Note Hit");
     }
 
     public void NoteMissed()
     {
         missedNote += 1;
-        StartCoroutine(ComboFeedback.instance.PerfectHit(ComboFeedback.instance.missTXT));
+        ComboScroller._ComboInstance.misses += 1;
+        StartCoroutine(ComboFeedback.instance.HitNote("miss"));
+        ComboScroller._ComboInstance.missCounter.text = ComboScroller._ComboInstance.misses.ToString() + "/3";
         //Debug.Log("Note Missed");
     }
 
@@ -138,8 +142,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        missedNote = 0;
-        hitNote = 0;
         _rndStartTime = Random.Range(1f, 6f);
         PlayerController.instance._interactTXT.SetActive(false);
 
