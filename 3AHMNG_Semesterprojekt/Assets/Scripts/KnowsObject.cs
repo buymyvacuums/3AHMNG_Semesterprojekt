@@ -42,7 +42,6 @@ public class KnowsObject : MonoBehaviour
         if(other.gameObject.tag == "Activator")
         {
             float distance = Vector2.Distance(other.gameObject.transform.position, gameObject.transform.position);
-            Debug.Log(distance);
             if (distance <= 0.50f)
             {
                 points = 1;
