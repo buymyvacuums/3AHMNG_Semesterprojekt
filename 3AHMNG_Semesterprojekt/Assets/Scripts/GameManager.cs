@@ -165,6 +165,16 @@ public class GameManager : MonoBehaviour
         return false;
     }
     
+    public void ResetAll()
+    {
+        currentScore = 0;   
+        currentValue = 0;
+        fishBits = 0;
+        KingOssisCaught = false;
+        QueenVitaeCaught = false;
+        UltranovaCaught = false;
+        FishBehaviour.galaxy = Galaxy.Tutoria;
+    }
 
 }
 
