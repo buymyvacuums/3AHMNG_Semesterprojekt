@@ -12,7 +12,7 @@ public class KnowsObject : MonoBehaviour
     private GameObject button;
 
     private int points;
-    private string feedbackTXT;
+    private Sprite feedbackTXT;
 
     // Start is called before the first frame update
     void Start()
@@ -45,17 +45,17 @@ public class KnowsObject : MonoBehaviour
             if (distance <= 0.50f)
             {
                 points = 1;
-                feedbackTXT = "ok...";
+                feedbackTXT = ComboFeedback.instance.okTXT;
             }
             if (distance <= 0.25f)
             {
                 points = 3;
-                feedbackTXT = "great";
+                feedbackTXT = ComboFeedback.instance.greatTXT;
             }
             if (distance <= 0.05f)
             {
                 points = 5;
-                feedbackTXT = "perfect!";
+                feedbackTXT = ComboFeedback.instance.perfectTXT;
             }
             
             canBePressed = true;

@@ -187,7 +187,6 @@ MonoBehaviour:
   misses: 0
   scoreCounter: {fileID: 151653479}
   missCounter: {fileID: 101180650}
-  barGO: {fileID: 0}
 --- !u!114 &31670377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2237,8 +2236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FeedbackTXT: {fileID: 9029099035161050062, guid: bc6049e471941c6449029e1ccf0ded57,
     type: 3}
-  perfectTXT: {fileID: -1508084882, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
-  missTXT: {fileID: -1385306801, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
+  perfectTXT: {fileID: 1292219687, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
+  greatTXT: {fileID: -307365700, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
+  okTXT: {fileID: -27877979, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
+  missTXT: {fileID: 1627313804, guid: 9353ccb7fe6c8104e9cf3bda3ff9b94c, type: 3}
 --- !u!114 &1459458153
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NoteHit(AK.Wwise.Event hitSound, int points, string text)
+    public void NoteHit(AK.Wwise.Event hitSound, int points, Sprite text)
     {
         hitNote += 1;
         ComboScroller._ComboInstance.points += points;
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     {
         missedNote += 1;
         ComboScroller._ComboInstance.misses += 1;
-        StartCoroutine(ComboFeedback.instance.HitNote("miss"));
+        StartCoroutine(ComboFeedback.instance.HitNote(ComboFeedback.instance.missTXT));
         ComboScroller._ComboInstance.missCounter.text = ComboScroller._ComboInstance.misses.ToString() + "/3";
         //Debug.Log("Note Missed");
     }
